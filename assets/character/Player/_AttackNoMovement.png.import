@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckmeqfswvw7b4"
-path="res://.godot/imported/Run.png-e236cfb33c916bcaf920e648aa0e7c3f.ctex"
+uid="uid://dfj32u5ka7ceo"
+path="res://.godot/imported/_AttackNoMovement.png-2f138d142338c649ae381bb127e6ad2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/Player/Run.png"
-dest_files=["res://.godot/imported/Run.png-e236cfb33c916bcaf920e648aa0e7c3f.ctex"]
+source_file="res://assets/character/Player/_AttackNoMovement.png"
+dest_files=["res://.godot/imported/_AttackNoMovement.png-2f138d142338c649ae381bb127e6ad2a.ctex"]
 
 [params]
 

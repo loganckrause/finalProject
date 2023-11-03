@@ -19,8 +19,6 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * SPEED
@@ -34,6 +32,7 @@ func _physics_process(delta):
 	
 	update_animations(direction)
 	
+	_attacks()
 func update_animations(direction):
 	if is_on_floor():
 		if direction == 0:
@@ -41,4 +40,11 @@ func update_animations(direction):
 	else:
 		if velocity.y < 0:
 			ap.play("jump")
+
+func _attacks():
+	var has_attacked = false
+	if Input.is_action_just_pressed('attack'):
+		ap.play("attack1")
+		has_attacked = true
+	elif Input.is_action_just_pressed('attack')
 	
