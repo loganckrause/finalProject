@@ -1,8 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://boli6i4ge5fqp"]
+[gd_scene load_steps=28 format=3 uid="uid://boli6i4ge5fqp"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_13en1"]
 [ext_resource type="Texture2D" uid="uid://dm1e1gkxatmtf" path="res://assets/character/SlimeIdle.png" id="2_yfawa"]
 [ext_resource type="Texture2D" uid="uid://bljcwo7wrm1k0" path="res://assets/character/SlimeJump.png" id="3_i54x2"]
+[ext_resource type="Texture2D" uid="uid://dgo2odh4lftj8" path="res://assets/weapon/US.png" id="4_kd3lr"]
+[ext_resource type="Script" path="res://scenes/gun.gd" id="5_2gabp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qsg3w"]
 size = Vector2(12, 10)
@@ -166,14 +168,26 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(7, 0)
 script = ExtResource("1_13en1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-45, -10)
+position = Vector2(-7, 0)
 shape = SubResource("RectangleShape2D_qsg3w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-45, -11)
+position = Vector2(-7, -1)
 sprite_frames = SubResource("SpriteFrames_sokal")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="gun" type="Sprite2D" parent="."]
+position = Vector2(2, 2)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_kd3lr")
+hframes = 3
+vframes = 6
+script = ExtResource("5_2gabp")
+
+[node name="muzzle" type="Node2D" parent="gun"]
+position = Vector2(4, -2)
