@@ -1,21 +1,24 @@
 extends CharacterBody2D
 
-@onready var initialPos = $SlimeSprite/gun.position
+
 const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
+var mouseDeadZone = 5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-func _process(delta):
+func _process(_delta):
 	if get_global_mouse_position().x > $SlimeSprite.global_position.x:
 		
 		$SlimeSprite.set_flip_h(false)
+		#if $SlimeSprite.global_position.distance_to(get_global_mouse_position()) > mouseDeadZone:
 		$SlimeSprite/gun.set_flip_v(false)
-		$SlimeSprite/gun.position = initialPos
+		$SlimeSprite/gun.global_position = $SlimeSprite.global_position + Vector2(1,2)
 	else:
 		$SlimeSprite.set_flip_h(true)
+		#if $SlimeSprite.global_position.distance_to(get_global_mouse_position()) > mouseDeadZone:
 		$SlimeSprite/gun.set_flip_v(true)
-		$SlimeSprite/gun.position = -initialPos
+		$SlimeSprite/gun.global_position = $SlimeSprite.global_position + Vector2(-1,2)
 	pass
 
 
