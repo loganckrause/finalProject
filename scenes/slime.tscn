@@ -1,6 +1,5 @@
-[gd_scene load_steps=26 format=3 uid="uid://boli6i4ge5fqp"]
+[gd_scene load_steps=25 format=3 uid="uid://boli6i4ge5fqp"]
 
-[ext_resource type="Script" path="res://scripts/slime.gd" id="1_13en1"]
 [ext_resource type="Texture2D" uid="uid://dm1e1gkxatmtf" path="res://assets/character/SlimeIdle.png" id="2_yfawa"]
 [ext_resource type="Texture2D" uid="uid://bljcwo7wrm1k0" path="res://assets/character/SlimeJump.png" id="3_i54x2"]
 
@@ -166,7 +165,6 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-script = ExtResource("1_13en1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-45, -10)

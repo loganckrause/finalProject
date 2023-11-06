@@ -14,8 +14,6 @@ var animation_locked : bool = false
 var direction : Vector2 = Vector2.ZERO
 var isAttacking = false
 
-	
-
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -45,7 +43,7 @@ func _physics_process(delta):
 	move_and_slide()
 	update_animation()
 	animation_facing()
-	
+
 func update_animation():
 	if is_on_floor():
 		if direction.x != 0 and isAttacking == false:
@@ -60,24 +58,15 @@ func update_animation():
 	if Input.is_action_just_pressed("attack"):
 		asprite.play("attack1")
 		isAttacking = true
-		$AttackArea/CollisionShape2D.disabled = false
 func animation_facing():
 	if direction.x > 0:
-		$CollisionShape2D.position.x = -5.5
-		$AttackArea/CollisionShape2D.position.x = 30
 		asprite.flip_h = false
 	elif direction.x < 0:
-		$CollisionShape2D.position.x = 5.5
-		$AttackArea/CollisionShape2D.position.x = -30
 		asprite.flip_h = true
 
 
 func _on_animated_sprite_2d_animation_finished():
 	if asprite.animation == "attack1":
-		$AttackArea/CollisionShape2D.disabled = true
 		isAttacking = false
-		
-func attack():
-	isAttacking = true
-	asprite.play("attack1")
+#bballss
 
