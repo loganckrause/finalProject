@@ -1236,4 +1236,7 @@ layer_0/tile_data = PackedInt32Array(131070, 65536, 0, 131071, 131072, 0, 65536,
 [node name="Slime" parent="." instance=ExtResource("2_qsyhu")]
 
 [node name="Camera2D" type="Camera2D" parent="Slime"]
-zoom = Vector2(5, 5)
+zoom = Vector2(4, 4)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 15.0

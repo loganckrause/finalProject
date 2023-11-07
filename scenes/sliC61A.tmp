@@ -1,12 +1,12 @@
 [gd_scene load_steps=30 format=3 uid="uid://boli6i4ge5fqp"]
 
-[ext_resource type="Script" path="res://scripts/Player/slime.gd" id="1_tpauq"]
+[ext_resource type="Script" path="res://scripts/slime.gd" id="1_13en1"]
 [ext_resource type="Texture2D" uid="uid://dm1e1gkxatmtf" path="res://assets/character/SlimeIdle.png" id="2_yfawa"]
 [ext_resource type="Texture2D" uid="uid://bljcwo7wrm1k0" path="res://assets/character/SlimeJump.png" id="3_i54x2"]
 [ext_resource type="Texture2D" uid="uid://dgo2odh4lftj8" path="res://assets/weapon/US.png" id="4_kd3lr"]
-[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="5_4td3e"]
-[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="6_5e8ti"]
-[ext_resource type="Script" path="res://objects/weapon.gd" id="7_rj4yq"]
+[ext_resource type="Script" path="res://objects/gun.gd" id="5_b6mtu"]
+[ext_resource type="Script" path="res://scenes/components/HealthComponent.gd" id="6_jbiqy"]
+[ext_resource type="Script" path="res://scenes/components/HitboxComponent.gd" id="7_buram"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l4kw8"]
 atlas = ExtResource("2_yfawa")
@@ -170,36 +170,29 @@ animations = [{
 size = Vector2(12, 10)
 
 [node name="Slime" type="CharacterBody2D"]
-script = ExtResource("1_tpauq")
+script = ExtResource("1_13en1")
 
 [node name="SlimeSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_sokal")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_qsg3w")
-
-[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("6_5e8ti")]
-health_component = NodePath("../HealthComponent")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
-
-[node name="HealthComponent" parent="." instance=ExtResource("5_4td3e")]
-
-[node name="weapon" type="Sprite2D" parent="."]
-position = Vector2(0, 1)
+[node name="gun" type="Sprite2D" parent="SlimeSprite"]
+position = Vector2(0, 2)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_kd3lr")
 offset = Vector2(12.5, -7.15256e-07)
 hframes = 3
 vframes = 6
-script = ExtResource("7_rj4yq")
+script = ExtResource("5_b6mtu")
 
-[node name="muzzle" type="Marker2D" parent="weapon"]
-position = Vector2(17.5, -1.25)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_qsg3w")
 
-[node name="FiringCooldown" type="Timer" parent="weapon"]
-process_callback = 0
-one_shot = true
+[node name="HealthComponent" type="Node2D" parent="."]
+script = ExtResource("6_jbiqy")
+
+[node name="HitboxComponent" type="Area2D" parent="." node_paths=PackedStringArray("health_component")]
+script = ExtResource("7_buram")
+health_component = NodePath("../HealthComponent")
