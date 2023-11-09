@@ -12,13 +12,15 @@ func _process(_delta):
 	if get_global_mouse_position().x > $SlimeSprite.global_position.x:
 		$SlimeSprite.set_flip_h(false)
 		$weapon.set_flip_v(false)
-		marker.scale.y = marker.scale.y
-		$weapon.global_position = $SlimeSprite.global_position + Vector2(1,2)
+		$weapon/hand.set_flip_v(false)
+		$weapon.global_position = $SlimeSprite.global_position + Vector2(2,1)
+		$weapon/hand.global_position = $weapon.global_position + Vector2(2,1)
 	else:
 		$SlimeSprite.set_flip_h(true)
 		$weapon.set_flip_v(true)
-		marker.scale.y = -marker.scale.y
-		$weapon.global_position = $SlimeSprite.global_position + Vector2(-1,2)
+		$weapon/hand.set_flip_v(true)
+		$weapon.global_position = $SlimeSprite.global_position + Vector2(-2,1)
+		$weapon/hand.global_position = $weapon.global_position + Vector2(-2,1)
 	pass
 
 
