@@ -1,5 +1,4 @@
 extends Area2D
-
 var dead = false
 var take_damage = false
 var damage_count = 0
