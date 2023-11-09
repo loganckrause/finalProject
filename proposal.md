@@ -18,7 +18,7 @@ N/A
 
 ## If planning to collaborate with 1 or 2 classmates for the final project, list their names, email addresses, and the names of their assigned TAs below.
 
-Yes, there will be two of us working on the project, Gavin Montross, tuq61645@temple.edu, and Logan Krause, (email). Our TA is Xinwen Zhang.
+Yes, there will be two of us working on the project, Gavin Montross, tuq61645@temple.edu, and Logan Krause, tup13924@temple.edu. Our TA is Xinwen Zhang.
 
 ## In the world of software, most everything takes longer to implement than you expect. And so it's not uncommon to accomplish less in a fixed amount of time than you hope.
 
