@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://boli6i4ge5fqp"]
 
-[ext_resource type="Script" path="res://scripts/Player/slime.gd" id="1_tpauq"]
+[ext_resource type="Script" path="res://scripts/Player/player.gd" id="1_oqed1"]
 [ext_resource type="Texture2D" uid="uid://dwoum5frsr8ln" path="res://assets/character/Player/Astronaut_DEMO.png" id="2_2tlpa"]
 [ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="5_4td3e"]
 [ext_resource type="Texture2D" uid="uid://cldflh5grc005" path="res://assets/weapon/Guns/guntest2.png" id="5_w4f7y"]
@@ -24,10 +24,10 @@ size = Vector2(14, 17)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5d75f"]
 size = Vector2(14, 17)
 
-[node name="Slime" type="CharacterBody2D"]
-script = ExtResource("1_tpauq")
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_oqed1")
 
-[node name="SlimeSprite" type="AnimatedSprite2D" parent="."]
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_sokal")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
@@ -56,7 +56,3 @@ position = Vector2(18, 0)
 [node name="FiringCooldown" type="Timer" parent="weapon"]
 process_callback = 0
 one_shot = true
-
-[node name="hand" type="Sprite2D" parent="weapon"]
-visible = false
-position = Vector2(6, 2)
