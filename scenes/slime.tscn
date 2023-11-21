@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/Player/slime.gd" id="1_tpauq"]
 [ext_resource type="Texture2D" uid="uid://dwoum5frsr8ln" path="res://assets/character/Player/Astronaut_DEMO.png" id="2_2tlpa"]
 [ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="5_4td3e"]
+[ext_resource type="Texture2D" uid="uid://wmiet4vfsixo" path="res://assets/weapon/Guns/guntest.png" id="5_141b7"]
 [ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="6_5e8ti"]
-[ext_resource type="Texture2D" uid="uid://b64rwlysmriqw" path="res://assets/weapon/Guns/Flintlock.png" id="6_cpvok"]
 [ext_resource type="Texture2D" uid="uid://bhatxfjcaocy" path="res://assets/character/Player/Astronaut_Hand.png" id="7_fga5q"]
 [ext_resource type="Script" path="res://objects/weapon.gd" id="7_rj4yq"]
 
@@ -47,17 +47,18 @@ shape = SubResource("RectangleShape2D_5d75f")
 [node name="HealthComponent" parent="." instance=ExtResource("5_4td3e")]
 
 [node name="weapon" type="Sprite2D" parent="."]
-texture = ExtResource("6_cpvok")
-offset = Vector2(17.5, -7.15256e-07)
+texture = ExtResource("5_141b7")
+offset = Vector2(10, 0)
 script = ExtResource("7_rj4yq")
 
 [node name="muzzle" type="Marker2D" parent="weapon"]
-position = Vector2(22.5, 0)
+position = Vector2(18, 0)
 
 [node name="FiringCooldown" type="Timer" parent="weapon"]
 process_callback = 0
 one_shot = true
 
 [node name="hand" type="Sprite2D" parent="weapon"]
-position = Vector2(9, 4)
+visible = false
+position = Vector2(6, 2)
 texture = ExtResource("7_fga5q")
