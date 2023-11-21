@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tpmvid5epnim"
-path="res://.godot/imported/Idle.png-c9b3d9a4bf1cd929cfab9fb06470df37.ctex"
+uid="uid://cldflh5grc005"
+path="res://.godot/imported/guntest2.png-f7812824f0d622631363d69fa6e9051f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/Player/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-c9b3d9a4bf1cd929cfab9fb06470df37.ctex"]
+source_file="res://assets/weapon/Guns/guntest2.png"
+dest_files=["res://.godot/imported/guntest2.png-f7812824f0d622631363d69fa6e9051f.ctex"]
 
 [params]
 
