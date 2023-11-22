@@ -18,4 +18,4 @@ func damage(attack: Attack):
 func die():
 	# add logic for death
 	get_parent().queue_free()
-	pass
+	

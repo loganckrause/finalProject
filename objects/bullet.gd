@@ -23,15 +23,15 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free() # Replace with function body.
 
 func _on_body_entered(body):
-	if body is HitboxComponent:
+	print("Entered body class:", body.get_class())
+	if body.is_class("HitboxComponent"):
+		print("yuh")
 		queue_free()
 		var hitbox : HitboxComponent = body
 		
 		var attack = Attack.new()
 		attack.attack_damage = attackDamage
 		attack.knockback_force = knockbackForce
-		attack.attack_position = global_position
-		attack.stun_time = stun_time
 		
 		hitbox.damage(attack)
 		
