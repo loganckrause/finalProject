@@ -2,6 +2,9 @@ extends Area2D
 
 
 @export var speed = 500
+@export var attackDamage = 3
+@export var knockbackForce = 0
+@export var stun_time = 1.5
 
 func _ready():
 	set_as_top_level(true)
@@ -19,6 +22,21 @@ func _physics_process(delta):
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free() # Replace with function body.
 
-
 func _on_body_entered(body):
-	queue_free()
+	if body is HitboxComponent:
+		queue_free()
+		var hitbox : HitboxComponent = body
+		
+		var attack = Attack.new()
+		attack.attack_damage = attackDamage
+		attack.knockback_force = knockbackForce
+		attack.attack_position = global_position
+		attack.stun_time = stun_time
+		
+		hitbox.damage(attack)
+		
+	# other stuff for the bullet
+	# Animate explode or something
+	# alive = false
+
+	

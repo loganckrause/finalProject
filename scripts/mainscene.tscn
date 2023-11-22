@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ldseijruojk2"]
+[gd_scene load_steps=3 format=3 uid="uid://ldseijruojk2"]
 
 [ext_resource type="PackedScene" uid="uid://cbdhytyeuox4x" path="res://scenes/mainscene.tscn" id="1_vqs8n"]
+[ext_resource type="PackedScene" uid="uid://d0t0sfn56diiu" path="res://scenes/Enemies/enemy1.tscn" id="2_th113"]
 
 [node name="main" instance=ExtResource("1_vqs8n")]
 
@@ -10,3 +11,6 @@ layer_0/tile_data = PackedInt32Array(131070, 65536, 0, 131071, 131072, 0, 65536,
 [node name="Camera2D" parent="Slime" index="5"]
 drag_left_margin = 0.08
 drag_right_margin = 0.08
+
+[node name="Area2D" parent="." index="2" instance=ExtResource("2_th113")]
+position = Vector2(-74, -123)
