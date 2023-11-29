@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlv1skjr2qq2t"
-path="res://.godot/imported/parallax-space-ring-planet.png-1398d79eda330f2f5734688868706cd4.ctex"
+uid="uid://dmkia18cxs8on"
+path="res://.godot/imported/parallax-space-backgound.png-9c347c9e49c3f7faf19c58435e86890d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Plants & Backgrounds/space_background_pack/layers/parallax-space-ring-planet.png"
-dest_files=["res://.godot/imported/parallax-space-ring-planet.png-1398d79eda330f2f5734688868706cd4.ctex"]
+source_file="res://Parallax Background/space_background_pack/layers/parallax-space-backgound.png"
+dest_files=["res://.godot/imported/parallax-space-backgound.png-9c347c9e49c3f7faf19c58435e86890d.ctex"]
 
 [params]
 
