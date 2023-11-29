@@ -1,0 +1,5 @@
+res://Scenes/world.tscn
+res://Scripts/Chest.gd
+res://Scenes/parallax.tscn
+res://Scenes/level_1.tscn
+res://scripts/TestPlayer.gd

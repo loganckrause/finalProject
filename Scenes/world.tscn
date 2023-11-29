@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5jmorjvt41y1"]
+
+[ext_resource type="PackedScene" uid="uid://gctlm6tjjoif" path="res://Scenes/level_1.tscn" id="1_bxwkr"]
+[ext_resource type="PackedScene" uid="uid://ca1fjjvx42pe0" path="res://Scenes/parallax.tscn" id="3_bpmh7"]
+
+[node name="World" type="Node2D"]
+
+[node name="Parallax" parent="." instance=ExtResource("3_bpmh7")]
+
+[node name="Level 1" parent="." instance=ExtResource("1_bxwkr")]

@@ -1,0 +1,33 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1701293290
+icon.svg::CompressedTexture2D::9051213840036523147::1701045245::1701045323::1::::<><>::
+::res://Assets/::1701283644
+::res://Assets/Animated Chests/::1701279540
+Chests.png::CompressedTexture2D::1247004664479074362::1624976423::1701279540::1::::<><>::
+Chests_Snow.png::CompressedTexture2D::3318535557179495561::1624976483::1701279540::1::::<><>::
+::res://Assets/platformer items - free assets/::1701283650
+animated_items.png::CompressedTexture2D::688636305519121878::1663551102::1701283650::1::::<><>::
+animated_items_outline.png::CompressedTexture2D::4063652685275650573::1663551116::1701283650::1::::<><>::
+README.txt::TextFile::-1::1663559422::0::1::::<><>::
+static_items.png::CompressedTexture2D::4919747981584190922::1663551236::1701283650::1::::<><>::
+static_items_outline.png::CompressedTexture2D::2097684211631605288::1663551278::1701283650::1::::<><>::
+::res://Plants & Backgrounds/::1701045245
+::res://Plants & Backgrounds/space_background_pack/::1701045245
+license.txt::TextFile::-1::1701045245::0::1::::<><>::
+::res://Plants & Backgrounds/space_background_pack/layers/::1701045323
+parallax-space-backgound.png::CompressedTexture2D::8022659104926423405::1701045245::1701045323::1::::<><>::
+parallax-space-big-planet.png::CompressedTexture2D::4217771306066447324::1701045245::1701045323::1::::<><>::
+parallax-space-far-planets.png::CompressedTexture2D::7134401029422138020::1701045245::1701045323::1::::<><>::
+parallax-space-ring-planet.png::CompressedTexture2D::7976302589981003641::1701045245::1701045323::1::::<><>::
+parallax-space-stars.png::CompressedTexture2D::264605664782049709::1701045245::1701045323::1::::<><>::
+::res://Scenes/::1701285436
+level_1.tscn::PackedScene::426435762976639429::1701285436::0::1::::<><>::uid://bqw7u402tgebg::::res://Tilesets/Assets.png<>res://scripts/TestPlayer.gd<>uid://d17qf084ds4st::::res://icon.svg<>uid://r1b8qicjklk1::::res://Assets/Animated Chests/Chests.png<>res://Scripts/Chest.gd<>uid://j2t0exb3ha83::::res://Assets/platformer items - free assets/animated_items.png
+parallax.tscn::PackedScene::4826835352336623909::1701283720::0::1::::<><>::uid://dmkia18cxs8on::::res://Plants & Backgrounds/space_background_pack/layers/parallax-space-backgound.png<>uid://b1decvh0rv6yy::::res://Plants & Backgrounds/space_background_pack/layers/parallax-space-big-planet.png<>uid://c8v7spitldqjk::::res://Plants & Backgrounds/space_background_pack/layers/parallax-space-far-planets.png<>uid://dlv1skjr2qq2t::::res://Plants & Backgrounds/space_background_pack/layers/parallax-space-ring-planet.png<>uid://d1gatiac1ow0::::res://Plants & Backgrounds/space_background_pack/layers/parallax-space-stars.png
+TestPlayer.tscn::PackedScene::6379747444074243422::1701045245::0::1::::<><>::res://Scripts/TestPlayer.gd<>uid://d17qf084ds4st
+world.tscn::PackedScene::6897840589122474922::1701283720::0::1::::<><>::uid://gctlm6tjjoif::::res://Scenes/level_1.tscn<>uid://ca1fjjvx42pe0::::res://Scenes/parallax.tscn
+::res://Scripts/::1701283479
+Chest.gd::GDScript::-1::1701283479::0::1::::<>AnimatedSprite2D<>::
+TestPlayer.gd::GDScript::-1::1701283298::0::1::::<>CharacterBody2D<>::
+::res://Tilesets/::1701046452
+Assets.png::CompressedTexture2D::3556838715187210936::1560840882::1701046452::1::::<><>::
+GrassLevelSheet.png::CompressedTexture2D::7509152868797743511::1701045245::1701045323::1::::<><>::
