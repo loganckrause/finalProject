@@ -1,3 +1,4 @@
+TileMap
 Control
 Button
 VBoxContainer
@@ -5,7 +6,6 @@ HBoxContainer
 Label
 MarginContainer
 TextureRect
-TileMap
 CollisionShape2D
 Sprite2D
 Area2D
