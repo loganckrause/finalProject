@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd6m6pn8ctf0n"
-path="res://.godot/imported/char_blue.png-c742d9b7db9f96a513cf2e49ef04de79.ctex"
+uid="uid://dhd4ucr3b4o5k"
+path="res://.godot/imported/player_noweaponrunningfrontfacingback.png-c8b53ba4eb1a77dc5143cbc24eb0cc45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/char_blue.png"
-dest_files=["res://.godot/imported/char_blue.png-c742d9b7db9f96a513cf2e49ef04de79.ctex"]
+source_file="res://assets/character/Player/player_noweaponrunningfrontfacingback.png"
+dest_files=["res://.godot/imported/player_noweaponrunningfrontfacingback.png-c8b53ba4eb1a77dc5143cbc24eb0cc45.ctex"]
 
 [params]
 

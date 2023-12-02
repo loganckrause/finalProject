@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bljcwo7wrm1k0"
-path="res://.godot/imported/SlimeJump.png-a24233700fbba2ac0aff1b1c08328750.ctex"
+uid="uid://dclqoku1hllfg"
+path="res://.godot/imported/player_idlefacingback.png-af0be927d5c3e48e6a3801c7ffb453d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/SlimeJump.png"
-dest_files=["res://.godot/imported/SlimeJump.png-a24233700fbba2ac0aff1b1c08328750.ctex"]
+source_file="res://assets/character/Player/player_idlefacingback.png"
+dest_files=["res://.godot/imported/player_idlefacingback.png-af0be927d5c3e48e6a3801c7ffb453d5.ctex"]
 
 [params]
 

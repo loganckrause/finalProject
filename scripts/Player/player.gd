@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const acceleration = 1000
 const deceleration = 2000
 
@@ -19,20 +18,72 @@ var dashCooldown: float = 1
 var dashTimer: float = 0
 var canDash: bool = true
 
+var mouseRight = true
+
+var current_action = ""
+var last_action = ""
+
 @onready var marker = get_node("weapon/muzzle")
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 
 func _process(delta):
+	$weapon.global_position = $PlayerSprite.global_position + Vector2(0,0)
+	
 	if get_global_mouse_position().x > $PlayerSprite.global_position.x:
-		$PlayerSprite.set_flip_h(false)
+		mouseRight = true
 		$weapon.set_flip_v(false)
-		$weapon.global_position = $PlayerSprite.global_position + Vector2(0,0)
 	else:
-		$PlayerSprite.set_flip_h(true)
+		mouseRight = false
 		$weapon.set_flip_v(true)
-		$weapon.global_position = $PlayerSprite.global_position + Vector2(0,0)
-	pass
+	
+	if Input.is_action_just_pressed("move_right"):
+		current_action = "right"
+	elif Input.is_action_just_pressed("move_left"):
+		current_action = "left"
+	else: pass
+
+	if current_action != "":
+		last_action = current_action
+		current_action = ""
+	
+	# Mouse right Movement
+	if mouseRight and Input.is_action_pressed("move_right"):
+		$PlayerSprite.play("runningforw")
+		$PlayerSprite.set_flip_h(false)
+
+	elif mouseRight and Input.is_action_pressed("move_left"):
+		$PlayerSprite.play("runningback")
+		$PlayerSprite.set_flip_h(true)
+	
+	# Mouse left Movement
+	elif !mouseRight and Input.is_action_pressed("move_right"):
+		$PlayerSprite.play("runningback")
+		$PlayerSprite.set_flip_h(false)
+		
+	elif !mouseRight and Input.is_action_pressed("move_left"):
+		$PlayerSprite.play("runningforw")
+		$PlayerSprite.set_flip_h(true)
+	
+	# Mouse right no Movement
+	elif mouseRight and last_action == "right":
+		$PlayerSprite.play("idlefacingforward")
+		$PlayerSprite.set_flip_h(false)
+	elif mouseRight and last_action == "left":
+		$PlayerSprite.play("idlefacingback")
+		$PlayerSprite.set_flip_h(true)
+	
+	# Mouse left no Movement
+	elif !mouseRight and last_action == "left":
+		$PlayerSprite.play("idlefacingforward")
+		$PlayerSprite.set_flip_h(true)
+	elif !mouseRight and last_action == "right":
+		$PlayerSprite.play("idlefacingback")
+		$PlayerSprite.set_flip_h(false)
+	
+	# Handling everything else
+	else:
+		$PlayerSprite.play("idlefacingforward")
 	
 	if dashTimer > 0:
 		dashTimer -= delta
