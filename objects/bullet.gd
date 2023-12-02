@@ -1,7 +1,7 @@
 extends Area2D
 
 
-@export var speed = 500
+@export var speed = 1000
 @export var attackDamage = 3
 @export var knockbackForce = 0
 @export var stun_time = 1.5
@@ -22,9 +22,9 @@ func _physics_process(delta):
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free() # Replace with function body.
 
-func _on_body_entered(body):
+func _on_area_entered(body):
 	print("Entered body class:", body.get_class())
-	if body.is_class("HitboxComponent"):
+	if body is HitboxComponent:
 		print("yuh")
 		queue_free()
 		var hitbox : HitboxComponent = body

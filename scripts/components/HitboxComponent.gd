@@ -5,4 +5,5 @@ class_name HitboxComponent
 
 func damage(attack: Attack):
 	if health_component:
+		print("yo")
 		health_component.damage(attack)

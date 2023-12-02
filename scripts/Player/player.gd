@@ -5,13 +5,19 @@ const acceleration = 1000
 const deceleration = 2000
 
 var gravity = 980
-const maxSpeed = 200
+var maxSpeed = 200
 const JUMP_VELOCITY = -300
 var canDoubleJump = false
 
 const WALL_JUMP_PUSH = 125
 const WALL_SLIDE_FRICTION = 100
 var is_wall_sliding = false
+
+var dashSpeed: float = 800
+var dashDuration: float = 0.2
+var dashCooldown: float = 1
+var dashTimer: float = 0
+var canDash: bool = true
 
 @onready var marker = get_node("weapon/muzzle")
 
@@ -27,6 +33,11 @@ func _process(delta):
 		$weapon.set_flip_v(true)
 		$weapon.global_position = $PlayerSprite.global_position + Vector2(0,0)
 	pass
+	
+	if dashTimer > 0:
+		dashTimer -= delta
+	else:
+		canDash = true
 
 func _physics_process(delta):
 	# dir[0] = input_dir
@@ -37,6 +48,7 @@ func _physics_process(delta):
 	player_movement(velocity)
 	jump(delta)
 	wall_slide(delta)
+	dash()
 
 func player_movement(velocity):
 	move_and_slide()
@@ -44,7 +56,7 @@ func player_movement(velocity):
 func xaccelerate(direction, delta):
 	var xInput = direction * acceleration * delta
 	velocity.x += xInput
-	if abs(velocity.x) > maxSpeed:
+	if abs(velocity.x) > maxSpeed and dashTimer <= 0:
 		velocity.x = direction * maxSpeed
 	
 	if direction == 0:
@@ -92,3 +104,12 @@ func wall_slide(delta):
 		
 	pass
 
+func dash():
+	if canDash and Input.is_action_just_pressed("dash"):
+		dashTimer = dashDuration
+		velocity = Vector2.ZERO
+		velocity.x = dashSpeed * xinput()
+		
+		canDash = false
+
+		
