@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de8qwefcr4n4r"
-path="res://.godot/imported/GrassLevelSheet.png-0d50218d52e02d0605f3c5ee5babb1a3.ctex"
+uid="uid://cmmaixplhitri"
+path="res://.godot/imported/props1.png-115210940e870a50129e9edd28ec3326.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tilesets/GrassLevelSheet.png"
-dest_files=["res://.godot/imported/GrassLevelSheet.png-0d50218d52e02d0605f3c5ee5babb1a3.ctex"]
+source_file="res://Tilesets/props1.png"
+dest_files=["res://.godot/imported/props1.png-115210940e870a50129e9edd28ec3326.ctex"]
 
 [params]
 
