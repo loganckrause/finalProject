@@ -1,2 +1,6 @@
 res://Scenes/Hub.tscn
-res://Tilesets/Tileset.tres
+res://Scenes/SceneTransistion.tscn
+res://Scenes/Menu.tscn
+res://Scripts/SceneTransistion.gd
+res://Scripts/Menu.gd
+res://Scripts/HubSwitch.gd

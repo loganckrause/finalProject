@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 
+
 const acceleration = 2000
 const deceleration = 1000
 
@@ -86,3 +87,4 @@ func wall_slide(delta):
 func _input(event : InputEvent):
 	if(event.is_action_pressed("down") && is_on_floor()):
 		position.y += 1
+
