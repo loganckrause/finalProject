@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dhd4ucr3b4o5k" path="res://assets/character/Player/player_noweaponrunningfrontfacingback.png" id="4_uggpp"]
 [ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="5_4td3e"]
 [ext_resource type="Texture2D" uid="uid://jrg6wxq5ag3e" path="res://assets/character/Player/player_noweaponrunningfront.png" id="5_t4jao"]
-[ext_resource type="Texture2D" uid="uid://cldflh5grc005" path="res://assets/weapon/Guns/guntest2.png" id="5_w4f7y"]
 [ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="6_5e8ti"]
 [ext_resource type="Script" path="res://objects/weapon.gd" id="7_rj4yq"]
+[ext_resource type="Texture2D" uid="uid://wmiet4vfsixo" path="res://assets/weapon/Guns/guntest.png" id="8_pp8tc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxcex"]
 atlas = ExtResource("2_6jchl")
@@ -231,7 +231,7 @@ shape = SubResource("RectangleShape2D_5d75f")
 [node name="HealthComponent" parent="." instance=ExtResource("5_4td3e")]
 
 [node name="weapon" type="Sprite2D" parent="."]
-texture = ExtResource("5_w4f7y")
+texture = ExtResource("8_pp8tc")
 offset = Vector2(10, 0)
 script = ExtResource("7_rj4yq")
 
