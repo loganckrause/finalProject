@@ -1,16 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0t0sfn56diiu"]
+[gd_scene load_steps=10 format=3 uid="uid://d0t0sfn56diiu"]
 
 [ext_resource type="Texture2D" uid="uid://rq70tkmfvff8" path="res://icon.svg" id="1_5ew5q"]
 [ext_resource type="Script" path="res://scripts/Enemies/enemy1.gd" id="1_uljmc"]
 [ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="3_div81"]
 [ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="4_rr641"]
+[ext_resource type="Script" path="res://scripts/components/VisionComponent.gd" id="5_66euy"]
+[ext_resource type="Script" path="res://scripts/Enemies/weaponEnemy.gd" id="6_jyd3d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4a4rn"]
 radius = 17.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rdb01"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" groups=["enemy"]]
+[sub_resource type="CircleShape2D" id="CircleShape2D_4n483"]
+radius = 71.0
+
+[node name="EnemyTest" type="CharacterBody2D" groups=["enemy"]]
 script = ExtResource("1_uljmc")
 
 [node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_rr641")]
@@ -29,3 +34,24 @@ scale = Vector2(0.138672, 0.152344)
 texture = ExtResource("1_5ew5q")
 
 [node name="HealthComponent" parent="." instance=ExtResource("3_div81")]
+
+[node name="VisionComponent" type="Area2D" parent="."]
+script = ExtResource("5_66euy")
+
+[node name="VisionShape" type="CollisionShape2D" parent="VisionComponent"]
+shape = SubResource("CircleShape2D_4n483")
+
+[node name="Weapon" type="Sprite2D" parent="."]
+position = Vector2(1.13687e-13, 0)
+scale = Vector2(0.101563, 0.0859375)
+texture = ExtResource("1_5ew5q")
+offset = Vector2(278.538, 0)
+script = ExtResource("6_jyd3d")
+
+[node name="muzzle" type="Marker2D" parent="Weapon"]
+position = Vector2(200, 0)
+
+[node name="FiringCooldown" type="Timer" parent="Weapon"]
+
+[connection signal="area_entered" from="VisionComponent" to="VisionComponent" method="_on_area_entered"]
+[connection signal="area_exited" from="VisionComponent" to="VisionComponent" method="_on_area_exited"]

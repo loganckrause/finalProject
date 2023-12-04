@@ -26,7 +26,9 @@ var last_action = ""
 @onready var marker = get_node("weapon/muzzle")
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-
+func _ready():
+	pass
+	
 func _process(delta):
 	$weapon.global_position = $PlayerSprite.global_position + Vector2(0,0)
 	

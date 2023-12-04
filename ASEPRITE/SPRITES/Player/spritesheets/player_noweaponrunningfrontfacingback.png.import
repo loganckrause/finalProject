@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct7tv074mg7aw"
-path="res://.godot/imported/background_layer_1.png-ad64ee5c08978d6beb4ac1607c9e4c21.ctex"
+uid="uid://cei2cnoaxpyjq"
+path="res://.godot/imported/player_noweaponrunningfrontfacingback.png-ed620233dc485918e7264b9d3fb712e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/background_layer_1.png"
-dest_files=["res://.godot/imported/background_layer_1.png-ad64ee5c08978d6beb4ac1607c9e4c21.ctex"]
+source_file="res://ASEPRITE/SPRITES/Player/spritesheets/player_noweaponrunningfrontfacingback.png"
+dest_files=["res://.godot/imported/player_noweaponrunningfrontfacingback.png-ed620233dc485918e7264b9d3fb712e5.ctex"]
 
 [params]
 
