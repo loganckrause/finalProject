@@ -11,7 +11,7 @@ var gravity = 980
 func _ready():
 	pass
 
-func _process(delta):
+func _process(_delta):
 	$weaponEnemy.global_position = $EnemySprite.global_position + Vector2(0,0)
 	
 func _physics_process(delta):
@@ -20,7 +20,7 @@ func _physics_process(delta):
 	player_movement(velocity)
 	jump(delta)
 
-func player_movement(velocity):
+func player_movement(_velocity):
 	move_and_slide()
 	
 func xaccelerate(direction, delta):

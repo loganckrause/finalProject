@@ -22,5 +22,5 @@ func _input(event) -> void:
 	
 
 
-func _on_body_exited(body):
+func _on_body_exited(_body):
 	label.hide()

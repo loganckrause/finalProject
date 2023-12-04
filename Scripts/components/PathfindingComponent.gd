@@ -21,5 +21,3 @@ func sendMovement(target) -> int:
 			xInput = 0
 	return xInput
 
-func _process(delta):
-	pass

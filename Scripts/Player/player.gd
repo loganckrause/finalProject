@@ -101,7 +101,7 @@ func _physics_process(delta):
 	wall_slide(delta)
 	dash()
 
-func player_movement(velocity):
+func player_movement(_velocity):
 	move_and_slide()
 	
 func xaccelerate(direction, delta):

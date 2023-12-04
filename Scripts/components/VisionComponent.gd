@@ -3,9 +3,6 @@ class_name VisionComponent
 
 var playerDetected: bool = false
 
-func _process(delta):
-	pass
-
 func isOverlapping():
 	var overlappingBodies = get_overlapping_areas()
 	if overlappingBodies.size() > 0:

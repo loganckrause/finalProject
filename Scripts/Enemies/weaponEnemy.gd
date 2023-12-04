@@ -21,7 +21,7 @@ func _ready():
 	set_as_top_level(true)
 	
 
-func _process(delta):
+func _process(_delta):
 	if vision_component.isOverlapping():
 		look_at(player.position)
 

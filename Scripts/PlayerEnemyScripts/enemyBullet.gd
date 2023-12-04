@@ -13,7 +13,7 @@ func _process(delta):
 	position += (Vector2.RIGHT*speed).rotated(rotation) * delta
 	
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	await(get_tree().create_timer(0.01))
 	set_physics_process(false)
 	

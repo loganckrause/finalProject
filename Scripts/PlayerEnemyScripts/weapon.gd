@@ -15,7 +15,7 @@ func _physics_process(_delta):
 	var mouse_pos = get_global_mouse_position()
 	look_at(mouse_pos)
 
-func _process(delta):
+func _process(_delta):
 	
 	if Input.is_action_pressed("fire") and $FiringCooldown.is_stopped():
 		shoot()
