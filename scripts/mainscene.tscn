@@ -14,4 +14,4 @@ drag_left_margin = 0.08
 drag_right_margin = 0.08
 
 [node name="Area2D" parent="." index="2" instance=ExtResource("2_th113")]
-position = Vector2(-74, -123)
+position = Vector2(-78, -34)

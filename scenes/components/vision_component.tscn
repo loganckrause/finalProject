@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://df1b7vy5uw1hh"]
+
+[ext_resource type="Script" path="res://scripts/components/VisionComponent.gd" id="1_3x51f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4eijv"]
+radius = 66.1211
+
+[node name="VisionComponent" type="Area2D"]
+script = ExtResource("1_3x51f")
+
+[node name="VisionCircle" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4eijv")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

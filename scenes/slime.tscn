@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://boli6i4ge5fqp"]
+[gd_scene load_steps=37 format=3 uid="uid://bsmkk0gf40q0m"]
 
 [ext_resource type="Script" path="res://scripts/Player/player.gd" id="1_oqed1"]
 [ext_resource type="Texture2D" uid="uid://dclqoku1hllfg" path="res://assets/character/Player/player_idlefacingback.png" id="2_6jchl"]
@@ -220,11 +220,11 @@ visible = false
 position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_qsg3w")
 
-[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("6_5e8ti")]
+[node name="PlayerHitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("6_5e8ti")]
 visible = false
 health_component = NodePath("../HealthComponent")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHitboxComponent"]
 position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_5d75f")
 
