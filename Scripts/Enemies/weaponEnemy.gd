@@ -4,7 +4,7 @@ extends Sprite2D
 @onready var playerPos = player.global_position
 @onready var playerVector2 = Vector2(playerPos.x, playerPos.y)
 
-@onready var bullet = preload("res://objects/enemyBullet.tscn")
+@onready var bullet = preload("res://Scenes/PlayerStuff/enemyBullet.tscn")
 
 @export var vision_component : VisionComponent
 

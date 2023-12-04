@@ -1,14 +1,14 @@
 [gd_scene load_steps=37 format=3 uid="uid://bsmkk0gf40q0m"]
 
 [ext_resource type="Script" path="res://scripts/Player/player.gd" id="1_oqed1"]
-[ext_resource type="Texture2D" uid="uid://dclqoku1hllfg" path="res://assets/character/Player/player_idlefacingback.png" id="2_6jchl"]
-[ext_resource type="Texture2D" uid="uid://ct8vxe85gew0j" path="res://assets/character/Player/Player_noweaponfacingfront.png" id="2_77h5n"]
-[ext_resource type="Texture2D" uid="uid://dhd4ucr3b4o5k" path="res://assets/character/Player/player_noweaponrunningfrontfacingback.png" id="4_uggpp"]
-[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="5_4td3e"]
-[ext_resource type="Texture2D" uid="uid://jrg6wxq5ag3e" path="res://assets/character/Player/player_noweaponrunningfront.png" id="5_t4jao"]
-[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="6_5e8ti"]
-[ext_resource type="Script" path="res://objects/weapon.gd" id="7_rj4yq"]
-[ext_resource type="Texture2D" uid="uid://wmiet4vfsixo" path="res://assets/weapon/Guns/guntest.png" id="8_pp8tc"]
+[ext_resource type="Texture2D" uid="uid://dclqoku1hllfg" path="res://Assets/character/Player/player_idlefacingback.png" id="2_6jchl"]
+[ext_resource type="Texture2D" uid="uid://ct8vxe85gew0j" path="res://Assets/character/Player/Player_noweaponfacingfront.png" id="2_77h5n"]
+[ext_resource type="Texture2D" uid="uid://dhd4ucr3b4o5k" path="res://Assets/character/Player/player_noweaponrunningfrontfacingback.png" id="4_uggpp"]
+[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://Scenes/components/health_component.tscn" id="5_4td3e"]
+[ext_resource type="Texture2D" uid="uid://jrg6wxq5ag3e" path="res://Assets/character/Player/player_noweaponrunningfront.png" id="5_t4jao"]
+[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://Scenes/components/hitbox_component.tscn" id="6_5e8ti"]
+[ext_resource type="Script" path="res://Scripts/PlayerEnemyScripts/weapon.gd" id="7_rj4yq"]
+[ext_resource type="Texture2D" uid="uid://wmiet4vfsixo" path="res://Assets/weapon/Guns/guntest.png" id="8_pp8tc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxcex"]
 atlas = ExtResource("2_6jchl")
@@ -220,9 +220,8 @@ visible = false
 position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_qsg3w")
 
-[node name="PlayerHitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("6_5e8ti")]
+[node name="PlayerHitboxComponent" parent="." instance=ExtResource("6_5e8ti")]
 visible = false
-health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHitboxComponent"]
 position = Vector2(-1, -0.5)

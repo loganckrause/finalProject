@@ -1,13 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://25523fylomel"]
+[gd_scene load_steps=5 format=3 uid="uid://25523fylomel"]
 
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="1_mv124"]
 [ext_resource type="PackedScene" uid="uid://ca1fjjvx42pe0" path="res://Scenes/parallax.tscn" id="2_0hjxp"]
-[ext_resource type="Script" path="res://Scripts/TestPlayer.gd" id="3_70xbw"]
-[ext_resource type="Texture2D" uid="uid://d17qf084ds4st" path="res://icon.svg" id="4_jxwc0"]
+[ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="4_3wv1y"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="5_03tjq"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pnfut"]
-size = Vector2(20, 19)
 
 [node name="Level 3" type="Node2D"]
 
@@ -18,24 +14,10 @@ layer_0/tile_data = PackedInt32Array(655360, 917504, 23, 720896, 589824, 12, 655
 
 [node name="Parallax" parent="." instance=ExtResource("2_0hjxp")]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Player"]]
-position = Vector2(0, 40)
-script = ExtResource("3_70xbw")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(48.75, 79.5)
-scale = Vector2(0.160156, 0.148438)
-texture = ExtResource("4_jxwc0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(49, 79.5)
-shape = SubResource("RectangleShape2D_pnfut")
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(47, 80)
-process_callback = 0
-position_smoothing_enabled = true
-position_smoothing_speed = 6.0
-
 [node name="NextLevel" parent="." instance=ExtResource("5_03tjq")]
 position = Vector2(372, 344)
+
+[node name="Player" parent="." instance=ExtResource("4_3wv1y")]
+position = Vector2(64, 143)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]

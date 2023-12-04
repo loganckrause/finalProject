@@ -1,2 +1,13 @@
-res://Scenes/Menu.tscn
+res://Scenes/Enemies/enemy1.tscn
+res://Tilesets/Tileset.tres
+res://Scenes/slime.tscn
 res://Scenes/Hub.tscn
+res://Scenes/Menu.tscn
+res://Scenes/Level 1.tscn
+res://Scenes/Level 2.tscn
+res://Scenes/Level 3.tscn
+res://Scenes/Level 4.tscn
+res://Scenes/PlayerStuff/bullet.tscn
+res://Scenes/PlayerStuff/enemyBullet.tscn
+res://scripts/Enemies/enemy1.gd
+res://Scripts/PlayerEnemyScripts/enemyBullet.gd

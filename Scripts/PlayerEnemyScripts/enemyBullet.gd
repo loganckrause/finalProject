@@ -24,7 +24,7 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 
 func _on_area_entered(body):
 	print("Entered body class:", body.get_class())
-	if body is HitboxComponent:
+	if body is HitboxComponent and body.name == "PlayerHitboxComponent":
 		print("yuh")
 		queue_free()
 		var hitbox : HitboxComponent = body

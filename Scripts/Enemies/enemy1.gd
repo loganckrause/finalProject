@@ -6,7 +6,7 @@ const acceleration = 1000
 const deceleration = 2000
 
 var gravity = 980
-var maxSpeed = 200
+@export var maxSpeed = 200
 
 func _ready():
 	pass

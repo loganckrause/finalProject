@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0hk1idwemc3t"]
 
-[ext_resource type="Script" path="res://objects/bullet.gd" id="1_q0s0x"]
-[ext_resource type="Texture2D" uid="uid://b1g6wr61brgc" path="res://assets/weapon/New_All_Fire_Bullet_Pixel_16x16/All_Fire_Bullet_Pixel_16x16_00.png" id="2_q8yle"]
+[ext_resource type="Script" path="res://Scripts/PlayerEnemyScripts/enemyBullet.gd" id="1_q0s0x"]
+[ext_resource type="Texture2D" uid="uid://b1g6wr61brgc" path="res://Assets/weapon/New_All_Fire_Bullet_Pixel_16x16/All_Fire_Bullet_Pixel_16x16_00.png" id="2_q8yle"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p7spo"]
 radius = 2.0

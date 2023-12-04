@@ -1,3 +1,4 @@
+Camera2D
 AnimationPlayer
 ColorRect
 CanvasLayer
@@ -15,7 +16,6 @@ VBoxContainer
 HBoxContainer
 MarginContainer
 TextureRect
-Camera2D
 CharacterBody2D
 Node2D
 AnimatableBody2D

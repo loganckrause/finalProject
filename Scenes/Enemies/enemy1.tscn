@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://d0t0sfn56diiu"]
 
-[ext_resource type="Texture2D" uid="uid://rq70tkmfvff8" path="res://icon.svg" id="1_5ew5q"]
+[ext_resource type="Texture2D" uid="uid://d17qf084ds4st" path="res://icon.svg" id="1_5ew5q"]
 [ext_resource type="Script" path="res://scripts/Enemies/enemy1.gd" id="1_uljmc"]
-[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="3_div81"]
-[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="4_rr641"]
-[ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://scenes/components/vision_component.tscn" id="5_pdhk8"]
+[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://Scenes/components/health_component.tscn" id="3_div81"]
+[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://Scenes/components/hitbox_component.tscn" id="4_rr641"]
+[ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://Scenes/components/vision_component.tscn" id="5_pdhk8"]
 [ext_resource type="Script" path="res://scripts/Enemies/weaponEnemy.gd" id="6_cw6iv"]
-[ext_resource type="PackedScene" uid="uid://cwb3b6a3tfjmm" path="res://scenes/components/pathfinding_component.tscn" id="7_j8yh2"]
+[ext_resource type="PackedScene" uid="uid://cwb3b6a3tfjmm" path="res://Scenes/components/pathfinding_component.tscn" id="7_j8yh2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4a4rn"]
 radius = 17.0
@@ -19,6 +19,7 @@ radius = 172.047
 [node name="Enemy1" type="CharacterBody2D" node_paths=PackedStringArray("pathfinding_component") groups=["enemy"]]
 script = ExtResource("1_uljmc")
 pathfinding_component = NodePath("PathfindingComponent")
+maxSpeed = 80
 
 [node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_rr641")]
 collision_priority = 0.0

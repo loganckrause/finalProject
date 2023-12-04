@@ -2,7 +2,7 @@ extends Sprite2D
 
 
 var cooltime = 0.2
-@onready var bullet = preload("res://objects/bullet.tscn")
+@onready var bullet = preload("res://Scenes/PlayerStuff/bullet.tscn")
 
 
 func _ready():
