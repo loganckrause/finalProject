@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cbdhytyeuox4x"]
 
 [ext_resource type="Texture2D" uid="uid://d1nqxe8ooubm8" path="res://assets/oak_woods_tileset.png" id="1_vk8rw"]
-[ext_resource type="PackedScene" uid="uid://boli6i4ge5fqp" path="res://scenes/player.tscn" id="2_qsyhu"]
+[ext_resource type="PackedScene" uid="uid://boli6i4ge5fqp" path="res://scenes/slime.tscn" id="2_qsyhu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lplh3"]
 texture = ExtResource("1_vk8rw")

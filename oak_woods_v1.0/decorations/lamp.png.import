@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cw621lbyust5e"
-path="res://.godot/imported/Flintlock.png-bbe9171ea953259e2155c1abef3bd81d.ctex"
+uid="uid://bg01p3p0p3ec0"
+path="res://.godot/imported/lamp.png-db680b350ea6072b693637e23e617d02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ASEPRITE/SPRITES/Guns/Flintlock.png"
-dest_files=["res://.godot/imported/Flintlock.png-bbe9171ea953259e2155c1abef3bd81d.ctex"]
+source_file="res://oak_woods_v1.0/decorations/lamp.png"
+dest_files=["res://.godot/imported/lamp.png-db680b350ea6072b693637e23e617d02.ctex"]
 
 [params]
 
