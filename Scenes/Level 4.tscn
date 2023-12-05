@@ -1,10 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://djwt024ncard6"]
+[gd_scene load_steps=34 format=3 uid="uid://djwt024ncard6"]
 
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="1_4ebfl"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_pahcs"]
+[ext_resource type="Texture2D" uid="uid://v73hu350ajt4" path="res://Assets/CaveBackgrounds & Stuff/pixelart_starfield_corona.png" id="1_txh7x"]
 [ext_resource type="Script" path="res://scripts/Chest.gd" id="4_0tno4"]
 [ext_resource type="Texture2D" uid="uid://r1b8qicjklk1" path="res://Assets/Animated Chests/Chests.png" id="4_xkh6d"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="5_2ogbf"]
+[ext_resource type="Texture2D" uid="uid://j2t0exb3ha83" path="res://Assets/platformer items - free assets/animated_items.png" id="6_ori8h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ohoau"]
 atlas = ExtResource("4_xkh6d")
@@ -93,7 +95,113 @@ animations = [{
 radius = 19.0
 height = 38.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubfj4"]
+atlas = ExtResource("6_ori8h")
+region = Rect2(0, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gyrs"]
+atlas = ExtResource("6_ori8h")
+region = Rect2(32, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbyib"]
+atlas = ExtResource("6_ori8h")
+region = Rect2(64, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r7lo"]
+atlas = ExtResource("6_ori8h")
+region = Rect2(96, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qu485"]
+atlas = ExtResource("6_ori8h")
+region = Rect2(128, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gm4u"]
+atlas = ExtResource("6_ori8h")
+region = Rect2(160, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45211"]
+atlas = ExtResource("6_ori8h")
+region = Rect2(192, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynedc"]
+atlas = ExtResource("6_ori8h")
+region = Rect2(224, 288, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ndga8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubfj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gyrs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbyib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r7lo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qu485")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gm4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45211")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynedc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3fpyg"]
+size = Vector2(10, 15)
+
+[sub_resource type="Animation" id="Animation_ogdv3"]
+resource_name = "bounce"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(3, 0), Vector2(1, -8), Vector2(-9, -16), Vector2(-21, -14), Vector2(-32, -8), Vector2(-35, 14)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_413eg"]
+_data = {
+"bounce": SubResource("Animation_ogdv3")
+}
+
+[sub_resource type="Gradient" id="Gradient_c2mxl"]
+offsets = PackedFloat32Array(0.0868263, 0.847305)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4qip8"]
+gradient = SubResource("Gradient_c2mxl")
+fill = 1
+fill_from = Vector2(0.478632, 0.431624)
+
 [node name="Level 4" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -14.0
+offset_top = 83.0
+offset_right = 383.0
+offset_bottom = 287.0
+texture = ExtResource("1_txh7x")
+expand_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_4ebfl")
@@ -129,4 +237,34 @@ shape = SubResource("CapsuleShape2D_g3rak")
 [node name="NextLevel" parent="." instance=ExtResource("5_2ogbf")]
 position = Vector2(229, 170)
 
+[node name="HealthPotion" type="Area2D" parent="."]
+position = Vector2(3, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HealthPotion"]
+visible = false
+position = Vector2(213, 236)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_ndga8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealthPotion"]
+position = Vector2(214, 234)
+shape = SubResource("RectangleShape2D_3fpyg")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HealthPotion"]
+libraries = {
+"": SubResource("AnimationLibrary_413eg")
+}
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0, 0, 0, 1)
+energy = 0.2
+blend_mode = 2
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(217, 249)
+texture = SubResource("GradientTexture2D_4qip8")
+texture_scale = 2.28
+
+[connection signal="animation_finished" from="Chest" to="Chest/Area2D" method="_on_chest_animation_finished"]
 [connection signal="body_entered" from="Chest/Area2D" to="Chest/Area2D" method="_on_body_entered"]

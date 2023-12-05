@@ -1,10 +1,38 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg8knpgq03dsd"]
+[gd_scene load_steps=10 format=3 uid="uid://cg8knpgq03dsd"]
 
+[ext_resource type="Texture2D" uid="uid://nnng1s0k7poi" path="res://Assets/CaveBackgrounds & Stuff/caveRemasteredV7.png" id="1_428hj"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_gl8kc"]
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="2_lohm7"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="3_s0sxq"]
+[ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="5_1afjg"]
+
+[sub_resource type="Gradient" id="Gradient_ckexa"]
+offsets = PackedFloat32Array(0.233533, 0.907186)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tto5f"]
+gradient = SubResource("Gradient_ckexa")
+fill = 1
+fill_from = Vector2(0.529915, 0.482906)
+fill_to = Vector2(1, 0.0128205)
+
+[sub_resource type="Gradient" id="Gradient_6wdyf"]
+offsets = PackedFloat32Array(0.233533, 0.907186)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_i8r8s"]
+gradient = SubResource("Gradient_6wdyf")
+fill = 1
+fill_from = Vector2(0.491453, 0.294872)
+fill_to = Vector2(1, 0.0128205)
 
 [node name="Level2" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -62.0
+offset_right = 614.0
+offset_bottom = 297.0
+texture = ExtResource("1_428hj")
 
 [node name="Player" parent="." instance=ExtResource("1_gl8kc")]
 position = Vector2(-23, 217)
@@ -27,3 +55,86 @@ layer_0/tile_data = PackedInt32Array(1048573, 1376256, 23, 1114109, 1376256, 24,
 
 [node name="NextLevel" parent="." instance=ExtResource("3_s0sxq")]
 position = Vector2(469, 154)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0, 0, 0, 1)
+energy = 0.45
+blend_mode = 2
+
+[node name="Lantern" type="Sprite2D" parent="."]
+position = Vector2(9, 37)
+texture = ExtResource("5_1afjg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lantern"]
+position = Vector2(3, 18)
+scale = Vector2(1.8551, 1.20561)
+color = Color(1, 0.717647, 0.45098, 1)
+energy = 1.58
+blend_mode = 2
+texture = SubResource("GradientTexture2D_tto5f")
+texture_scale = 1.86
+
+[node name="Lantern2" type="Sprite2D" parent="."]
+position = Vector2(190, 37)
+texture = ExtResource("5_1afjg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lantern2"]
+position = Vector2(-4, 51)
+scale = Vector2(1.8551, 1.20561)
+color = Color(1, 0.717647, 0.45098, 1)
+energy = 1.58
+blend_mode = 2
+texture = SubResource("GradientTexture2D_i8r8s")
+texture_scale = 1.86
+
+[node name="Lantern" type="Sprite2D" parent="Lantern2"]
+position = Vector2(291, 4)
+texture = ExtResource("5_1afjg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lantern2/Lantern"]
+position = Vector2(6, 44)
+scale = Vector2(1.8551, 1.20561)
+color = Color(1, 0.717647, 0.45098, 1)
+energy = 1.58
+blend_mode = 2
+texture = SubResource("GradientTexture2D_i8r8s")
+texture_scale = 1.86
+
+[node name="Lantern3" type="Sprite2D" parent="."]
+position = Vector2(335, 39)
+texture = ExtResource("5_1afjg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lantern3"]
+position = Vector2(6, 49)
+scale = Vector2(1.8551, 1.20561)
+color = Color(1, 0.717647, 0.45098, 1)
+energy = 1.58
+blend_mode = 2
+texture = SubResource("GradientTexture2D_i8r8s")
+texture_scale = 1.86
+
+[node name="Lantern4" type="Sprite2D" parent="."]
+position = Vector2(151, 164)
+texture = ExtResource("5_1afjg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lantern4"]
+position = Vector2(4, 52)
+scale = Vector2(1.8551, 1.20561)
+color = Color(1, 0.717647, 0.45098, 1)
+energy = 1.58
+blend_mode = 2
+texture = SubResource("GradientTexture2D_i8r8s")
+texture_scale = 1.86
+
+[node name="Lantern5" type="Sprite2D" parent="."]
+position = Vector2(409, 167)
+texture = ExtResource("5_1afjg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lantern5"]
+position = Vector2(1, 51)
+scale = Vector2(1.8551, 1.20561)
+color = Color(1, 0.717647, 0.45098, 1)
+energy = 1.58
+blend_mode = 2
+texture = SubResource("GradientTexture2D_i8r8s")
+texture_scale = 1.86

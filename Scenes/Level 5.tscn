@@ -6,16 +6,16 @@
 [node name="Level5" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_nq5vq")]
-position = Vector2(27, 209)
+position = Vector2(68, 205)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(26, -75)
 zoom = Vector2(0.7, 0.8)
 process_callback = 0
-limit_left = -185
-limit_top = 74
-limit_right = 320
-limit_bottom = 226
+limit_left = -85
+limit_top = 44
+limit_right = 435
+limit_bottom = 266
 limit_smoothed = true
 position_smoothing_enabled = true
 

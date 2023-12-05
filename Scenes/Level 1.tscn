@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://c5jmorjvt41y1"]
+[gd_scene load_steps=13 format=3 uid="uid://c5jmorjvt41y1"]
 
+[ext_resource type="Texture2D" uid="uid://bych5ukuaatj7" path="res://Assets/CaveBackgrounds & Stuff/awesomeCavePixelArt.png" id="1_fi2fc"]
 [ext_resource type="Texture2D" uid="uid://domj8tr1okhwm" path="res://Tilesets/mainlev_build.png" id="2_a77a7"]
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="5_51v8s"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="5_076jv"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="5_gkotl"]
 [ext_resource type="PackedScene" uid="uid://d0t0sfn56diiu" path="res://Scenes/Enemies/enemy1.tscn" id="6_e8k1e"]
+[ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="7_gwyap"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7vat8"]
 
@@ -2770,7 +2772,25 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_7vat8")
 sources/0 = SubResource("TileSetAtlasSource_bf0ht")
 
+[sub_resource type="Gradient" id="Gradient_n102m"]
+offsets = PackedFloat32Array(0.233533, 0.907186)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1os6e"]
+gradient = SubResource("Gradient_n102m")
+fill = 1
+fill_from = Vector2(0.491453, 0.294872)
+fill_to = Vector2(1, 0.0128205)
+
 [node name="Level 1" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -15.0
+offset_top = 19.0
+offset_right = 736.0
+offset_bottom = 233.0
+texture = ExtResource("1_fi2fc")
+expand_mode = 1
 
 [node name="Tiles Behind" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_hdk48")
@@ -2800,3 +2820,73 @@ position = Vector2(469, 123)
 
 [node name="Enemy1" parent="." instance=ExtResource("6_e8k1e")]
 position = Vector2(287, 69)
+
+[node name="Lantern" type="Sprite2D" parent="."]
+position = Vector2(68, 45)
+texture = ExtResource("7_gwyap")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lantern"]
+position = Vector2(1, 42)
+scale = Vector2(1.8551, 1.20561)
+color = Color(1, 0.717647, 0.45098, 1)
+energy = 1.58
+blend_mode = 2
+texture = SubResource("GradientTexture2D_1os6e")
+texture_scale = 1.86
+
+[node name="Lantern4" type="Sprite2D" parent="."]
+position = Vector2(276, 105)
+texture = ExtResource("7_gwyap")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lantern4"]
+position = Vector2(7, 50)
+scale = Vector2(1.8551, 1.20561)
+color = Color(1, 0.717647, 0.45098, 1)
+energy = 1.58
+blend_mode = 2
+texture = SubResource("GradientTexture2D_1os6e")
+texture_scale = 1.86
+
+[node name="Lantern2" type="Sprite2D" parent="."]
+position = Vector2(221, 41)
+texture = ExtResource("7_gwyap")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lantern2"]
+position = Vector2(6, 45)
+scale = Vector2(1.8551, 1.20561)
+color = Color(1, 0.717647, 0.45098, 1)
+energy = 1.58
+blend_mode = 2
+texture = SubResource("GradientTexture2D_1os6e")
+texture_scale = 1.86
+
+[node name="Lantern5" type="Sprite2D" parent="."]
+position = Vector2(631, 38)
+texture = ExtResource("7_gwyap")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lantern5"]
+position = Vector2(-1.99998, 56)
+scale = Vector2(1.8551, 1.20561)
+color = Color(1, 0.717647, 0.45098, 1)
+energy = 1.58
+blend_mode = 2
+texture = SubResource("GradientTexture2D_1os6e")
+texture_scale = 1.86
+
+[node name="Lantern3" type="Sprite2D" parent="."]
+position = Vector2(337, 41)
+texture = ExtResource("7_gwyap")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lantern3"]
+position = Vector2(5, 54)
+scale = Vector2(1.8551, 1.20561)
+color = Color(1, 0.717647, 0.45098, 1)
+energy = 1.58
+blend_mode = 2
+texture = SubResource("GradientTexture2D_1os6e")
+texture_scale = 1.86
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0, 0, 0, 1)
+energy = 0.36
+blend_mode = 2

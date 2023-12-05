@@ -1,13 +1,12 @@
 res://Scenes/Level 1.tscn
 res://Tilesets/Tileset.tres
-res://Scenes/next_level.tscn
-res://Scenes/Hub.tscn
-res://Scenes/Level 4.tscn
-res://Scenes/parallax.tscn
-res://scripts/Enemies/enemy1.gd
 res://Scenes/Level 2.tscn
 res://Scenes/Level 3.tscn
-res://scripts/Chest.gd
-res://scripts/components/VisionComponent.gd
-res://scripts/Player/player.gd
+res://Scenes/Level 4.tscn
 res://Scenes/Level 5.tscn
+res://Scenes/HealingPotion.tscn
+res://scripts/Chest.gd
+res://scripts/PotionSpawn.gd
+res://Scenes/healing_potion.tscn
+res://Scenes/PlayerStuff/bullet.tscn
+res://Scenes/Hub.tscn

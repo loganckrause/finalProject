@@ -1,13 +1,24 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701731318
+::res://::1701759296
+caveRemasteredV7.png::CompressedTexture2D::5471324441221235446::1701754159::1701758070::1::::<><>::
 export_presets.cfg::TextFile::-1::1701716440::0::1::::<><>::
 icon.svg::CompressedTexture2D::9051213840036523147::1701714759::1701714759::1::::<><>::
-::res://Assets/::1701714759
-Gravity-SpriteSheet.png::CompressedTexture2D::4825564307098568036::1701714759::1701714759::1::::<><>::
-Space.jpg::CompressedTexture2D::5044946260840068723::1701714759::1701714759::1::::<><>::
+::res://Assets/::1701759296
+Gravity-SpriteSheet.png::CompressedTexture2D::4825564307098568036::1701714759::1701759296::1::::<><>::
 ::res://Assets/Animated Chests/::1701714759
 Chests.png::CompressedTexture2D::1247004664479074362::1701714759::1701714759::1::::<><>::
 Chests_Snow.png::CompressedTexture2D::3318535557179495561::1701714759::1701714759::1::::<><>::
+::res://Assets/CaveBackgrounds & Stuff/::1701759296
+6axfm8uck3oy.png::CompressedTexture2D::4999650177560540793::1701757993::1701758278::1::::<><>::
+awesomeCavePixelArt.png::CompressedTexture2D::4075561346104287774::1701756727::1701758052::1::::<><>::
+brickwall.jpg::CompressedTexture2D::6358225873327004195::1701758569::1701758572::1::::<><>::
+caveRemasteredV7.png::CompressedTexture2D::940093308330699232::1701754004::1701758052::1::::<><>::
+cave_background.png::CompressedTexture2D::8232322255409171753::1701758791::1701758807::1::::<><>::
+lantern.png::CompressedTexture2D::7881529954538729532::1701756122::1701758052::1::::<><>::
+pixelart_starfield.png::CompressedTexture2D::2611689112974042749::1700351870::1701759148::1::::<><>::
+pixelart_starfield_corona.png::CompressedTexture2D::1541739476001396887::1700533374::1701759148::1::::<><>::
+pixelart_starfield_diagonal_diffraction_spikes.png::CompressedTexture2D::3980982414833405020::1700440184::1701759148::1::::<><>::
+Space.jpg::CompressedTexture2D::5044946260840068723::1701714759::1701758052::1::::<><>::
 ::res://Assets/character/::1701714759
 ::res://Assets/character/Player/::1701714759
 Astronaut_DEMO.png::CompressedTexture2D::8733555253276729871::1701714759::1701714759::1::::<><>::
@@ -52,15 +63,15 @@ parallax-space-big-planet.png::CompressedTexture2D::4217771306066447324::1701714
 parallax-space-far-planets.png::CompressedTexture2D::7134401029422138020::1701714759::1701714759::1::::<><>::
 parallax-space-ring-planet.png::CompressedTexture2D::7976302589981003641::1701714759::1701714759::1::::<><>::
 parallax-space-stars.png::CompressedTexture2D::264605664782049709::1701714759::1701714759::1::::<><>::
-::res://Scenes/::1701717121
-Hub.tscn::PackedScene::5189975291142664193::1701717121::0::1::::<><>::uid://cd42r7gh2ukmd::::res://Assets/Space.jpg<>uid://dqdi1o1gx7rs7::::res://Tilesets/robot.png<>uid://domj8tr1okhwm::::res://Tilesets/mainlev_build.png<>res://scripts/InteractionArea.gd<>res://scripts/HubSwitch.gd<>uid://bsmkk0gf40q0m::::res://Scenes/slime.tscn<>uid://ca0slsaso7mxg::::res://Assets/Gravity-SpriteSheet.png
-Level 1.tscn::PackedScene::6897840589122474922::1701717120::0::1::::<><>::uid://ca1fjjvx42pe0::::res://Scenes/parallax.tscn<>uid://domj8tr1okhwm::::res://Tilesets/mainlev_build.png<>uid://bnww31fwo8lay::::res://Tilesets/Tileset.tres<>uid://bc8odp4js2qqo::::res://Scenes/next_level.tscn<>uid://bsmkk0gf40q0m::::res://Scenes/slime.tscn<>uid://d0t0sfn56diiu::::res://Scenes/Enemies/enemy1.tscn
-Level 2.tscn::PackedScene::8739489418294447412::1701716052::0::1::::<><>::uid://ca1fjjvx42pe0::::res://Scenes/parallax.tscn<>uid://domj8tr1okhwm::::res://Tilesets/mainlev_build.png<>uid://bsmkk0gf40q0m::::res://Scenes/slime.tscn<>uid://bc8odp4js2qqo::::res://Scenes/next_level.tscn
-Level 3.tscn::PackedScene::1958901316550634019::1701716052::0::1::::<><>::uid://bnww31fwo8lay::::res://Tilesets/Tileset.tres<>uid://ca1fjjvx42pe0::::res://Scenes/parallax.tscn<>uid://bsmkk0gf40q0m::::res://Scenes/slime.tscn<>uid://bc8odp4js2qqo::::res://Scenes/next_level.tscn
-Level 4.tscn::PackedScene::6125160880682360689::1701716052::0::1::::<><>::
+::res://Scenes/::1701759296
+Hub.tscn::PackedScene::5189975291142664193::1701759296::0::1::::<><>::uid://bdheexwuhxuhx::::res://Assets/CaveBackgrounds & Stuff/pixelart_starfield.png<>uid://dqdi1o1gx7rs7::::res://Tilesets/robot.png<>uid://domj8tr1okhwm::::res://Tilesets/mainlev_build.png<>res://scripts/InteractionArea.gd<>uid://ca0slsaso7mxg::::res://Assets/Gravity-SpriteSheet.png<>res://scripts/HubSwitch.gd<>uid://bsmkk0gf40q0m::::res://Scenes/slime.tscn<>uid://ca0slsaso7mxg::::res://Assets/Gravity-SpriteSheet.png
+Level 1.tscn::PackedScene::6897840589122474922::1701759271::0::1::::<><>::uid://bych5ukuaatj7::::res://Assets/CaveBackgrounds & Stuff/awesomeCavePixelArt.png<>uid://domj8tr1okhwm::::res://Tilesets/mainlev_build.png<>uid://bnww31fwo8lay::::res://Tilesets/Tileset.tres<>uid://bc8odp4js2qqo::::res://Scenes/next_level.tscn<>uid://bsmkk0gf40q0m::::res://Scenes/slime.tscn<>uid://d0t0sfn56diiu::::res://Scenes/Enemies/enemy1.tscn<>uid://dkj4v80uxfys7::::res://Assets/CaveBackgrounds & Stuff/lantern.png
+Level 2.tscn::PackedScene::5262730078227355747::1701759271::0::1::::<><>::uid://nnng1s0k7poi::::res://Assets/CaveBackgrounds & Stuff/caveRemasteredV7.png<>uid://bsmkk0gf40q0m::::res://Scenes/slime.tscn<>uid://bnww31fwo8lay::::res://Tilesets/Tileset.tres<>uid://bc8odp4js2qqo::::res://Scenes/next_level.tscn<>uid://dkj4v80uxfys7::::res://Assets/CaveBackgrounds & Stuff/lantern.png
+Level 3.tscn::PackedScene::2510806518232840307::1701759271::0::1::::<><>::uid://bsmkk0gf40q0m::::res://Scenes/slime.tscn<>uid://cdh4rjhd1jwa0::::res://Assets/CaveBackgrounds & Stuff/6axfm8uck3oy.png<>uid://bnww31fwo8lay::::res://Tilesets/Tileset.tres<>uid://bc8odp4js2qqo::::res://Scenes/next_level.tscn<>uid://dkj4v80uxfys7::::res://Assets/CaveBackgrounds & Stuff/lantern.png
+Level 4.tscn::PackedScene::7837577685644229833::1701759271::0::1::::<><>::uid://bnww31fwo8lay::::res://Tilesets/Tileset.tres<>uid://bsmkk0gf40q0m::::res://Scenes/slime.tscn<>res://scripts/Chest.gd<>uid://r1b8qicjklk1::::res://Assets/Animated Chests/Chests.png<>uid://bc8odp4js2qqo::::res://Scenes/next_level.tscn<>uid://j2t0exb3ha83::::res://Assets/platformer items - free assets/animated_items.png
+Level 5.tscn::PackedScene::3954034731492896275::1701759271::0::1::::<><>::uid://bsmkk0gf40q0m::::res://Scenes/slime.tscn<>uid://bnww31fwo8lay::::res://Tilesets/Tileset.tres
 Menu.tscn::PackedScene::2815559261458918302::1701716772::0::1::::<><>::res://scripts/Menu.gd<>uid://cd42r7gh2ukmd::::res://Assets/Space.jpg
-next_level.tscn::PackedScene::2595779065217216966::1701717121::0::1::::<><>::res://scripts/next_level.gd
-parallax.tscn::PackedScene::4826835352336623909::1701714759::0::1::::<><>::uid://dmkia18cxs8on::::res://Parallax Background/space_background_pack/layers/parallax-space-backgound.png<>uid://c8v7spitldqjk::::res://Parallax Background/space_background_pack/layers/parallax-space-far-planets.png<>uid://dlv1skjr2qq2t::::res://Parallax Background/space_background_pack/layers/parallax-space-ring-planet.png<>uid://d1gatiac1ow0::::res://Parallax Background/space_background_pack/layers/parallax-space-stars.png<>uid://b1decvh0rv6yy::::res://Parallax Background/space_background_pack/layers/parallax-space-big-planet.png
+next_level.tscn::PackedScene::2595779065217216966::1701732973::0::1::::<><>::res://scripts/next_level.gd
 SceneTransistion.tscn::PackedScene::3214275580674827690::1701716314::0::1::::<><>::
 slime.tscn::PackedScene::3675218752712627798::1701716772::0::1::::<><>::res://scripts/Player/player.gd<>uid://dclqoku1hllfg::::res://Assets/character/Player/player_idlefacingback.png<>uid://ct8vxe85gew0j::::res://Assets/character/Player/Player_noweaponfacingfront.png<>uid://dhd4ucr3b4o5k::::res://Assets/character/Player/player_noweaponrunningfrontfacingback.png<>uid://cuwnh0wr64eac::::res://Scenes/components/health_component.tscn<>uid://jrg6wxq5ag3e::::res://Assets/character/Player/player_noweaponrunningfront.png<>uid://1oisc6ufulmn::::res://Scenes/components/hitbox_component.tscn<>res://scripts/PlayerEnemyScripts/weapon.gd<>uid://wmiet4vfsixo::::res://Assets/weapon/Guns/guntest.png
 ::res://Scenes/components/::1701716053
@@ -70,11 +81,11 @@ pathfinding_component.tscn::PackedScene::6320763796289984288::1701714759::0::1::
 vision_component.tscn::PackedScene::7563999094729085837::1701714759::0::1::::<><>::res://scripts/components/VisionComponent.gd
 ::res://Scenes/Enemies/::1701716127
 enemy1.tscn::PackedScene::8954756672570522956::1701716127::0::1::::<><>::uid://d17qf084ds4st::::res://icon.svg<>res://scripts/Enemies/enemy1.gd<>uid://cuwnh0wr64eac::::res://Scenes/components/health_component.tscn<>uid://1oisc6ufulmn::::res://Scenes/components/hitbox_component.tscn<>uid://df1b7vy5uw1hh::::res://Scenes/components/vision_component.tscn<>res://scripts/Enemies/weaponEnemy.gd<>uid://cwb3b6a3tfjmm::::res://Scenes/components/pathfinding_component.tscn
-::res://Scenes/PlayerStuff/::1701716772
-bullet.tscn::PackedScene::9075608597792268026::1701716772::0::1::::<><>::uid://b1g6wr61brgc::::res://Assets/weapon/New_All_Fire_Bullet_Pixel_16x16/All_Fire_Bullet_Pixel_16x16_00.png<>res://scripts/PlayerEnemyScripts/bullet.gd
+::res://Scenes/PlayerStuff/::1701759271
+bullet.tscn::PackedScene::9075608597792268026::1701759271::0::1::::<><>::uid://b1g6wr61brgc::::res://Assets/weapon/New_All_Fire_Bullet_Pixel_16x16/All_Fire_Bullet_Pixel_16x16_00.png<>res://scripts/PlayerEnemyScripts/bullet.gd
 enemyBullet.tscn::PackedScene::4156246445318135027::1701716772::0::1::::<><>::res://scripts/PlayerEnemyScripts/enemyBullet.gd<>uid://b1g6wr61brgc::::res://Assets/weapon/New_All_Fire_Bullet_Pixel_16x16/All_Fire_Bullet_Pixel_16x16_00.png
-::res://scripts/::1701717132
-Chest.gd::GDScript::-1::1701715002::0::1::::<>AnimatedSprite2D<>::
+::res://scripts/::1701753579
+Chest.gd::GDScript::-1::1701753579::0::1::::<>Area2D<>::
 HubSwitch.gd::GDScript::-1::1701717132::0::1::::<>Area2D<>::
 InteractionArea.gd::GDScript::-1::1701717132::0::1::::<>Area2D<>::
 KillArea.gd::GDScript::-1::1701715002::0::1::::<>Area2D<>::
@@ -82,24 +93,24 @@ Menu.gd::GDScript::-1::1701717132::0::1::::<>Control<>::
 next_level.gd::GDScript::-1::1701717132::0::1::::<>Area2D<>::
 SpaceScroll.gd::GDScript::-1::1701715002::0::1::::<>RefCounted<>::
 TestPlayer.gd::GDScript::-1::1701715002::0::1::::<>CharacterBody2D<>::
-::res://scripts/components/::1701717132
+::res://scripts/components/::1701735965
 HealthComponent.gd::GDScript::-1::1701717132::0::1::::HealthComponent<>Node2D<>::
 HitboxComponent.gd::GDScript::-1::1701715002::0::1::::HitboxComponent<>Area2D<>::
 PathfindingComponent.gd::GDScript::-1::1701716001::0::1::::PathfindingComponent<>Node2D<>::
-VisionComponent.gd::GDScript::-1::1701717132::0::1::::VisionComponent<>Area2D<>::
-::res://scripts/Enemies/::1701717132
-enemy1.gd::GDScript::-1::1701717132::0::1::::<>CharacterBody2D<>::
+VisionComponent.gd::GDScript::-1::1701735965::0::1::::VisionComponent<>Area2D<>::
+::res://scripts/Enemies/::1701731922
+enemy1.gd::GDScript::-1::1701731922::0::1::::<>CharacterBody2D<>::
 weaponEnemy.gd::GDScript::-1::1701717132::0::1::::<>Sprite2D<>::
-::res://scripts/Player/::1701717132
-player.gd::GDScript::-1::1701717132::0::1::::<>CharacterBody2D<>::
+::res://scripts/Player/::1701736044
+player.gd::GDScript::-1::1701736044::0::1::::<>CharacterBody2D<>::
 ::res://scripts/PlayerEnemyScripts/::1701717132
 Attack.gd::GDScript::-1::1701715002::0::1::::Attack<>RefCounted<>::
 bullet.gd::GDScript::-1::1701717132::0::1::::<>Area2D<>::
 enemyBullet.gd::GDScript::-1::1701717132::0::1::::<>Area2D<>::
 weapon.gd::GDScript::-1::1701717132::0::1::::<>Sprite2D<>::
-::res://Tilesets/::1701716690
+::res://Tilesets/::1701749348
 mainlev_build.png::CompressedTexture2D::8167284804599993028::1701714759::1701714759::1::::<><>::
 props1.png::CompressedTexture2D::5639895542161147750::1701714759::1701714759::1::::<><>::
 props2.png::CompressedTexture2D::7099790927108497619::1701714759::1701714759::1::::<><>::
 robot.png::CompressedTexture2D::8289009624930102776::1701714759::1701714759::1::::<><>::
-Tileset.tres::TileSet::3345679111997760044::1701716690::0::1::::<><>::uid://domj8tr1okhwm::::res://Tilesets/mainlev_build.png
+Tileset.tres::TileSet::3345679111997760044::1701749348::0::1::::<><>::uid://domj8tr1okhwm::::res://Tilesets/mainlev_build.png

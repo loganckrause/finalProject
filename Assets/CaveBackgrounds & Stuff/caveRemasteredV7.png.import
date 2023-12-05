@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd42r7gh2ukmd"
-path="res://.godot/imported/Space.jpg-e5311a31235f1ac883e3b76c7c3453fd.ctex"
+uid="uid://nnng1s0k7poi"
+path="res://.godot/imported/caveRemasteredV7.png-88192b6f5b3f15907eb63c46ba5709a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Space.jpg"
-dest_files=["res://.godot/imported/Space.jpg-e5311a31235f1ac883e3b76c7c3453fd.ctex"]
+source_file="res://Assets/CaveBackgrounds & Stuff/caveRemasteredV7.png"
+dest_files=["res://.godot/imported/caveRemasteredV7.png-88192b6f5b3f15907eb63c46ba5709a7.ctex"]
 
 [params]
 
