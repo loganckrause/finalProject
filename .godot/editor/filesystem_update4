@@ -1,20 +1,13 @@
-res://Scenes/slime.tscn
-res://Tilesets/Tileset.tres
-res://Scenes/Hub.tscn
-res://Scenes/Menu.tscn
 res://Scenes/Level 1.tscn
+res://Tilesets/Tileset.tres
+res://Scenes/next_level.tscn
+res://Scenes/Hub.tscn
+res://Scenes/Level 4.tscn
+res://Scenes/parallax.tscn
+res://scripts/Enemies/enemy1.gd
 res://Scenes/Level 2.tscn
 res://Scenes/Level 3.tscn
-res://Scenes/Level 4.tscn
-res://Scenes/PlayerStuff/bullet.tscn
-res://Scenes/Enemies/enemy1.tscn
-res://Scenes/PlayerStuff/enemyBullet.tscn
-res://Scripts/PlayerEnemyScripts/bullet.gd
-res://scripts/Enemies/enemy1.gd
-res://Scripts/PlayerEnemyScripts/enemyBullet.gd
-res://Scripts/InteractionArea.gd
-res://scripts/components/PathfindingComponent.gd
-res://scripts/Player/player.gd
+res://scripts/Chest.gd
 res://scripts/components/VisionComponent.gd
-res://Scripts/PlayerEnemyScripts/weapon.gd
-res://scripts/Enemies/weaponEnemy.gd
+res://scripts/Player/player.gd
+res://Scenes/Level 5.tscn

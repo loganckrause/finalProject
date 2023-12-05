@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cd42r7gh2ukmd" path="res://Assets/Space.jpg" id="1_178i0"]
 [ext_resource type="Texture2D" uid="uid://dqdi1o1gx7rs7" path="res://Tilesets/robot.png" id="1_x73h0"]
 [ext_resource type="Texture2D" uid="uid://domj8tr1okhwm" path="res://Tilesets/mainlev_build.png" id="2_i7ks7"]
-[ext_resource type="Script" path="res://Scripts/InteractionArea.gd" id="6_0ffv7"]
+[ext_resource type="Script" path="res://scripts/InteractionArea.gd" id="4_8tub5"]
+[ext_resource type="Script" path="res://scripts/HubSwitch.gd" id="6_qd1jt"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="7_8t15r"]
 [ext_resource type="Texture2D" uid="uid://ca0slsaso7mxg" path="res://Assets/Gravity-SpriteSheet.png" id="7_iipd7"]
-[ext_resource type="Script" path="res://Scripts/HubSwitch.gd" id="8_rj76g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_biiye"]
 texture = ExtResource("2_i7ks7")
@@ -2292,7 +2292,7 @@ layer_0/tile_data = PackedInt32Array(458751, 262144, 3, 393217, 196608, 1, 39321
 
 [node name="Interact" type="Area2D" parent="."]
 collision_layer = 0
-script = ExtResource("6_0ffv7")
+script = ExtResource("4_8tub5")
 
 [node name="Label" type="Label" parent="Interact"]
 offset_left = 142.0
@@ -2315,7 +2315,7 @@ autoplay = "default"
 frame_progress = 0.584298
 
 [node name="Area2D" type="Area2D" parent="Interact/AnimatedSprite2D"]
-script = ExtResource("8_rj76g")
+script = ExtResource("6_qd1jt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact/AnimatedSprite2D/Area2D"]
 position = Vector2(-2.79605, 7.01086)
