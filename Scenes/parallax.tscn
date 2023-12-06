@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://ca1fjjvx42pe0"]
+
+[ext_resource type="Texture2D" uid="uid://dmkia18cxs8on" path="res://Parallax Background/space_background_pack/layers/parallax-space-backgound.png" id="1_jedp5"]
+[ext_resource type="Texture2D" uid="uid://c8v7spitldqjk" path="res://Parallax Background/space_background_pack/layers/parallax-space-far-planets.png" id="2_xnkmf"]
+[ext_resource type="Texture2D" uid="uid://dlv1skjr2qq2t" path="res://Parallax Background/space_background_pack/layers/parallax-space-ring-planet.png" id="3_qdo5b"]
+[ext_resource type="Texture2D" uid="uid://d1gatiac1ow0" path="res://Parallax Background/space_background_pack/layers/parallax-space-stars.png" id="4_270wk"]
+[ext_resource type="Texture2D" uid="uid://b1decvh0rv6yy" path="res://Parallax Background/space_background_pack/layers/parallax-space-big-planet.png" id="5_mwppr"]
+
+[node name="Parallax" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+scale = Vector2(1.3, 1.3)
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("1_jedp5")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(400, 400)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(-21, 41)
+texture = ExtResource("2_xnkmf")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(400, 350)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(214, -1)
+texture = ExtResource("3_qdo5b")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(272, 160)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+texture = ExtResource("4_270wk")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(700, 250)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(88, 4)
+texture = ExtResource("5_mwppr")
+centered = false

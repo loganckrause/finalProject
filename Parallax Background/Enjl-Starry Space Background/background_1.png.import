@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+<<<<<<<< HEAD:Assets/weapon/Guns/player_idlefacingback.png.import
+uid="uid://dclqoku1hllfg"
+path="res://.godot/imported/player_idlefacingback.png-af0be927d5c3e48e6a3801c7ffb453d5.ctex"
+========
+uid="uid://s8cw4dl4k8fd"
+path="res://.godot/imported/background_1.png-a3b0dc93925d9a1e804fd0a885b8dcdc.ctex"
+>>>>>>>> development:Parallax Background/Enjl-Starry Space Background/background_1.png.import
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+<<<<<<<< HEAD:Assets/weapon/Guns/player_idlefacingback.png.import
+source_file="res://assets/character/Player/player_idlefacingback.png"
+dest_files=["res://.godot/imported/player_idlefacingback.png-af0be927d5c3e48e6a3801c7ffb453d5.ctex"]
+========
+source_file="res://Parallax Background/Enjl-Starry Space Background/background_1.png"
+dest_files=["res://.godot/imported/background_1.png-a3b0dc93925d9a1e804fd0a885b8dcdc.ctex"]
+>>>>>>>> development:Parallax Background/Enjl-Starry Space Background/background_1.png.import
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
