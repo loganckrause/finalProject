@@ -2817,6 +2817,7 @@ offset_left = -15.0
 offset_top = 19.0
 offset_right = 736.0
 offset_bottom = 233.0
+mouse_default_cursor_shape = 3
 texture = ExtResource("1_fi2fc")
 expand_mode = 1
 
