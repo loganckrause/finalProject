@@ -19,3 +19,4 @@ res://Scenes/components/hitbox_component.tscn
 res://Scripts/components/HealthComponent.gd
 res://Scenes/components/pathfinding_component.tscn
 res://Scenes/components/vision_component.tscn
+res://Scenes/Level 9.tscn
