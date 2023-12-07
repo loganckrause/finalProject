@@ -4,9 +4,18 @@ res://Scenes/Level 2.tscn
 res://Scenes/Level 3.tscn
 res://Scenes/Level 4.tscn
 res://Scenes/Level 5.tscn
-res://Scenes/HealingPotion.tscn
-res://scripts/Chest.gd
-res://scripts/PotionSpawn.gd
-res://Scenes/healing_potion.tscn
-res://Scenes/PlayerStuff/bullet.tscn
-res://Scenes/Hub.tscn
+res://Scenes/Level 6.tscn
+res://Scenes/Level 7.tscn
+res://Scenes/Level 8.tscn
+res://Scripts/Chest2.gd
+res://scripts/Chest2.gd
+res://scripts/components/HealthComponent.gd
+res://Scenes/components/health_component.tscn
+res://scripts/components/HitboxComponent.gd
+res://scripts/components/PathfindingComponent.gd
+res://scripts/components/VisionComponent.gd
+res://scripts/Enemies/weaponEnemy.gd
+res://Scenes/components/hitbox_component.tscn
+res://Scripts/components/HealthComponent.gd
+res://Scenes/components/pathfinding_component.tscn
+res://Scenes/components/vision_component.tscn

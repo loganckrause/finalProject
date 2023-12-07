@@ -2,6 +2,5 @@
 
 [ext_resource type="Script" path="res://scripts/components/PathfindingComponent.gd" id="1_ejcce"]
 
-[node name="PathfindingComponent" type="Node2D" node_paths=PackedStringArray("vision_component")]
+[node name="PathfindingComponent" type="Node2D"]
 script = ExtResource("1_ejcce")
-vision_component = NodePath("")

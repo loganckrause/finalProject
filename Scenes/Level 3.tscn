@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="3_dknyd"]
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="5_x3tsb"]
 
-[sub_resource type="Gradient" id="Gradient_478wi"]
+[sub_resource type="Gradient" id="Gradient_dex5k"]
 offsets = PackedFloat32Array(0.233533, 0.907186)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_f245a"]
-gradient = SubResource("Gradient_478wi")
+gradient = SubResource("Gradient_dex5k")
 fill = 1
 fill_from = Vector2(0.529915, 0.482906)
 fill_to = Vector2(1, 0.0128205)
