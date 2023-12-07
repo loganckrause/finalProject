@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqdi1o1gx7rs7"
-path="res://.godot/imported/robot.png-9290032f2426d013c9068d15128a9eb2.ctex"
+uid="uid://d0gq6ff0yfodn"
+path="res://.godot/imported/crystals.png-5b9d866f65104aa0014451a0665638f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tilesets/robot.png"
-dest_files=["res://.godot/imported/robot.png-9290032f2426d013c9068d15128a9eb2.ctex"]
+source_file="res://Assets/CaveBackgrounds & Stuff/crystals.png"
+dest_files=["res://.godot/imported/crystals.png-5b9d866f65104aa0014451a0665638f4.ctex"]
 
 [params]
 

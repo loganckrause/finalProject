@@ -249,13 +249,13 @@ animations = [{
 }]
 
 [sub_resource type="Gradient" id="Gradient_c2mxl"]
-offsets = PackedFloat32Array(0.0868263, 0.847305)
+offsets = PackedFloat32Array(0, 0.622755)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_co3yh"]
 gradient = SubResource("Gradient_c2mxl")
 fill = 1
-fill_from = Vector2(0.478632, 0.431624)
+fill_from = Vector2(0.542735, 0.495726)
 
 [node name="Level8" type="Node2D"]
 
@@ -272,7 +272,7 @@ position = Vector2(-109, 161)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(2, -2)
-zoom = Vector2(0.7, 0.8)
+zoom = Vector2(0.8, 0.8)
 process_callback = 0
 limit_left = -150
 limit_top = -20

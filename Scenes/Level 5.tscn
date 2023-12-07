@@ -1,13 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwlmmyy5wfay2"]
+[gd_scene load_steps=15 format=3 uid="uid://bwlmmyy5wfay2"]
 
 [ext_resource type="Texture2D" uid="uid://c5fxehnntttly" path="res://Assets/CaveBackgrounds & Stuff/AllCaveWallsTogether.png" id="1_0y8d3"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_nq5vq"]
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="2_5u61u"]
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="4_hshtj"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="5_761ox"]
+[ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="6_sa50t"]
 
 [sub_resource type="Gradient" id="Gradient_2k517"]
-offsets = PackedFloat32Array(0.233533, 0.907186)
+offsets = PackedFloat32Array(0.323353, 0.706587)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_8il1h"]
@@ -15,6 +16,33 @@ gradient = SubResource("Gradient_2k517")
 fill = 1
 fill_from = Vector2(0.529915, 0.482906)
 fill_to = Vector2(1, 0.0128205)
+
+[sub_resource type="Gradient" id="Gradient_apl8j"]
+offsets = PackedFloat32Array(0.185629, 0.667665)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bk5tb"]
+gradient = SubResource("Gradient_apl8j")
+fill = 1
+fill_from = Vector2(0.487179, 0.478632)
+
+[sub_resource type="Gradient" id="Gradient_52fue"]
+offsets = PackedFloat32Array(0.185629, 0.667665)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_703yk"]
+gradient = SubResource("Gradient_52fue")
+fill = 1
+fill_from = Vector2(0.487179, 0.478632)
+
+[sub_resource type="Gradient" id="Gradient_lqdf3"]
+offsets = PackedFloat32Array(0.185629, 0.667665)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_81q26"]
+gradient = SubResource("Gradient_lqdf3")
+fill = 1
+fill_from = Vector2(0.487179, 0.478632)
 
 [node name="Level5" type="Node2D"]
 
@@ -31,7 +59,7 @@ position = Vector2(-18, 202)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(26, -75)
-zoom = Vector2(0.7, 0.8)
+zoom = Vector2(0.8, 0.8)
 process_callback = 0
 limit_left = -85
 limit_top = 44
@@ -89,7 +117,7 @@ position = Vector2(261, 180)
 texture = ExtResource("4_hshtj")
 
 [node name="PointLight2D" type="PointLight2D" parent="Lantern4"]
-position = Vector2(8, 23)
+position = Vector2(1, 18)
 scale = Vector2(1.8551, 1.20561)
 color = Color(1, 0.717647, 0.45098, 1)
 energy = 1.58
@@ -104,3 +132,26 @@ blend_mode = 2
 
 [node name="NextLevel" parent="." instance=ExtResource("5_761ox")]
 position = Vector2(277, 74)
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource("6_sa50t")
+format = 2
+layer_0/tile_data = PackedInt32Array(851992, 0, 2, 851989, 131072, 0, 917503, 131072, 1)
+
+[node name="PurpleCrystalLight" type="PointLight2D" parent="."]
+position = Vector2(-6, 225)
+color = Color(1, 0.2, 1, 1)
+energy = 0.59
+texture = SubResource("GradientTexture2D_bk5tb")
+
+[node name="BlueCrystalLight" type="PointLight2D" parent="."]
+position = Vector2(394, 230)
+color = Color(0.494118, 1, 1, 1)
+energy = 0.59
+texture = SubResource("GradientTexture2D_703yk")
+
+[node name="GreenCrystalLight3" type="PointLight2D" parent="."]
+position = Vector2(343, 229)
+color = Color(0.427451, 1, 0.32549, 1)
+energy = 0.59
+texture = SubResource("GradientTexture2D_81q26")

@@ -1,20 +1,48 @@
-[gd_scene load_steps=8 format=3 uid="uid://y5imlfgtfvtb"]
+[gd_scene load_steps=15 format=3 uid="uid://y5imlfgtfvtb"]
 
 [ext_resource type="Texture2D" uid="uid://nnng1s0k7poi" path="res://Assets/CaveBackgrounds & Stuff/caveRemasteredV7.png" id="1_0k3eh"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_v3h2o"]
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="2_rwvrh"]
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="4_5ryj1"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="5_gqdlf"]
+[ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="6_15ol6"]
 
-[sub_resource type="Gradient" id="Gradient_478wi"]
-offsets = PackedFloat32Array(0.233533, 0.907186)
+[sub_resource type="Gradient" id="Gradient_3htgo"]
+offsets = PackedFloat32Array(0.287425, 0.706587)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_mfr2f"]
-gradient = SubResource("Gradient_478wi")
+gradient = SubResource("Gradient_3htgo")
 fill = 1
-fill_from = Vector2(0.529915, 0.482906)
+fill_from = Vector2(0.517094, 0.482906)
 fill_to = Vector2(1, 0.0128205)
+
+[sub_resource type="Gradient" id="Gradient_tqmmk"]
+offsets = PackedFloat32Array(0.185629, 0.667665)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sub1q"]
+gradient = SubResource("Gradient_tqmmk")
+fill = 1
+fill_from = Vector2(0.487179, 0.478632)
+
+[sub_resource type="Gradient" id="Gradient_kxr7c"]
+offsets = PackedFloat32Array(0.185629, 0.667665)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qg3i7"]
+gradient = SubResource("Gradient_kxr7c")
+fill = 1
+fill_from = Vector2(0.487179, 0.478632)
+
+[sub_resource type="Gradient" id="Gradient_6n4et"]
+offsets = PackedFloat32Array(0.185629, 0.667665)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gftkv"]
+gradient = SubResource("Gradient_6n4et")
+fill = 1
+fill_from = Vector2(0.487179, 0.478632)
 
 [node name="Level7" type="Node2D"]
 
@@ -44,7 +72,7 @@ position = Vector2(-167, 136)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -4)
-zoom = Vector2(0.7, 0.8)
+zoom = Vector2(0.6, 0.6)
 process_callback = 0
 limit_left = -260
 limit_top = -80
@@ -125,3 +153,44 @@ blend_mode = 2
 
 [node name="NextLevel" parent="." instance=ExtResource("5_gqdlf")]
 position = Vector2(613, 57)
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource("6_15ol6")
+format = 2
+layer_0/tile_data = PackedInt32Array(524289, 0, 1, 589818, 65536, 1, 524327, 0, 2, 524319, 65536, 1, 524325, 0, 0, 589823, 65536, 2)
+
+[node name="BlueCrystalLight" type="PointLight2D" parent="."]
+position = Vector2(-8, 148)
+color = Color(0.494118, 1, 1, 1)
+energy = 0.59
+texture = SubResource("GradientTexture2D_sub1q")
+
+[node name="BlueCrystalLight3" type="PointLight2D" parent="."]
+position = Vector2(633, 147)
+color = Color(0.494118, 1, 1, 1)
+energy = 0.59
+texture = SubResource("GradientTexture2D_sub1q")
+
+[node name="GreenCrystalLight3" type="PointLight2D" parent="."]
+position = Vector2(600, 147)
+color = Color(0.427451, 1, 0.32549, 1)
+energy = 0.59
+texture = SubResource("GradientTexture2D_qg3i7")
+
+[node name="PurpleCrystalLight" type="PointLight2D" parent="."]
+position = Vector2(24, 149)
+color = Color(1, 0.2, 1, 1)
+energy = 0.59
+texture = SubResource("GradientTexture2D_gftkv")
+
+[node name="PurpleCrystalLight2" type="PointLight2D" parent="."]
+position = Vector2(-88, 151)
+color = Color(1, 0.2, 1, 1)
+energy = 0.59
+texture = SubResource("GradientTexture2D_gftkv")
+
+[node name="PurpleCrystalLight3" type="PointLight2D" parent="."]
+position = Vector2(503, 147)
+color = Color(1, 0.2, 1, 1)
+energy = 0.59
+texture = SubResource("GradientTexture2D_gftkv")

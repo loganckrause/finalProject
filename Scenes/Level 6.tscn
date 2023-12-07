@@ -1,20 +1,39 @@
-[gd_scene load_steps=8 format=3 uid="uid://ftwoq0oadr0j"]
+[gd_scene load_steps=13 format=3 uid="uid://ftwoq0oadr0j"]
 
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_6d0vx"]
 [ext_resource type="Texture2D" uid="uid://bych5ukuaatj7" path="res://Assets/CaveBackgrounds & Stuff/awesomeCavePixelArt.png" id="1_apmv4"]
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="2_ghf6i"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="4_tvgr1"]
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="5_012iu"]
+[ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="6_rl1kw"]
 
 [sub_resource type="Gradient" id="Gradient_nt3hv"]
-offsets = PackedFloat32Array(0.233533, 0.907186)
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+offsets = PackedFloat32Array(0.233533, 0.290419, 0.652695, 0.907186)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.938356, 1, 1, 1, 0, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_5rgjv"]
 gradient = SubResource("Gradient_nt3hv")
 fill = 1
-fill_from = Vector2(0.529915, 0.482906)
+fill_from = Vector2(0.487179, 0.478632)
 fill_to = Vector2(1, 0.0128205)
+
+[sub_resource type="Gradient" id="Gradient_u5g1u"]
+offsets = PackedFloat32Array(0.185629, 0.667665)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ymrlt"]
+gradient = SubResource("Gradient_u5g1u")
+fill = 1
+fill_from = Vector2(0.487179, 0.478632)
+
+[sub_resource type="Gradient" id="Gradient_bqywb"]
+offsets = PackedFloat32Array(0.185629, 0.667665)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o57c2"]
+gradient = SubResource("Gradient_bqywb")
+fill = 1
+fill_from = Vector2(0.487179, 0.478632)
 
 [node name="Level6" type="Node2D"]
 
@@ -27,11 +46,11 @@ texture = ExtResource("1_apmv4")
 expand_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_6d0vx")]
-position = Vector2(-26, 183)
+position = Vector2(-73, 232)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(0, 1)
-zoom = Vector2(0.7, 0.8)
+position = Vector2(1, 1)
+zoom = Vector2(0.7, 0.7)
 process_callback = 0
 limit_left = -120
 limit_top = -180
@@ -39,6 +58,7 @@ limit_right = 320
 limit_bottom = 250
 limit_smoothed = true
 position_smoothing_enabled = true
+position_smoothing_speed = 3.0
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_ghf6i")
@@ -53,7 +73,7 @@ position = Vector2(10, 138)
 texture = ExtResource("5_012iu")
 
 [node name="PointLight2D" type="PointLight2D" parent="Lantern"]
-position = Vector2(15, 8)
+position = Vector2(83, -14)
 scale = Vector2(1.8551, 1.20561)
 color = Color(1, 0.717647, 0.45098, 1)
 energy = 1.58
@@ -79,7 +99,7 @@ position = Vector2(50, 196)
 texture = ExtResource("5_012iu")
 
 [node name="PointLight2D" type="PointLight2D" parent="Lantern3"]
-position = Vector2(1.00001, 27)
+position = Vector2(-3, 18)
 scale = Vector2(1.8551, 1.20561)
 color = Color(1, 0.717647, 0.45098, 1)
 energy = 1.58
@@ -92,7 +112,7 @@ position = Vector2(162, 199)
 texture = ExtResource("5_012iu")
 
 [node name="PointLight2D" type="PointLight2D" parent="Lantern4"]
-position = Vector2(1, 27)
+position = Vector2(-146, -45)
 scale = Vector2(1.8551, 1.20561)
 color = Color(1, 0.717647, 0.45098, 1)
 energy = 1.58
@@ -105,7 +125,7 @@ position = Vector2(104, 73)
 texture = ExtResource("5_012iu")
 
 [node name="PointLight2D" type="PointLight2D" parent="Lantern5"]
-position = Vector2(-1, 14)
+position = Vector2(8, 27)
 scale = Vector2(1.8551, 1.20561)
 color = Color(1, 0.717647, 0.45098, 1)
 energy = 1.58
@@ -167,5 +187,22 @@ texture_scale = 1.86
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(0, 0, 0, 1)
-energy = 0.84
+energy = 0.44
 blend_mode = 2
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource("6_rl1kw")
+format = 2
+layer_0/tile_data = PackedInt32Array(983036, 0, 1, 917521, 131072, 2)
+
+[node name="BlueCrystalLight" type="PointLight2D" parent="."]
+position = Vector2(277, 240)
+color = Color(0.494118, 1, 1, 1)
+energy = 0.59
+texture = SubResource("GradientTexture2D_ymrlt")
+
+[node name="PurpleCrystalLight" type="PointLight2D" parent="."]
+position = Vector2(-56, 241)
+color = Color(1, 0.2, 1, 1)
+energy = 0.59
+texture = SubResource("GradientTexture2D_o57c2")
