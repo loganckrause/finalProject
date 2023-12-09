@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdheexwuhxuhx"
-path="res://.godot/imported/pixelart_starfield.png-594b562cc5109f6b2ec7aaded3557485.ctex"
+path="res://.godot/imported/pixelart_starfield.png-45815b6f9481b6df80aa401b18360cc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CaveBackgrounds & Stuff/pixelart_starfield.png"
-dest_files=["res://.godot/imported/pixelart_starfield.png-594b562cc5109f6b2ec7aaded3557485.ctex"]
+source_file="res://Assets/CaveBackgrounds & Stuff/pixelart_starfield.png"
+dest_files=["res://.godot/imported/pixelart_starfield.png-45815b6f9481b6df80aa401b18360cc4.ctex"]
 
 [params]
 

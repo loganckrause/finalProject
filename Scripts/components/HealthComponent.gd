@@ -22,7 +22,7 @@ func damage(attack: Attack):
 
 func die():
 	if get_parent().is_in_group("player"):
-		await(get_tree().create_timer(1.0).timeout)
+		await(get_tree().create_timer(0.5).timeout)
 		SceneTransition.switch()
 		get_tree().change_scene_to_file(deathscreen)
 		SceneTransition.end()

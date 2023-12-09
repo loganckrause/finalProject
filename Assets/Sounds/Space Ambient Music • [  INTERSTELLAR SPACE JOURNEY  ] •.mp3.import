@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://ccjsaptt6atoc"
-path="res://.godot/imported/Space Ambient Music • [  INTERSTELLAR SPACE JOURNEY  ] •.mp3-613545f8be7d9c1b80085c0fbf4676eb.mp3str"
+path="res://.godot/imported/Space Ambient Music • [  INTERSTELLAR SPACE JOURNEY  ] •.mp3-461c4c9fd6c847472cdea8bff7b455e3.mp3str"
 
 [deps]
 
-source_file="res://assets/Sounds/Space Ambient Music • [  INTERSTELLAR SPACE JOURNEY  ] •.mp3"
-dest_files=["res://.godot/imported/Space Ambient Music • [  INTERSTELLAR SPACE JOURNEY  ] •.mp3-613545f8be7d9c1b80085c0fbf4676eb.mp3str"]
+source_file="res://Assets/Sounds/Space Ambient Music • [  INTERSTELLAR SPACE JOURNEY  ] •.mp3"
+dest_files=["res://.godot/imported/Space Ambient Music • [  INTERSTELLAR SPACE JOURNEY  ] •.mp3-461c4c9fd6c847472cdea8bff7b455e3.mp3str"]
 
 [params]
 

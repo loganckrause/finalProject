@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://bjaonr0q64pnh"]
 
 [ext_resource type="Script" path="res://scripts/DeathScreen.gd" id="1_y2uaq"]
-[ext_resource type="Texture2D" uid="uid://r23itn8kiibb" path="res://assets/CaveBackgrounds & Stuff/DSGAMEOVER.jpg" id="2_jp1bb"]
-[ext_resource type="AudioStream" uid="uid://chofg8mrya2bk" path="res://assets/Sounds/DSDeathSound.mp3" id="3_h5gsn"]
+[ext_resource type="Texture2D" uid="uid://r23itn8kiibb" path="res://Assets/CaveBackgrounds & Stuff/DSGAMEOVER.jpg" id="2_jp1bb"]
+[ext_resource type="AudioStream" uid="uid://chofg8mrya2bk" path="res://Assets/Sounds/DSDeathSound.mp3" id="3_h5gsn"]
 
 [node name="Death" type="Node2D"]
 script = ExtResource("1_y2uaq")

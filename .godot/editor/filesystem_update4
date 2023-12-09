@@ -1,9 +1,14 @@
 res://Scenes/Hub.tscn
 res://Tilesets/shiptres.tres
 res://Shaders/hitflash.tres
-res://scripts/Player/player.gd
 res://Scenes/Death.tscn
 res://Scenes/Menu.tscn
 res://Scenes/next_level.tscn
 res://Scenes/randomizer.tscn
-res://scripts/Randomizer.gd
+res://scripts/DeathScreen.gd
+res://Scenes/slime.tscn
+res://Scenes/PlayerStuff/slime.tscn
+res://scripts/components/HealthComponent.gd
+res://scripts/HealthPotion.gd
+res://Scenes/Level 4.tscn
+res://Tilesets/Tileset.tres

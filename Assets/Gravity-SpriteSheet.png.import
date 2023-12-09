@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ca0slsaso7mxg"
-path="res://.godot/imported/Gravity-SpriteSheet.png-4a9cdef30fe94790150c96a632214d47.ctex"
+path="res://.godot/imported/Gravity-SpriteSheet.png-74221d58274e0e4b4336d6d610fa2dff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Gravity-SpriteSheet.png"
-dest_files=["res://.godot/imported/Gravity-SpriteSheet.png-4a9cdef30fe94790150c96a632214d47.ctex"]
+source_file="res://Assets/Gravity-SpriteSheet.png"
+dest_files=["res://.godot/imported/Gravity-SpriteSheet.png-74221d58274e0e4b4336d6d610fa2dff.ctex"]
 
 [params]
 
