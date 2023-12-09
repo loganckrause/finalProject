@@ -1,8 +1,9 @@
-res://Scenes/slime.tscn
+res://Scenes/Hub.tscn
 res://Tilesets/shiptres.tres
 res://Shaders/hitflash.tres
-res://scripts/Player/player.gd
-res://Scenes/Hub.tscn
 res://Scenes/Death.tscn
 res://Scenes/Menu.tscn
 res://Scenes/next_level.tscn
+res://Scenes/slime.tscn
+res://scripts/components/HealthComponent.gd
+res://scripts/Player/player.gd

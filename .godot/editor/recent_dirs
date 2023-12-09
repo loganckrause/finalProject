@@ -1,3 +1,4 @@
+D:/GameProjects/finalProject/scripts/components
 res://Assets/character/Player
 res://scripts
 res://Shaders
@@ -10,6 +11,5 @@ res://Assets/Animated Chests
 res://Assets/CaveBackgrounds & Stuff
 res://.godot/imported
 res://scripts/Enemies
-A:/Game
 res://Scripts/PlayerEnemyScripts
 res://Scripts
