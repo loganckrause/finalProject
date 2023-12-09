@@ -1,7 +1,7 @@
 extends Area2D
 
 
-@export var speed = 500
+@export var speed = 400
 @export var attackDamage = 3
 @export var knockbackForce = 0
 @export var stun_time = 1.5

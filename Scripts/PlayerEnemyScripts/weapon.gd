@@ -1,7 +1,7 @@
 extends Sprite2D
 
 
-var cooltime = 0.2
+var cooltime = 0.4
 @onready var bullet = preload("res://Scenes/PlayerStuff/bullet.tscn")
 
 

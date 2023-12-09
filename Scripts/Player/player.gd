@@ -278,4 +278,5 @@ func wall_slide(delta):
 func _input(event : InputEvent):
 	if(event.is_action_pressed("down") && is_on_floor()):
 		position.y += 1
+
 		

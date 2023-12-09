@@ -1,14 +1,14 @@
 [gd_scene load_steps=23 format=3 uid="uid://c5jmorjvt41y1"]
 
-[ext_resource type="Texture2D" uid="uid://bych5ukuaatj7" path="res://assets/CaveBackgrounds & Stuff/awesomeCavePixelArt.png" id="1_fi2fc"]
+[ext_resource type="Texture2D" uid="uid://bych5ukuaatj7" path="res://Assets/CaveBackgrounds & Stuff/awesomeCavePixelArt.png" id="1_fi2fc"]
 [ext_resource type="Texture2D" uid="uid://domj8tr1okhwm" path="res://Tilesets/mainlev_build.png" id="2_a77a7"]
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="5_51v8s"]
-[ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://scenes/next_level.tscn" id="5_076jv"]
-[ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://scenes/slime.tscn" id="5_gkotl"]
+[ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="5_076jv"]
+[ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="5_gkotl"]
 [ext_resource type="PackedScene" path="res://scenes/Enemies/enemySlime.tscn" id="6_e8k1e"]
-[ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://assets/CaveBackgrounds & Stuff/lantern.png" id="7_gwyap"]
+[ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="7_gwyap"]
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="8_boy6c"]
-[ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://scenes/maingameaudio.tscn" id="9_cmunu"]
+[ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="9_cmunu"]
 [ext_resource type="PackedScene" path="res://scenes/Enemies/enemyBat.tscn" id="10_pqbsm"]
 [ext_resource type="PackedScene" path="res://scenes/Enemies/enemySkull.tscn" id="11_hus7w"]
 
@@ -2850,9 +2850,6 @@ position_smoothing_enabled = true
 [node name="NextLevel" parent="." instance=ExtResource("5_076jv")]
 position = Vector2(469, 123)
 
-[node name="Enemy1" parent="." instance=ExtResource("6_e8k1e")]
-position = Vector2(287, 69)
-
 [node name="Lantern" type="Sprite2D" parent="."]
 position = Vector2(68, 45)
 texture = ExtResource("7_gwyap")
@@ -2959,4 +2956,7 @@ process_mode = 3
 position = Vector2(447, 84)
 
 [node name="enemySkull" parent="." instance=ExtResource("11_hus7w")]
-position = Vector2(389, 87)
+position = Vector2(274, 130)
+
+[node name="Enemy1" parent="." instance=ExtResource("6_e8k1e")]
+position = Vector2(411, 196)

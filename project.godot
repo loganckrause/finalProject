@@ -23,6 +23,7 @@ SceneTransition="*res://Scenes/scene_transition.tscn"
 Maingameaudio="*res://Scenes/maingameaudio.tscn"
 Randomizer="*res://scripts/Randomizer.gd"
 NextLevel="*res://scripts/next_level.gd"
+PlayerHealth="*res://scripts/Player/PlayerHealth.gd"
 
 [display]
 

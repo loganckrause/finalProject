@@ -1,3 +1,4 @@
+CollisionShape2D
 Node
 AudioStreamPlayer
 AudioStreamPlayer2D
@@ -11,4 +12,3 @@ TileMap
 CanvasLayer
 ColorRect
 Timer
-CollisionShape2D
