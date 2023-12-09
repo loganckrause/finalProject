@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7ia7le6wcv7k"]
+
+[ext_resource type="AudioStream" uid="uid://dqh40oichv2kj" path="res://Assets/Sounds/John Tasoulas - Odyssey.mp3" id="1_iiwje"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_iiwje")
+volume_db = -22.442

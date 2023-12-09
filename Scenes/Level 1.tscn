@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c5jmorjvt41y1"]
+[gd_scene load_steps=21 format=3 uid="uid://c5jmorjvt41y1"]
 
 [ext_resource type="Texture2D" uid="uid://bych5ukuaatj7" path="res://Assets/CaveBackgrounds & Stuff/awesomeCavePixelArt.png" id="1_fi2fc"]
 [ext_resource type="Texture2D" uid="uid://domj8tr1okhwm" path="res://Tilesets/mainlev_build.png" id="2_a77a7"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d0t0sfn56diiu" path="res://Scenes/Enemies/enemy1.tscn" id="6_e8k1e"]
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="7_gwyap"]
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="8_boy6c"]
+[ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="9_cmunu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7vat8"]
 
@@ -2948,3 +2949,6 @@ position = Vector2(343, 213)
 color = Color(0.494118, 1, 1, 1)
 energy = 0.59
 texture = SubResource("GradientTexture2D_bd8bl")
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("9_cmunu")]
+process_mode = 3

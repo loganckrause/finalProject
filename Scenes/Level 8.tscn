@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://c27u33itvh4ex"]
+[gd_scene load_steps=44 format=3 uid="uid://c27u33itvh4ex"]
 
 [ext_resource type="Texture2D" uid="uid://bdheexwuhxuhx" path="res://Assets/CaveBackgrounds & Stuff/pixelart_starfield.png" id="1_aqirv"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="2_sf0n0"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scripts/Chest2.gd" id="5_d1g80"]
 [ext_resource type="Texture2D" uid="uid://j2t0exb3ha83" path="res://Assets/platformer items - free assets/animated_items.png" id="6_fttmr"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="7_7vy0x"]
+[ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="8_q63dr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pw2mf"]
 atlas = ExtResource("4_rkmqj")
@@ -353,6 +354,8 @@ blend_mode = 2
 position = Vector2(114, 169)
 texture = SubResource("GradientTexture2D_co3yh")
 texture_scale = 2.28
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("8_q63dr")]
 
 [connection signal="animation_finished" from="Chest" to="Chest/Area2D" method="_on_chest_animation_finished"]
 [connection signal="body_entered" from="Chest/Area2D" to="Chest/Area2D" method="_on_body_entered"]

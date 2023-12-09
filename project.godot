@@ -20,6 +20,9 @@ config/icon="res://icon.svg"
 [autoload]
 
 SceneTransition="*res://Scenes/scene_transition.tscn"
+Maingameaudio="*res://Scenes/maingameaudio.tscn"
+Randomizer="*res://scripts/Randomizer.gd"
+NextLevel="*res://scripts/next_level.gd"
 
 [display]
 

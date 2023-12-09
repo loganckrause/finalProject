@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://djwt024ncard6"]
+[gd_scene load_steps=35 format=3 uid="uid://djwt024ncard6"]
 
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="1_4ebfl"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_pahcs"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://r1b8qicjklk1" path="res://Assets/Animated Chests/Chests.png" id="4_xkh6d"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="5_2ogbf"]
 [ext_resource type="Texture2D" uid="uid://j2t0exb3ha83" path="res://Assets/platformer items - free assets/animated_items.png" id="6_ori8h"]
+[ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="8_wqt06"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ohoau"]
 atlas = ExtResource("4_xkh6d")
@@ -265,6 +266,8 @@ blend_mode = 2
 position = Vector2(217, 249)
 texture = SubResource("GradientTexture2D_4qip8")
 texture_scale = 2.28
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("8_wqt06")]
 
 [connection signal="animation_finished" from="Chest" to="Chest/Area2D" method="_on_chest_animation_finished"]
 [connection signal="body_entered" from="Chest/Area2D" to="Chest/Area2D" method="_on_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bwkwuq7q2epgy"]
+[gd_scene load_steps=12 format=3 uid="uid://bwkwuq7q2epgy"]
 
 [ext_resource type="Texture2D" uid="uid://cdh4rjhd1jwa0" path="res://Assets/CaveBackgrounds & Stuff/6axfm8uck3oy.png" id="1_k8jcv"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_mnx22"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="4_ob1sa"]
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="5_igaqu"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="6_eh0ns"]
+[ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="7_r2may"]
 
 [sub_resource type="Gradient" id="Gradient_7w5h0"]
 offsets = PackedFloat32Array(0.299401, 0.784431)
@@ -117,3 +118,5 @@ texture = SubResource("GradientTexture2D_oi6iv")
 
 [node name="NextLevel" parent="." instance=ExtResource("6_eh0ns")]
 position = Vector2(69, 119)
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("7_r2may")]

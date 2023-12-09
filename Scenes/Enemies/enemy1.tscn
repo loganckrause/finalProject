@@ -58,4 +58,6 @@ position = Vector2(793.6, 0)
 [node name="PathfindingComponent" parent="." node_paths=PackedStringArray("vision_component") instance=ExtResource("7_j8yh2")]
 vision_component = NodePath("../VisionComponent")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
 [connection signal="timeout" from="weaponEnemy/FiringCooldown" to="weaponEnemy" method="_on_firing_cooldown_timeout"]

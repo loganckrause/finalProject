@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://Scenes/components/hitbox_component.tscn" id="6_5e8ti"]
 [ext_resource type="Script" path="res://scripts/PlayerEnemyScripts/weapon.gd" id="7_rj4yq"]
 [ext_resource type="Texture2D" uid="uid://wmiet4vfsixo" path="res://Assets/weapon/Guns/guntest.png" id="8_pp8tc"]
-[ext_resource type="Texture2D" uid="uid://0um56fc2gqs3" path="res://assets/character/Player/PlayerSpriteSheet.png" id="12_t5ghq"]
+[ext_resource type="Texture2D" uid="uid://0um56fc2gqs3" path="res://Assets/character/Player/PlayerSpriteSheet.png" id="12_t5ghq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_puy07"]
 shader = ExtResource("2_raqi4")
@@ -284,6 +284,21 @@ size = Vector2(12, 19)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5d75f"]
 size = Vector2(14, 17)
 
+[sub_resource type="Animation" id="Animation_gt2j1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_p6i6n"]
 resource_name = "hitflash"
 length = 0.2
@@ -298,21 +313,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_gt2j1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:material:shader_parameter/enabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xn386"]

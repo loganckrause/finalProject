@@ -7,6 +7,7 @@ extends Control
 @onready var audio = $AudioStreamPlayer
 
 func _ready():
+	Maingameaudio.stop()
 	start_button.button_down.connect(on_start_pressed)
 	exit_button.button_down.connect(on_exit_pressed)
 	audio.play()

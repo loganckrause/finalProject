@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://y5imlfgtfvtb"]
+[gd_scene load_steps=16 format=3 uid="uid://y5imlfgtfvtb"]
 
 [ext_resource type="Texture2D" uid="uid://nnng1s0k7poi" path="res://Assets/CaveBackgrounds & Stuff/caveRemasteredV7.png" id="1_0k3eh"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_v3h2o"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="4_5ryj1"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="5_gqdlf"]
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="6_15ol6"]
+[ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="7_44uh4"]
 
 [sub_resource type="Gradient" id="Gradient_3htgo"]
 offsets = PackedFloat32Array(0.287425, 0.706587)
@@ -194,3 +195,5 @@ position = Vector2(503, 147)
 color = Color(1, 0.2, 1, 1)
 energy = 0.59
 texture = SubResource("GradientTexture2D_gftkv")
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("7_44uh4")]

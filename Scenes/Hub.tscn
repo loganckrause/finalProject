@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://cf7cet2nxl4v2"]
+[gd_scene load_steps=79 format=3 uid="uid://cf7cet2nxl4v2"]
 
 [ext_resource type="Texture2D" uid="uid://bdheexwuhxuhx" path="res://Assets/CaveBackgrounds & Stuff/pixelart_starfield.png" id="1_kj5hi"]
 [ext_resource type="TileSet" uid="uid://b5rj8427ili8w" path="res://Tilesets/shiptres.tres" id="2_nwxbt"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="7_8t15r"]
 [ext_resource type="Texture2D" uid="uid://ca0slsaso7mxg" path="res://Assets/Gravity-SpriteSheet.png" id="7_iipd7"]
 [ext_resource type="AudioStream" uid="uid://brkw7lim68euh" path="res://Assets/Sounds/PortalSpawn.ogg" id="8_uq5le"]
+[ext_resource type="AudioStream" uid="uid://ccjsaptt6atoc" path="res://Assets/Sounds/Space Ambient Music • [  INTERSTELLAR SPACE JOURNEY  ] •.mp3" id="9_jsjiy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s2pdu"]
 atlas = ExtResource("7_iipd7")
@@ -581,6 +582,11 @@ position = Vector2(-141, 102)
 color = Color(1, 0.65098, 0.388235, 1)
 energy = 0.48
 texture = SubResource("GradientTexture2D_5uvv6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_jsjiy")
+volume_db = -6.569
+autoplay = true
 
 [connection signal="body_entered" from="AnimatedSprite2D/Area2D" to="AnimatedSprite2D/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Interact" to="Interact" method="_on_body_entered"]
