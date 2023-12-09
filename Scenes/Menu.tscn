@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bgd435h0enbxe"]
 
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_5twq2"]
-[ext_resource type="Texture2D" uid="uid://cd42r7gh2ukmd" path="res://Assets/CaveBackgrounds & Stuff/Space.jpg" id="1_d45o4"]
-[ext_resource type="AudioStream" uid="uid://mat8phrycngy" path="res://Assets/Sounds/ＳＰＡＣＥ　ＴＲＩＰ [ Chillwave - Synthwave - Retrowave Mix ]-[AudioTrimmer.com].mp3" id="3_qidg4"]
+[ext_resource type="Texture2D" uid="uid://cd42r7gh2ukmd" path="res://assets/CaveBackgrounds & Stuff/Space.jpg" id="1_d45o4"]
+[ext_resource type="AudioStream" uid="uid://mat8phrycngy" path="res://assets/Sounds/ＳＰＡＣＥ　ＴＲＩＰ [ Chillwave - Synthwave - Retrowave Mix ]-[AudioTrimmer.com].mp3" id="3_qidg4"]
 
 [sub_resource type="SystemFont" id="SystemFont_qoyf6"]
 font_names = PackedStringArray("Impact")

@@ -20,4 +20,26 @@ func sendMovement(target) -> int:
 		else:
 			xInput = 0
 	return xInput
+	
+func sendYMovement(target) -> int:
+	# Y Movement
+	var yInput: int
+	if vision_component.isOverlapping():
+		#print("vision")
+		if player.global_position.y > target.global_position.y:
+			yInput = 1
+		elif player.global_position.y < target.global_position.y:
+			yInput = -1
+		else:
+			yInput = 0
+	return yInput
 
+func getDistanceBetweenTargets(target1: Vector2, target2: Vector2) -> Vector2:
+	var distance = target2 - target1
+	return distance
+
+func isInVision():
+	if vision_component.isOverlapping():
+		return true
+	else:
+		return false

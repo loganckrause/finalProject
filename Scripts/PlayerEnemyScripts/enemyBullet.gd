@@ -25,8 +25,6 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 func _on_area_entered(body):
 	print("Entered body class:", body.get_class())
 	if body is HitboxComponent and body.name == "PlayerHitboxComponent":
-		print("yuh")
-		queue_free()
 		var hitbox : HitboxComponent = body
 		
 		var attack = Attack.new()
@@ -34,6 +32,17 @@ func _on_area_entered(body):
 		attack.knockback_force = knockbackForce
 		
 		hitbox.damage(attack)
+		
+		speed = 0
+		$AnimatedSprite2D.play("collision")
+		await(get_tree().create_timer(0.4).timeout)
+		queue_free()
+
+	elif body.get_name() == "wall":
+		speed = 0
+		$AnimatedSprite2D.play("collision")
+		await(get_tree().create_timer(0.4).timeout)
+		queue_free()
 		
 	# other stuff for the bullet
 	# Animate explode or something

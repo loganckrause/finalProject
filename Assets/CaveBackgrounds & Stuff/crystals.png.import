@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0gq6ff0yfodn"
-path="res://.godot/imported/crystals.png-5b9d866f65104aa0014451a0665638f4.ctex"
+path="res://.godot/imported/crystals.png-1320d0eb499ea7a7282891eb70128f65.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/CaveBackgrounds & Stuff/crystals.png"
-dest_files=["res://.godot/imported/crystals.png-5b9d866f65104aa0014451a0665638f4.ctex"]
+source_file="res://assets/CaveBackgrounds & Stuff/crystals.png"
+dest_files=["res://.godot/imported/crystals.png-1320d0eb499ea7a7282891eb70128f65.ctex"]
 
 [params]
 
