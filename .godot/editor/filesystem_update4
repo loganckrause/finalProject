@@ -1,10 +1,9 @@
+res://Scenes/Hub.tscn
 res://Tilesets/shiptres.tres
 res://Shaders/hitflash.tres
-res://scripts/Randomizer.gd
-res://Scenes/randomizer.tscn
-res://Scenes/next_level.tscn
-res://scripts/next_level.gd
-res://Scenes/Hub.tscn
+res://scripts/Player/player.gd
 res://Scenes/Death.tscn
 res://Scenes/Menu.tscn
-res://scripts/HubSwitch.gd
+res://Scenes/next_level.tscn
+res://Scenes/randomizer.tscn
+res://scripts/Randomizer.gd

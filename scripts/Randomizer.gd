@@ -17,6 +17,7 @@ func generate():
 		nextLevel = 8
 	elif len(completedLevels) == 9:
 		nextLevel = 10
+		Maingameaudio.stop()
 	else:
 		nextLevel = levelChoice
 	return get_tree().change_scene_to_file("res://Scenes/Level " + str(nextLevel) + ".tscn")
