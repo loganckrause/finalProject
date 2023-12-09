@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dqh40oichv2kj"
-path="res://.godot/imported/John Tasoulas - Odyssey.mp3-220b059c1b7060cac52e6a110dbb2b4f.mp3str"
+path="res://.godot/imported/John Tasoulas - Odyssey.mp3-9e610fd7a04bdb3e437cccf87becb81d.mp3str"
 
 [deps]
 
-source_file="res://Assets/Sounds/John Tasoulas - Odyssey.mp3"
-dest_files=["res://.godot/imported/John Tasoulas - Odyssey.mp3-220b059c1b7060cac52e6a110dbb2b4f.mp3str"]
+source_file="res://assets/Sounds/John Tasoulas - Odyssey.mp3"
+dest_files=["res://.godot/imported/John Tasoulas - Odyssey.mp3-9e610fd7a04bdb3e437cccf87becb81d.mp3str"]
 
 [params]
 

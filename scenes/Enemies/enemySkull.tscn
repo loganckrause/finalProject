@@ -1,0 +1,146 @@
+[gd_scene load_steps=20 format=3 uid="uid://d1f4bmxddyb2q"]
+
+[ext_resource type="Script" path="res://scripts/enemies/skull.gd" id="1_bsux7"]
+[ext_resource type="Texture2D" uid="uid://ce2h4v20exevp" path="res://assets/enemies/skull.png" id="2_2gji0"]
+[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="2_tvs4d"]
+[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="3_3k7jl"]
+[ext_resource type="PackedScene" uid="uid://cwb3b6a3tfjmm" path="res://scenes/components/pathfinding_component.tscn" id="4_jra07"]
+[ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://scenes/components/vision_component.tscn" id="5_1wdfh"]
+[ext_resource type="Script" path="res://scripts/enemies/weaponEnemy.gd" id="6_estkc"]
+[ext_resource type="Texture2D" uid="uid://kw0xssnymhjh" path="res://icon.svg" id="6_ljcnd"]
+
+[sub_resource type="Animation" id="Animation_mmi4v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_aibc3"]
+resource_name = "attack"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 7, 8, 14, 2, 7]
+}
+
+[sub_resource type="Animation" id="Animation_p2cyc"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 1, 0, 4, 6, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_adgr2"]
+_data = {
+"RESET": SubResource("Animation_mmi4v"),
+"attack": SubResource("Animation_aibc3"),
+"idle": SubResource("Animation_p2cyc")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hd3dr"]
+animation = &"attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3q32y"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3w7rx"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_0kdf7"]
+states/attack/node = SubResource("AnimationNodeAnimation_hd3dr")
+states/attack/position = Vector2(659, 100)
+states/idle/node = SubResource("AnimationNodeAnimation_3q32y")
+states/idle/position = Vector2(465, 95)
+transitions = ["attack", "idle", SubResource("AnimationNodeStateMachineTransition_3w7rx")]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qcmee"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pfx54"]
+radius = 274.002
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hci7x"]
+
+[node name="enemySkull" type="CharacterBody2D" node_paths=PackedStringArray("pathfinding_component")]
+collision_mask = 2
+script = ExtResource("1_bsux7")
+pathfinding_component = NodePath("PathfindingComponent")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_2gji0")
+hframes = 4
+vframes = 4
+frame = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_adgr2")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_adgr2")
+}
+tree_root = SubResource("AnimationNodeStateMachine_0kdf7")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_tvs4d")]
+
+[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_3k7jl")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+shape = SubResource("CircleShape2D_qcmee")
+
+[node name="PathfindingComponent" parent="." node_paths=PackedStringArray("vision_component") instance=ExtResource("4_jra07")]
+vision_component = NodePath("../VisionComponent")
+
+[node name="VisionComponent" parent="." instance=ExtResource("5_1wdfh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisionComponent"]
+shape = SubResource("CircleShape2D_pfx54")
+
+[node name="enemyWeapon" type="Sprite2D" parent="." node_paths=PackedStringArray("vision_component")]
+visible = false
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_ljcnd")
+offset = Vector2(140, 0)
+script = ExtResource("6_estkc")
+vision_component = NodePath("../VisionComponent")
+
+[node name="FiringCooldown" type="Timer" parent="enemyWeapon"]
+
+[node name="muzzle" type="Marker2D" parent="enemyWeapon"]
+position = Vector2(140, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hci7x")
+
+[connection signal="weaponShot" from="enemyWeapon" to="." method="_on_enemy_weapon_weapon_shot"]

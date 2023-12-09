@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2kj7hqe7uwhu"]
+[gd_scene load_steps=16 format=3 uid="uid://d2kj7hqe7uwhu"]
 
-[ext_resource type="Texture2D" uid="uid://b1g6wr61brgc" path="res://Assets/weapon/New_All_Fire_Bullet_Pixel_16x16/All_Fire_Bullet_Pixel_16x16_00.png" id="1_1y78q"]
 [ext_resource type="Script" path="res://scripts/PlayerEnemyScripts/bullet.gd" id="1_k2ijg"]
+[ext_resource type="Texture2D" uid="uid://7v3h20rerqg2" path="res://assets/weapon/bullets/laserbullet.png" id="2_eysmd"]
+[ext_resource type="Texture2D" uid="uid://cx0rvfog5ddqa" path="res://assets/weapon/bullets/laserbulletcollision.png" id="2_i5jup"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_p7spo"]
-radius = 2.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d33q3"]
+radius = 3.0
+height = 11.0
 
 [sub_resource type="Gradient" id="Gradient_u5lmg"]
 offsets = PackedFloat32Array(0.233533, 0.976048)
@@ -15,23 +17,94 @@ gradient = SubResource("Gradient_u5lmg")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cxcm"]
+atlas = ExtResource("2_i5jup")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dp5s"]
+atlas = ExtResource("2_i5jup")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iv7yq"]
+atlas = ExtResource("2_i5jup")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhonk"]
+atlas = ExtResource("2_i5jup")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbe1h"]
+atlas = ExtResource("2_eysmd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxqdo"]
+atlas = ExtResource("2_eysmd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prkc8"]
+atlas = ExtResource("2_eysmd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlu0w"]
+atlas = ExtResource("2_eysmd")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_611yy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cxcm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dp5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iv7yq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhonk")
+}],
+"loop": true,
+"name": &"collision",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbe1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxqdo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prkc8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlu0w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
 [node name="bullet" type="Area2D" groups=["bullet"]]
 script = ExtResource("1_k2ijg")
+speed = 300
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_p7spo")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_1y78q")
-region_enabled = true
-region_rect = Rect2(180.43, 4.75601, 7.02678, 6.6214)
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(3, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_d33q3")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(0.105882, 0.184314, 1, 1)
 energy = 1.08
 texture = SubResource("GradientTexture2D_wkbon")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_611yy")
+animation = &"collision"
+autoplay = "default"
+frame_progress = 0.671078
+offset = Vector2(0, 0.5)
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
