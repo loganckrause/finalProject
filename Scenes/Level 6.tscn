@@ -46,7 +46,7 @@ texture = ExtResource("1_apmv4")
 expand_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_6d0vx")]
-position = Vector2(-73, 232)
+position = Vector2(-81, 187)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, 1)
@@ -112,7 +112,7 @@ position = Vector2(162, 199)
 texture = ExtResource("5_012iu")
 
 [node name="PointLight2D" type="PointLight2D" parent="Lantern4"]
-position = Vector2(-146, -45)
+position = Vector2(-126, -53)
 scale = Vector2(1.8551, 1.20561)
 color = Color(1, 0.717647, 0.45098, 1)
 energy = 1.58
@@ -125,7 +125,7 @@ position = Vector2(104, 73)
 texture = ExtResource("5_012iu")
 
 [node name="PointLight2D" type="PointLight2D" parent="Lantern5"]
-position = Vector2(8, 27)
+position = Vector2(5, 30)
 scale = Vector2(1.8551, 1.20561)
 color = Color(1, 0.717647, 0.45098, 1)
 energy = 1.58
@@ -202,7 +202,7 @@ energy = 0.59
 texture = SubResource("GradientTexture2D_ymrlt")
 
 [node name="PurpleCrystalLight" type="PointLight2D" parent="."]
-position = Vector2(-56, 241)
+position = Vector2(-55, 240)
 color = Color(1, 0.2, 1, 1)
 energy = 0.59
 texture = SubResource("GradientTexture2D_o57c2")

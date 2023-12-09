@@ -20,16 +20,13 @@ config/icon="res://icon.svg"
 [autoload]
 
 SceneTransition="*res://Scenes/scene_transition.tscn"
-Death="*res://Scenes/Death.tscn"
 
 [display]
 
 window/size/viewport_width=272
 window/size/viewport_height=160
-window/size/mode=3
-window/size/borderless=true
-window/size/window_width_override=1920
-window/size/window_height_override=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 window/bg_color=Color(0.14, 0.14, 0.14, 1)

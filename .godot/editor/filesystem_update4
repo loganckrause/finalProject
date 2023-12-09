@@ -1,35 +1,8 @@
-res://Scenes/Level 7.tscn
-res://Tilesets/Tileset.tres
-res://Tilesets/Crystals.tres
-res://Scenes/Level 1.tscn
-res://Scenes/Level 2.tscn
-res://Scenes/Level 3.tscn
-res://Scenes/Level 4.tscn
-res://Scenes/Level 5.tscn
-res://Scenes/Level 6.tscn
-res://Scenes/Level 8.tscn
-res://Scenes/Level 9.tscn
-res://Scenes/Level 10.tscn
-res://Scenes/Hub.tscn
-res://Scenes/scene_transition.tscn
-res://scripts/scene_transition.gd
-res://scripts/next_level.gd
-res://scripts/HubSwitch.gd
-res://Scenes/Death.tscn
-res://scripts/DeathScreen.gd
-res://scripts/components/HealthComponent.gd
-res://Scenes/components/health_component.tscn
-res://scripts/PlayerEnemyScripts/bullet.gd
-res://scripts/Chest2.gd
-res://scripts/Chest.gd
-res://scripts/Enemies/enemy1.gd
-res://scripts/PlayerEnemyScripts/enemyBullet.gd
-res://scripts/components/HitboxComponent.gd
-res://scripts/InteractionArea.gd
-res://scripts/Menu.gd
-res://scripts/components/PathfindingComponent.gd
+res://Scenes/slime.tscn
+res://Tilesets/shiptres.tres
+res://Shaders/hitflash.tres
 res://scripts/Player/player.gd
-res://scripts/components/VisionComponent.gd
-res://scripts/PlayerEnemyScripts/weapon.gd
-res://scripts/Enemies/weaponEnemy.gd
-res://Scripts/components/HealthComponent.gd
+res://Scenes/Hub.tscn
+res://Scenes/Death.tscn
+res://Scenes/Menu.tscn
+res://Scenes/next_level.tscn

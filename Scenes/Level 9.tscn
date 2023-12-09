@@ -37,7 +37,7 @@ texture = ExtResource("1_k8jcv")
 expand_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_mnx22")]
-position = Vector2(-177, 197)
+position = Vector2(-151, 118)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-1, -1)

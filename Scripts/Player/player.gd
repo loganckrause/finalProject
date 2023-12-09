@@ -2,32 +2,31 @@ extends CharacterBody2D
 
 const acceleration = 1000
 const deceleration = 2000
-
 var gravity = 980
 var maxSpeed = 200
 const JUMP_VELOCITY = -300
 var canDoubleJump = false
-
+var is_jumping = false
 const WALL_JUMP_PUSH = 125
 const WALL_SLIDE_FRICTION = 100
 var is_wall_sliding = false
-
+var jumpcount = 0
+var has_double_jumped = false
 var dashSpeed: float = 800
 var dashDuration: float = 0.2
 var dashCooldown: float = 1
 var dashTimer: float = 0
 var canDash: bool = true
-
 var mouseRight = true
 
 var current_action = ""
 var last_action = ""
 
 @onready var marker = get_node("weapon/muzzle")
-
+@export var health_component: HealthComponent
+@onready var ap = $PlayerSprite
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-
-func _process(delta):
+func _physics_process(delta):
 	$weapon.global_position = $PlayerSprite.global_position + Vector2(0,0)
 	
 	if get_global_mouse_position().x > $PlayerSprite.global_position.x:
@@ -48,61 +47,24 @@ func _process(delta):
 		current_action = ""
 	
 	# Mouse right Movement
-	if mouseRight and Input.is_action_pressed("move_right"):
-		$PlayerSprite.play("runningforw")
-		$PlayerSprite.set_flip_h(false)
 
-	elif mouseRight and Input.is_action_pressed("move_left"):
-		$PlayerSprite.play("runningback")
-		$PlayerSprite.set_flip_h(true)
-	
-	# Mouse left Movement
-	elif !mouseRight and Input.is_action_pressed("move_right"):
-		$PlayerSprite.play("runningback")
-		$PlayerSprite.set_flip_h(false)
-		
-	elif !mouseRight and Input.is_action_pressed("move_left"):
-		$PlayerSprite.play("runningforw")
-		$PlayerSprite.set_flip_h(true)
-	
-	# Mouse right no Movement
-	elif mouseRight and last_action == "right":
-		$PlayerSprite.play("idlefacingforward")
-		$PlayerSprite.set_flip_h(false)
-	elif mouseRight and last_action == "left":
-		$PlayerSprite.play("idlefacingback")
-		$PlayerSprite.set_flip_h(true)
-	
-	# Mouse left no Movement
-	elif !mouseRight and last_action == "left":
-		$PlayerSprite.play("idlefacingforward")
-		$PlayerSprite.set_flip_h(true)
-	elif !mouseRight and last_action == "right":
-		$PlayerSprite.play("idlefacingback")
-		$PlayerSprite.set_flip_h(false)
-	
-	# Handling everything else
-	else:
-		$PlayerSprite.play("idlefacingforward")
 	
 	if dashTimer > 0:
 		dashTimer -= delta
 	else:
 		canDash = true
-
-func _physics_process(delta):
+		
 	# dir[0] = input_dir
 	# dir[1] = xInput
 	var inputDir = xinput()
 	
 	xaccelerate(inputDir, delta)
-	player_movement(velocity)
 	jump(delta)
 	wall_slide(delta)
 	dash()
-
-func player_movement(_velocity):
 	move_and_slide()
+	update_animation()
+	
 	
 func xaccelerate(direction, delta):
 	var xInput = direction * acceleration * delta
@@ -165,6 +127,47 @@ func dash():
 func _input(event : InputEvent):
 	if(event.is_action_pressed("down") && is_on_floor()):
 		position.y += 1
+
+func update_animation():
+	if is_on_floor():
+		if mouseRight and Input.is_action_pressed("move_right"):
+			$PlayerSprite.play("runningforw")
+			$PlayerSprite.set_flip_h(false)
+
+		elif mouseRight and Input.is_action_pressed("move_left"):
+			$PlayerSprite.play("runningback")
+			$PlayerSprite.set_flip_h(true)
 		
-
-
+		# Mouse left Movement
+		elif !mouseRight and Input.is_action_pressed("move_right"):
+			$PlayerSprite.play("runningback")
+			$PlayerSprite.set_flip_h(false)
+			
+		elif !mouseRight and Input.is_action_pressed("move_left"):
+			$PlayerSprite.play("runningforw")
+			$PlayerSprite.set_flip_h(true)
+		
+		# Mouse right no Movement
+		elif mouseRight and last_action == "right":
+			$PlayerSprite.play("idlefacingforward")
+			$PlayerSprite.set_flip_h(false)
+		elif mouseRight and last_action == "left":
+			$PlayerSprite.play("idlefacingback")
+			$PlayerSprite.set_flip_h(true)
+		
+		# Mouse left no Movement
+		elif !mouseRight and last_action == "left":
+			$PlayerSprite.play("idlefacingforward")
+			$PlayerSprite.set_flip_h(true)
+		elif !mouseRight and last_action == "right":
+			$PlayerSprite.play("idlefacingback")
+			$PlayerSprite.set_flip_h(false)
+		
+		# Handling everything else
+		else:
+			$PlayerSprite.play("idlefacingforward")
+	else:
+		if Input.is_action_just_pressed("jump"):
+			ap.play("jump")
+		elif velocity.y > 0:
+			ap.play("falling")
