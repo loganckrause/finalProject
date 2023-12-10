@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpmt7iwwrxet0"]
+
+[ext_resource type="AudioStream" uid="uid://dwfavkbl7et0i" path="res://Assets/Sounds/mixkit-short-laser-gun-shot-1670.wav" id="1_73gop"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_73gop")
+volume_db = -9.306

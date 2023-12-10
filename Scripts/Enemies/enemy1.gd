@@ -11,7 +11,7 @@ var gravity = 980
 @export var maxSpeed = 200
 
 var tempMaxSpeed = maxSpeed
-var dashSpeed: float = 200
+var dashSpeed: float = 100
 var dashDuration: float = 0.6
 var dashCooldown: float = 2
 var isDashing = false
@@ -23,6 +23,8 @@ var jumpTimer = Timer.new()
 var jumpInterval: float = 2.5
 
 var state_machine
+
+var runIntoDamage: float = 3
 
 func _ready():
 	dashTimer.set_one_shot(true)
@@ -106,3 +108,13 @@ func xaccelerate(direction, delta):
 			velocity.x = min(0, velocity.x + friction)
 
 
+
+
+func _on_hitbox_component_area_entered(area):
+	if area is HitboxComponent and area.name == "PlayerHitboxComponent":
+		var hitbox : HitboxComponent = area
+
+		var attack = Attack.new()
+		attack.attack_damage = runIntoDamage
+
+		hitbox.damage(attack)

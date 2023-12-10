@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://cf7cet2nxl4v2"]
+[gd_scene load_steps=79 format=3 uid="uid://bllklf26i1itb"]
 
 [ext_resource type="Texture2D" uid="uid://bdheexwuhxuhx" path="res://Assets/CaveBackgrounds & Stuff/pixelart_starfield.png" id="1_kj5hi"]
 [ext_resource type="TileSet" uid="uid://b5rj8427ili8w" path="res://Tilesets/shiptres.tres" id="2_nwxbt"]
@@ -530,7 +530,7 @@ theme_override_font_sizes/font_size = 7
 text = "[E] to interact"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact"]
-position = Vector2(43, 127)
+position = Vector2(46, 127)
 shape = SubResource("RectangleShape2D_eetyt")
 
 [node name="Player" parent="Interact" instance=ExtResource("7_8t15r")]

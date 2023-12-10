@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://c27u33itvh4ex"]
+[gd_scene load_steps=53 format=3 uid="uid://c27u33itvh4ex"]
 
 [ext_resource type="Texture2D" uid="uid://bdheexwuhxuhx" path="res://Assets/CaveBackgrounds & Stuff/pixelart_starfield.png" id="1_aqirv"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="2_sf0n0"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://j2t0exb3ha83" path="res://Assets/platformer items - free assets/animated_items.png" id="6_fttmr"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="7_7vy0x"]
 [ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="8_q63dr"]
+[ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="9_mm2ld"]
+[ext_resource type="Script" path="res://scripts/LevelPass.gd" id="10_i0gbr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pw2mf"]
 atlas = ExtResource("4_rkmqj")
@@ -258,6 +260,30 @@ gradient = SubResource("Gradient_c2mxl")
 fill = 1
 fill_from = Vector2(0.542735, 0.495726)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajvvh"]
+size = Vector2(869, 229)
+
+[sub_resource type="Gradient" id="Gradient_03iul"]
+offsets = PackedFloat32Array(0.188498, 0.773163)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cnkjo"]
+gradient = SubResource("Gradient_03iul")
+fill = 1
+fill_from = Vector2(0.482906, 0.482906)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhkgf"]
+size = Vector2(15.5, 192.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0bsa"]
+size = Vector2(439, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r235k"]
+size = Vector2(13, 201)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hj8q2"]
+size = Vector2(442.5, 12)
+
 [node name="Level8" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -303,7 +329,7 @@ position = Vector2(-42, -3)
 shape = SubResource("CapsuleShape2D_p7c35")
 
 [node name="SpeedPotion" type="Area2D" parent="."]
-position = Vector2(-10, 7)
+position = Vector2(-1, 2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SpeedPotion"]
 visible = false
@@ -317,13 +343,13 @@ position = Vector2(122, 153)
 shape = SubResource("RectangleShape2D_47o8x")
 disabled = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SpeedPotion"]
+[node name="SpeedBounce" type="AnimationPlayer" parent="SpeedPotion"]
 libraries = {
 "": SubResource("AnimationLibrary_qcxyd")
 }
 
 [node name="AttackPotion" type="Area2D" parent="."]
-position = Vector2(-10, 7)
+position = Vector2(-1, 2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AttackPotion"]
 visible = false
@@ -337,7 +363,7 @@ position = Vector2(122, 153)
 shape = SubResource("RectangleShape2D_47o8x")
 disabled = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AttackPotion"]
+[node name="AttackBounce" type="AnimationPlayer" parent="AttackPotion"]
 libraries = {
 "": SubResource("AnimationLibrary_qcxyd")
 }
@@ -357,5 +383,45 @@ texture_scale = 2.28
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("8_q63dr")]
 
+[node name="EnemyChecker" type="Area2D" parent="."]
+position = Vector2(-85, 35)
+script = ExtResource("9_mm2ld")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyChecker"]
+visible = false
+position = Vector2(424.5, 83.5)
+shape = SubResource("RectangleShape2D_ajvvh")
+
+[node name="LevelPass" type="PointLight2D" parent="."]
+position = Vector2(711, 116)
+enabled = false
+color = Color(0, 1, 0, 1)
+energy = 0.83
+texture = SubResource("GradientTexture2D_cnkjo")
+texture_scale = 2.09
+script = ExtResource("10_i0gbr")
+
+[node name="wall" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+position = Vector2(-136, 81)
+shape = SubResource("RectangleShape2D_nhkgf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall"]
+position = Vector2(73.5, -22)
+shape = SubResource("RectangleShape2D_q0bsa")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wall"]
+position = Vector2(280, 77.5)
+shape = SubResource("RectangleShape2D_r235k")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wall"]
+position = Vector2(70.75, 182)
+shape = SubResource("RectangleShape2D_hj8q2")
+
 [connection signal="animation_finished" from="Chest" to="Chest/Area2D" method="_on_chest_animation_finished"]
 [connection signal="body_entered" from="Chest/Area2D" to="Chest/Area2D" method="_on_body_entered"]
+[connection signal="animation_finished" from="SpeedPotion/SpeedBounce" to="Chest/Area2D" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="AttackPotion/AttackBounce" to="Chest/Area2D" method="_on_animation_player_animation_finished"]
+[connection signal="enemies_gone" from="EnemyChecker" to="NextLevel" method="_on_enemy_checker_enemies_gone"]
+[connection signal="enemies_gone" from="EnemyChecker" to="LevelPass" method="_on_enemy_checker_enemies_gone"]

@@ -14,8 +14,8 @@ var is_wall_sliding = false
 
 var tempMaxSpeed = maxSpeed
 var dashSpeed: float = 600
-var dashCooldown: float = 2
-var dashDuration: float = 0.6
+var dashCooldown: float = 1.5
+var dashDuration: float = 0.4
 var isDashing = false
 var canDash = true
 var dashDurationTimer = Timer.new()
@@ -38,6 +38,7 @@ var isFalling = false
 
 @onready var marker = get_node("weapon/muzzle")
 @export var health_component : HealthComponent
+@onready var global_script = get_node("/root/GlobalScript")
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 func _ready():
 	dashDurationTimer.set_one_shot(true)
@@ -49,6 +50,12 @@ func _ready():
 	
 	
 	$AnimationTree.active = true
+
+func _on_health_component_take_damage():
+	global_script.set_player_health(health_component.health)
+	$PlayerHitboxComponent/CollisionShape2D.disabled = true
+	await(get_tree().create_timer(0.2).timeout)
+	$PlayerHitboxComponent/CollisionShape2D.disabled = false
 
 func _on_dashDurationTimer_timeout():
 	tempMaxSpeed = maxSpeed
@@ -178,11 +185,17 @@ func _physics_process(delta):
 	# dir[1] = xInput
 	var inputDir = xinput()
 	
+	
 	xaccelerate(inputDir, delta)
 	player_movement(velocity)
 	jump(delta)
 	wall_slide(delta)
 	dashAttack()
+	
+	if isDashing:
+		$PlayerHitboxComponent/CollisionShape2D.disabled = true
+		await(get_tree().create_timer(dashDuration).timeout)
+		$PlayerHitboxComponent/CollisionShape2D.disabled = false
 
 func dashAttack():
 	if Input.is_action_just_pressed("dash") and canDash and not isDashing:
@@ -280,3 +293,4 @@ func _input(event : InputEvent):
 		position.y += 1
 
 		
+

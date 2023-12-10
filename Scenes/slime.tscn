@@ -322,6 +322,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("health_component") groups=["player"]]
+collision_mask = 4
 script = ExtResource("1_oqed1")
 health_component = NodePath("HealthComponent")
 
@@ -374,3 +375,5 @@ one_shot = true
 libraries = {
 "": SubResource("AnimationLibrary_xn386")
 }
+
+[connection signal="takeDamage" from="HealthComponent" to="." method="_on_health_component_take_damage"]

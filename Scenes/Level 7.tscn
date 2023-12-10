@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://y5imlfgtfvtb"]
+[gd_scene load_steps=29 format=3 uid="uid://y5imlfgtfvtb"]
 
 [ext_resource type="Texture2D" uid="uid://nnng1s0k7poi" path="res://Assets/CaveBackgrounds & Stuff/caveRemasteredV7.png" id="1_0k3eh"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_v3h2o"]
@@ -7,6 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="5_gqdlf"]
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="6_15ol6"]
 [ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="7_44uh4"]
+[ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="8_3k1qf"]
+[ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://scenes/Enemies/enemySkull.tscn" id="9_ux7h1"]
+[ext_resource type="PackedScene" uid="uid://b73mxahhrggmc" path="res://scenes/Enemies/golem.tscn" id="10_bb102"]
+[ext_resource type="PackedScene" uid="uid://c61myq8gk6uoy" path="res://scenes/Enemies/enemyBat.tscn" id="11_riexf"]
+[ext_resource type="PackedScene" uid="uid://bkr7fwaqp42x1" path="res://scenes/Enemies/enemySlime.tscn" id="12_yvbf4"]
+[ext_resource type="Script" path="res://scripts/LevelPass.gd" id="13_u5r2j"]
 
 [sub_resource type="Gradient" id="Gradient_3htgo"]
 offsets = PackedFloat32Array(0.287425, 0.706587)
@@ -44,6 +50,30 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 gradient = SubResource("Gradient_6n4et")
 fill = 1
 fill_from = Vector2(0.487179, 0.478632)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vlmyo"]
+size = Vector2(1047, 328)
+
+[sub_resource type="Gradient" id="Gradient_ilsgs"]
+offsets = PackedFloat32Array(0.188498, 0.773163)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wxs4p"]
+gradient = SubResource("Gradient_ilsgs")
+fill = 1
+fill_from = Vector2(0.482906, 0.482906)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mltc5"]
+size = Vector2(15.5, 199.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fics"]
+size = Vector2(973.5, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkjvs"]
+size = Vector2(13, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsr3r"]
+size = Vector2(971.5, 12)
 
 [node name="Level7" type="Node2D"]
 
@@ -197,3 +227,60 @@ energy = 0.59
 texture = SubResource("GradientTexture2D_gftkv")
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("7_44uh4")]
+
+[node name="EnemyChecker" type="Area2D" parent="."]
+position = Vector2(-85, 35)
+script = ExtResource("8_3k1qf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyChecker"]
+visible = false
+position = Vector2(335.5, 34)
+shape = SubResource("RectangleShape2D_vlmyo")
+
+[node name="enemySkull" parent="." groups=["Enemies"] instance=ExtResource("9_ux7h1")]
+position = Vector2(137, 47)
+
+[node name="enemySkull2" parent="." groups=["Enemies"] instance=ExtResource("9_ux7h1")]
+position = Vector2(382, 41)
+
+[node name="golem" parent="." groups=["Enemies"] instance=ExtResource("10_bb102")]
+position = Vector2(257, 114)
+
+[node name="bat" parent="." groups=["Enemies"] instance=ExtResource("11_riexf")]
+position = Vector2(634, 50)
+
+[node name="enemySlime" parent="." groups=["Enemies"] instance=ExtResource("12_yvbf4")]
+position = Vector2(92, -15)
+
+[node name="enemySlime2" parent="." groups=["Enemies"] instance=ExtResource("12_yvbf4")]
+position = Vector2(399, -17)
+
+[node name="LevelPass" type="PointLight2D" parent="."]
+position = Vector2(711, 116)
+enabled = false
+color = Color(0, 1, 0, 1)
+energy = 0.83
+texture = SubResource("GradientTexture2D_wxs4p")
+texture_scale = 2.09
+script = ExtResource("13_u5r2j")
+
+[node name="wall" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+position = Vector2(-232, 49.125)
+shape = SubResource("RectangleShape2D_mltc5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall"]
+position = Vector2(257.25, -53)
+shape = SubResource("RectangleShape2D_0fics")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wall"]
+position = Vector2(744, 42)
+shape = SubResource("RectangleShape2D_mkjvs")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wall"]
+position = Vector2(255.25, 150)
+shape = SubResource("RectangleShape2D_nsr3r")
+
+[connection signal="enemies_gone" from="EnemyChecker" to="NextLevel" method="_on_enemy_checker_enemies_gone"]
+[connection signal="enemies_gone" from="EnemyChecker" to="LevelPass" method="_on_enemy_checker_enemies_gone"]

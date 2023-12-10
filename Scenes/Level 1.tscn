@@ -1,16 +1,21 @@
-[gd_scene load_steps=23 format=3 uid="uid://c5jmorjvt41y1"]
+[gd_scene load_steps=35 format=3 uid="uid://c5jmorjvt41y1"]
 
 [ext_resource type="Texture2D" uid="uid://bych5ukuaatj7" path="res://Assets/CaveBackgrounds & Stuff/awesomeCavePixelArt.png" id="1_fi2fc"]
 [ext_resource type="Texture2D" uid="uid://domj8tr1okhwm" path="res://Tilesets/mainlev_build.png" id="2_a77a7"]
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="5_51v8s"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="5_076jv"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="5_gkotl"]
-[ext_resource type="PackedScene" path="res://scenes/Enemies/enemySlime.tscn" id="6_e8k1e"]
+[ext_resource type="PackedScene" uid="uid://bkr7fwaqp42x1" path="res://scenes/Enemies/enemySlime.tscn" id="6_e8k1e"]
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="7_gwyap"]
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="8_boy6c"]
 [ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="9_cmunu"]
-[ext_resource type="PackedScene" path="res://scenes/Enemies/enemyBat.tscn" id="10_pqbsm"]
-[ext_resource type="PackedScene" path="res://scenes/Enemies/enemySkull.tscn" id="11_hus7w"]
+[ext_resource type="PackedScene" uid="uid://c61myq8gk6uoy" path="res://scenes/Enemies/enemyBat.tscn" id="10_pqbsm"]
+[ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://scenes/Enemies/enemySkull.tscn" id="11_hus7w"]
+[ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="12_lcqtw"]
+[ext_resource type="Script" path="res://scripts/LevelPass.gd" id="13_l7sxb"]
+[ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://Scenes/Enemies/enemySkull.tscn" id="15_gk7gf"]
+[ext_resource type="PackedScene" uid="uid://bkr7fwaqp42x1" path="res://Scenes/Enemies/enemySlime.tscn" id="16_a52y8"]
+[ext_resource type="PackedScene" uid="uid://b73mxahhrggmc" path="res://Scenes/Enemies/golem.tscn" id="16_sv228"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7vat8"]
 
@@ -2772,7 +2777,8 @@ texture = ExtResource("2_a77a7")
 29:63/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_hdk48"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 3
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_7vat8")
 sources/0 = SubResource("TileSetAtlasSource_bf0ht")
 
@@ -2812,6 +2818,30 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 gradient = SubResource("Gradient_1evla")
 fill = 1
 fill_from = Vector2(0.487179, 0.478632)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fn1bs"]
+size = Vector2(869, 229)
+
+[sub_resource type="Gradient" id="Gradient_aqxqu"]
+offsets = PackedFloat32Array(0.188498, 0.773163)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_md2ga"]
+gradient = SubResource("Gradient_aqxqu")
+fill = 1
+fill_from = Vector2(0.482906, 0.482906)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uiqcb"]
+size = Vector2(16, 233)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1sq3b"]
+size = Vector2(723, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvqq1"]
+size = Vector2(727, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7b3vy"]
+size = Vector2(17, 194)
 
 [node name="Level 1" type="Node2D"]
 
@@ -2952,11 +2982,58 @@ texture = SubResource("GradientTexture2D_bd8bl")
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("9_cmunu")]
 process_mode = 3
 
-[node name="bat" parent="." instance=ExtResource("10_pqbsm")]
+[node name="bat" parent="." groups=["Enemies"] instance=ExtResource("10_pqbsm")]
 position = Vector2(447, 84)
 
-[node name="enemySkull" parent="." instance=ExtResource("11_hus7w")]
+[node name="skull" parent="." groups=["Enemies"] instance=ExtResource("11_hus7w")]
 position = Vector2(274, 130)
 
-[node name="Enemy1" parent="." instance=ExtResource("6_e8k1e")]
+[node name="slime" parent="." groups=["Enemies"] instance=ExtResource("6_e8k1e")]
 position = Vector2(411, 196)
+
+[node name="EnemyChecker" type="Area2D" parent="."]
+position = Vector2(-85, 35)
+script = ExtResource("12_lcqtw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyChecker"]
+position = Vector2(429, 84)
+shape = SubResource("RectangleShape2D_fn1bs")
+
+[node name="LevelPass" type="PointLight2D" parent="."]
+position = Vector2(569, 180)
+enabled = false
+color = Color(0, 1, 0, 1)
+energy = 0.83
+texture = SubResource("GradientTexture2D_md2ga")
+texture_scale = 2.09
+script = ExtResource("13_l7sxb")
+
+[node name="enemySkull" parent="." groups=["Enemies"] instance=ExtResource("15_gk7gf")]
+position = Vector2(179, 64)
+
+[node name="enemySlime" parent="." groups=["Enemies"] instance=ExtResource("16_a52y8")]
+position = Vector2(326, 69)
+
+[node name="golem" parent="." instance=ExtResource("16_sv228")]
+position = Vector2(490, 192)
+
+[node name="wall" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+position = Vector2(-8, 106.5)
+shape = SubResource("RectangleShape2D_uiqcb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall"]
+position = Vector2(359.5, 218)
+shape = SubResource("RectangleShape2D_1sq3b")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wall"]
+position = Vector2(353, 22)
+shape = SubResource("RectangleShape2D_pvqq1")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wall"]
+position = Vector2(712.5, 112)
+shape = SubResource("RectangleShape2D_7b3vy")
+
+[connection signal="enemies_gone" from="EnemyChecker" to="NextLevel" method="_on_enemy_checker_enemies_gone"]
+[connection signal="enemies_gone" from="EnemyChecker" to="LevelPass" method="_on_enemy_checker_enemies_gone"]

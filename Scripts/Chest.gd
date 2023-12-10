@@ -15,7 +15,11 @@ func _on_body_entered(body):
 
 
 func _on_chest_animation_finished():
-	collision.disabled = false
 	potion.play("default")
 	animation_player.play("bounce")
 	potion.visible = true
+	_on_animation_player_animation_finished("bounce")
+
+
+func _on_animation_player_animation_finished(anim_name):
+	collision.disabled = false

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://brvista7g3t6k"]
+
+[ext_resource type="AudioStream" uid="uid://csgu7gojw5ikn" path="res://Assets/Sounds/the-final-boss-battle-158700.mp3" id="1_noh1y"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_noh1y")
+volume_db = -17.516

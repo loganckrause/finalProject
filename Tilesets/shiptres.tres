@@ -1110,6 +1110,7 @@ texture = ExtResource("1_qjmlu")
 25:18/0/physics_layer_0/angular_velocity = 0.0
 
 [resource]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 3
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_wo4qe")
 sources/0 = SubResource("TileSetAtlasSource_df06p")

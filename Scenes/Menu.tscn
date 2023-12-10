@@ -109,4 +109,4 @@ text = "Exit Game
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_qidg4")
-volume_db = -5.333
+volume_db = -8.07

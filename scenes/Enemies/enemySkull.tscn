@@ -1,13 +1,13 @@
-[gd_scene load_steps=20 format=3 uid="uid://d1f4bmxddyb2q"]
+[gd_scene load_steps=20 format=3 uid="uid://bbwxtpj14djoa"]
 
 [ext_resource type="Script" path="res://scripts/enemies/skull.gd" id="1_bsux7"]
-[ext_resource type="Texture2D" uid="uid://ce2h4v20exevp" path="res://assets/enemies/skull.png" id="2_2gji0"]
-[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="2_tvs4d"]
-[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="3_3k7jl"]
-[ext_resource type="PackedScene" uid="uid://cwb3b6a3tfjmm" path="res://scenes/components/pathfinding_component.tscn" id="4_jra07"]
-[ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://scenes/components/vision_component.tscn" id="5_1wdfh"]
+[ext_resource type="Texture2D" uid="uid://ce2h4v20exevp" path="res://Assets/enemies/skull.png" id="2_2gji0"]
+[ext_resource type="PackedScene" path="res://scenes/components/health_component.tscn" id="2_tvs4d"]
+[ext_resource type="PackedScene" path="res://scenes/components/hitbox_component.tscn" id="3_3k7jl"]
+[ext_resource type="PackedScene" path="res://scenes/components/pathfinding_component.tscn" id="4_jra07"]
+[ext_resource type="PackedScene" path="res://scenes/components/vision_component.tscn" id="5_1wdfh"]
 [ext_resource type="Script" path="res://scripts/enemies/weaponEnemy.gd" id="6_estkc"]
-[ext_resource type="Texture2D" uid="uid://kw0xssnymhjh" path="res://icon.svg" id="6_ljcnd"]
+[ext_resource type="Texture2D" uid="uid://d17qf084ds4st" path="res://icon.svg" id="6_ljcnd"]
 
 [sub_resource type="Animation" id="Animation_mmi4v"]
 length = 0.001
@@ -89,7 +89,8 @@ radius = 274.002
 [sub_resource type="CircleShape2D" id="CircleShape2D_hci7x"]
 
 [node name="enemySkull" type="CharacterBody2D" node_paths=PackedStringArray("pathfinding_component")]
-collision_mask = 2
+collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_bsux7")
 pathfinding_component = NodePath("PathfindingComponent")
 
@@ -143,4 +144,5 @@ position = Vector2(140, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_hci7x")
 
+[connection signal="area_entered" from="HitboxComponent" to="." method="_on_hitbox_component_area_entered"]
 [connection signal="weaponShot" from="enemyWeapon" to="." method="_on_enemy_weapon_weapon_shot"]

@@ -12,7 +12,7 @@ const decelerationy = 300
 @export var maxSpeed = 70
 
 var tempMaxSpeed = maxSpeed
-var dashSpeed: float = 300
+var dashSpeed: float = 220
 var dashDuration: float = 1
 var dashCooldown: float = 3
 var isDashing = false
@@ -21,6 +21,8 @@ var dashTimer = Timer.new()
 var cooldownTimer = Timer.new()
 
 var state_machine
+
+var runIntoDamage: float = 3
 
 func _ready():
 	dashTimer.set_one_shot(true)
@@ -32,7 +34,14 @@ func _ready():
 	
 	$AnimationTree.active = true
 
+func _on_hitbox_component_area_entered(area):
+	if area is HitboxComponent and area.name == "PlayerHitboxComponent":
+		var hitbox : HitboxComponent = area
 
+		var attack = Attack.new()
+		attack.attack_damage = runIntoDamage
+
+		hitbox.damage(attack)
 func _on_dashTimer_timeout():
 	tempMaxSpeed = maxSpeed
 	isDashing = false
@@ -120,5 +129,7 @@ func vectorToAngle(vector: Vector2) -> float:
 	var angleToPlayer
 	angleToPlayer = atan2(vector.y, vector.x)
 	return angleToPlayer
+
+
 
 

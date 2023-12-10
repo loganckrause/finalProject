@@ -1,6 +1,5 @@
 extends Sprite2D
 
-
 var cooltime = 0.4
 @onready var bullet = preload("res://Scenes/PlayerStuff/bullet.tscn")
 
@@ -19,6 +18,7 @@ func _process(_delta):
 	
 	if Input.is_action_pressed("fire") and $FiringCooldown.is_stopped():
 		shoot()
+		GunSound.play()
 
 func shoot():
 	var bullet_instance = bullet.instantiate()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bwkwuq7q2epgy"]
+[gd_scene load_steps=24 format=3 uid="uid://bwkwuq7q2epgy"]
 
 [ext_resource type="Texture2D" uid="uid://cdh4rjhd1jwa0" path="res://Assets/CaveBackgrounds & Stuff/6axfm8uck3oy.png" id="1_k8jcv"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_mnx22"]
@@ -7,6 +7,11 @@
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="5_igaqu"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="6_eh0ns"]
 [ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="7_r2may"]
+[ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="8_uarj6"]
+[ext_resource type="PackedScene" uid="uid://b73mxahhrggmc" path="res://scenes/Enemies/golem.tscn" id="9_ssrhb"]
+[ext_resource type="PackedScene" uid="uid://c61myq8gk6uoy" path="res://scenes/Enemies/enemyBat.tscn" id="10_01rt5"]
+[ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://scenes/Enemies/enemySkull.tscn" id="11_g2ood"]
+[ext_resource type="Script" path="res://scripts/LevelPass.gd" id="12_hmmr8"]
 
 [sub_resource type="Gradient" id="Gradient_7w5h0"]
 offsets = PackedFloat32Array(0.299401, 0.784431)
@@ -26,6 +31,30 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 gradient = SubResource("Gradient_ypge5")
 fill = 1
 fill_from = Vector2(0.487179, 0.478632)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4t1e6"]
+size = Vector2(869, 229)
+
+[sub_resource type="Gradient" id="Gradient_4n0rr"]
+offsets = PackedFloat32Array(0.188498, 0.773163)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hfxgl"]
+gradient = SubResource("Gradient_4n0rr")
+fill = 1
+fill_from = Vector2(0.482906, 0.482906)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnc7m"]
+size = Vector2(14, 182.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7803"]
+size = Vector2(439, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_siyd3"]
+size = Vector2(13, 172.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56xa2"]
+size = Vector2(397.25, 12)
 
 [node name="Level9" type="Node2D"]
 
@@ -120,3 +149,49 @@ texture = SubResource("GradientTexture2D_oi6iv")
 position = Vector2(69, 119)
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("7_r2may")]
+
+[node name="EnemyChecker" type="Area2D" parent="."]
+position = Vector2(-85, 35)
+script = ExtResource("8_uarj6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyChecker"]
+position = Vector2(127, 92)
+shape = SubResource("RectangleShape2D_4t1e6")
+
+[node name="golem" parent="." groups=["Enemies"] instance=ExtResource("9_ssrhb")]
+position = Vector2(109, 193)
+
+[node name="bat" parent="." groups=["Enemies"] instance=ExtResource("10_01rt5")]
+position = Vector2(118, 71)
+
+[node name="enemySkull" parent="." groups=["Enemies"] instance=ExtResource("11_g2ood")]
+position = Vector2(148, 112)
+
+[node name="LevelPass" type="PointLight2D" parent="."]
+position = Vector2(167, 179)
+enabled = false
+color = Color(0, 1, 0, 1)
+energy = 0.83
+texture = SubResource("GradientTexture2D_hfxgl")
+texture_scale = 2.09
+script = ExtResource("12_hmmr8")
+
+[node name="wall" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+position = Vector2(-199, 129.188)
+shape = SubResource("RectangleShape2D_rnc7m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall"]
+position = Vector2(0, 41)
+shape = SubResource("RectangleShape2D_k7803")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wall"]
+position = Vector2(199, 128.25)
+shape = SubResource("RectangleShape2D_siyd3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wall"]
+position = Vector2(1.375, 214)
+shape = SubResource("RectangleShape2D_56xa2")
+
+[connection signal="enemies_gone" from="EnemyChecker" to="NextLevel" method="_on_enemy_checker_enemies_gone"]

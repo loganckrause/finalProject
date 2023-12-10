@@ -1,28 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://c7u5uy7fylrvo"]
+[gd_scene load_steps=24 format=3 uid="uid://c61myq8gk6uoy"]
 
 [ext_resource type="Script" path="res://scripts/enemies/bat.gd" id="1_svi5i"]
-[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="2_6vuly"]
-[ext_resource type="Texture2D" uid="uid://b5ci1nafojiq4" path="res://assets/enemies/bat.png" id="2_kvyvo"]
-[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="3_hfq0g"]
-[ext_resource type="PackedScene" uid="uid://cwb3b6a3tfjmm" path="res://scenes/components/pathfinding_component.tscn" id="4_xuew3"]
-[ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://scenes/components/vision_component.tscn" id="5_0w325"]
-
-[sub_resource type="Animation" id="Animation_k1ob3"]
-resource_name = "idle"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
+[ext_resource type="PackedScene" path="res://scenes/components/health_component.tscn" id="2_6vuly"]
+[ext_resource type="Texture2D" uid="uid://b5ci1nafojiq4" path="res://Assets/enemies/bat.png" id="2_kvyvo"]
+[ext_resource type="PackedScene" path="res://scenes/components/hitbox_component.tscn" id="3_hfq0g"]
+[ext_resource type="PackedScene" path="res://scenes/components/pathfinding_component.tscn" id="4_xuew3"]
+[ext_resource type="PackedScene" path="res://scenes/components/vision_component.tscn" id="5_0w325"]
 
 [sub_resource type="Animation" id="Animation_88dky"]
 length = 0.001
@@ -99,6 +82,23 @@ tracks/0/keys = {
 "values": [Vector2i(0, 4), Vector2i(1, 4), Vector2i(2, 4), Vector2i(3, 4)]
 }
 
+[sub_resource type="Animation" id="Animation_k1ob3"]
+resource_name = "idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k2lmn"]
 _data = {
 "RESET": SubResource("Animation_88dky"),
@@ -150,6 +150,8 @@ radius = 8.06226
 radius = 467.027
 
 [node name="bat" type="CharacterBody2D" node_paths=PackedStringArray("pathfinding_component")]
+collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_svi5i")
 pathfinding_component = NodePath("PathfindingComponent")
 
@@ -189,3 +191,5 @@ vision_component = NodePath("../VisionComponent")
 
 [node name="VisionBox" type="CollisionShape2D" parent="VisionComponent"]
 shape = SubResource("CircleShape2D_ck0kc")
+
+[connection signal="area_entered" from="HitboxComponent" to="." method="_on_hitbox_component_area_entered"]

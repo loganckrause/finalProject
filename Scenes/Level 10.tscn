@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://bmvat3dh5trx4"]
+[gd_scene load_steps=20 format=3 uid="uid://bmvat3dh5trx4"]
 
 [ext_resource type="Texture2D" uid="uid://bych5ukuaatj7" path="res://Assets/CaveBackgrounds & Stuff/awesomeCavePixelArt.png" id="1_1eda7"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="2_pl8pi"]
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="3_yiu3q"]
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="4_cu55n"]
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="5_o6sg2"]
+[ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="6_tevrj"]
 
 [sub_resource type="Gradient" id="Gradient_478wi"]
 offsets = PackedFloat32Array(0.299401, 0.784431)
@@ -42,6 +43,21 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 gradient = SubResource("Gradient_xfovp")
 fill = 1
 fill_from = Vector2(0.487179, 0.478632)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnhr2"]
+size = Vector2(869, 268.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6edc"]
+size = Vector2(14, 223.188)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wi77"]
+size = Vector2(692.5, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idwv5"]
+size = Vector2(13, 231.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tsau"]
+size = Vector2(690.625, 12)
 
 [node name="Level10" type="Node2D"]
 
@@ -130,3 +146,29 @@ texture = SubResource("GradientTexture2D_eyx8w")
 color = Color(0, 0, 0, 1)
 energy = 0.28
 blend_mode = 2
+
+[node name="EnemyChecker" type="Area2D" parent="."]
+position = Vector2(-85, 35)
+script = ExtResource("6_tevrj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyChecker"]
+position = Vector2(114, 101.25)
+shape = SubResource("RectangleShape2D_xnhr2")
+
+[node name="wall" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+position = Vector2(-342, 142.594)
+shape = SubResource("RectangleShape2D_q6edc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall"]
+position = Vector2(-0.25, 25)
+shape = SubResource("RectangleShape2D_8wi77")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wall"]
+position = Vector2(343, 147.375)
+shape = SubResource("RectangleShape2D_idwv5")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wall"]
+position = Vector2(-4.3125, 261)
+shape = SubResource("RectangleShape2D_0tsau")

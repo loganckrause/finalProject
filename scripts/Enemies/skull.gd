@@ -12,6 +12,8 @@ const decelerationy = 300
 
 var state_machine
 
+var runIntoDamage: float = 3
+
 func _ready():
 	$AnimationTree.active = true
 
@@ -77,3 +79,13 @@ func _on_enemy_weapon_weapon_shot():
 		$Sprite2D.set_flip_h(true)
 		state_machine.travel("attack")
 	else: state_machine.travel("attack")
+
+
+func _on_hitbox_component_area_entered(area):
+	if area is HitboxComponent and area.name == "PlayerHitboxComponent":
+		var hitbox : HitboxComponent = area
+
+		var attack = Attack.new()
+		attack.attack_damage = runIntoDamage
+
+		hitbox.damage(attack)

@@ -9,7 +9,7 @@ radius = 3.0
 height = 11.0
 
 [sub_resource type="Gradient" id="Gradient_u5lmg"]
-offsets = PackedFloat32Array(0.233533, 0.976048)
+offsets = PackedFloat32Array(0.127796, 0.86901)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_wkbon"]
@@ -97,7 +97,7 @@ shape = SubResource("CapsuleShape2D_d33q3")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(0.105882, 0.184314, 1, 1)
-energy = 1.08
+energy = 0.73
 texture = SubResource("GradientTexture2D_wkbon")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

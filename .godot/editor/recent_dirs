@@ -1,9 +1,10 @@
+res://Scenes
+res://scripts
+res://scripts/Enemies
 D:/GameProjects/finalProject/scripts/components
 D:/GameProjects/finalProject/scripts/Player
 res://scripts/Player
-res://scripts
 D:/GameProjects/finalProject/scripts
-res://Scenes
 res://Assets/Spawns
 res://Assets/character/Player
 res://Shaders
@@ -14,6 +15,5 @@ res://Assets/platformer items - free assets
 res://Assets/Animated Chests
 res://Assets/CaveBackgrounds & Stuff
 res://.godot/imported
-res://scripts/Enemies
 res://Scripts/PlayerEnemyScripts
 res://Scripts
