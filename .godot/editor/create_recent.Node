@@ -1,5 +1,6 @@
-TextureProgressBar
 Label
+TextureRect
+TextureProgressBar
 AnimatedSprite2D
 Sprite2D
 CanvasLayer
@@ -11,4 +12,3 @@ Node
 AudioStreamPlayer2D
 AnimationPlayer
 AnimationTree
-TextureRect

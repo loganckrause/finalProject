@@ -1,12 +1,12 @@
 [gd_scene load_steps=32 format=3 uid="uid://c61myq8gk6uoy"]
 
 [ext_resource type="Script" path="res://scripts/enemies/bat.gd" id="1_svi5i"]
-[ext_resource type="PackedScene" path="res://scenes/components/health_component.tscn" id="2_6vuly"]
+[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://Scenes/components/health_component.tscn" id="2_6vuly"]
 [ext_resource type="Texture2D" uid="uid://b5ci1nafojiq4" path="res://Assets/enemies/bat.png" id="2_kvyvo"]
 [ext_resource type="Texture2D" uid="uid://d2tdlo7x31vbe" path="res://Assets/enemies/deathanimation.png" id="3_7hpbu"]
-[ext_resource type="PackedScene" path="res://scenes/components/hitbox_component.tscn" id="3_hfq0g"]
-[ext_resource type="PackedScene" path="res://scenes/components/pathfinding_component.tscn" id="4_xuew3"]
-[ext_resource type="PackedScene" path="res://scenes/components/vision_component.tscn" id="5_0w325"]
+[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://Scenes/components/hitbox_component.tscn" id="3_hfq0g"]
+[ext_resource type="PackedScene" uid="uid://cwb3b6a3tfjmm" path="res://Scenes/components/pathfinding_component.tscn" id="4_xuew3"]
+[ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://Scenes/components/vision_component.tscn" id="5_0w325"]
 
 [sub_resource type="Animation" id="Animation_88dky"]
 length = 0.001

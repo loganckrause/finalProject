@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://scripts/AttackPotion.gd" id="8_vv67m"]
 [ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="9_mm2ld"]
 [ext_resource type="Script" path="res://scripts/LevelPass.gd" id="10_i0gbr"]
-[ext_resource type="PackedScene" uid="uid://bk3ddvpbk8j8g" path="res://scenes/PlayerStuff/HealthBar.tscn" id="11_vcowk"]
+[ext_resource type="PackedScene" uid="uid://bk3ddvpbk8j8g" path="res://Scenes/PlayerStuff/HealthBar.tscn" id="11_vcowk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pw2mf"]
 atlas = ExtResource("4_rkmqj")

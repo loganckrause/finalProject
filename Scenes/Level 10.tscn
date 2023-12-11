@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="4_cu55n"]
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="5_o6sg2"]
 [ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="6_tevrj"]
-[ext_resource type="PackedScene" uid="uid://cfmwn1icgxwja" path="res://scenes/Enemies/boss.tscn" id="7_qh358"]
-[ext_resource type="PackedScene" uid="uid://bk3ddvpbk8j8g" path="res://scenes/PlayerStuff/HealthBar.tscn" id="8_acay4"]
+[ext_resource type="PackedScene" uid="uid://cfmwn1icgxwja" path="res://Scenes/Enemies/boss.tscn" id="7_qh358"]
+[ext_resource type="PackedScene" uid="uid://bk3ddvpbk8j8g" path="res://Scenes/PlayerStuff/HealthBar.tscn" id="8_acay4"]
 
 [sub_resource type="Gradient" id="Gradient_wq5tv"]
 offsets = PackedFloat32Array(0.185629, 0.667665)

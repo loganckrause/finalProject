@@ -8,11 +8,11 @@
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="6_sa50t"]
 [ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="7_2qc0t"]
 [ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="8_kmj24"]
-[ext_resource type="PackedScene" path="res://scenes/Enemies/enemySkull.tscn" id="9_weygb"]
-[ext_resource type="PackedScene" path="res://scenes/Enemies/enemySlime.tscn" id="10_e57rw"]
-[ext_resource type="PackedScene" path="res://scenes/Enemies/golem.tscn" id="11_qn7lk"]
+[ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://Scenes/Enemies/enemySkull.tscn" id="9_weygb"]
+[ext_resource type="PackedScene" uid="uid://bkr7fwaqp42x1" path="res://Scenes/Enemies/enemySlime.tscn" id="10_e57rw"]
+[ext_resource type="PackedScene" uid="uid://b73mxahhrggmc" path="res://Scenes/Enemies/golem.tscn" id="11_qn7lk"]
 [ext_resource type="Script" path="res://scripts/LevelPass.gd" id="12_4uhox"]
-[ext_resource type="PackedScene" uid="uid://bk3ddvpbk8j8g" path="res://scenes/PlayerStuff/HealthBar.tscn" id="13_jvdpb"]
+[ext_resource type="PackedScene" uid="uid://bk3ddvpbk8j8g" path="res://Scenes/PlayerStuff/HealthBar.tscn" id="13_jvdpb"]
 
 [sub_resource type="Gradient" id="Gradient_2k517"]
 offsets = PackedFloat32Array(0.323353, 0.706587)

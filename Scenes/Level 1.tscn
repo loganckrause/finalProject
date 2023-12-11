@@ -8,13 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="7_gwyap"]
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="8_boy6c"]
 [ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="9_cmunu"]
-[ext_resource type="PackedScene" path="res://scenes/Enemies/enemyBat.tscn" id="10_pqbsm"]
+[ext_resource type="PackedScene" uid="uid://c61myq8gk6uoy" path="res://Scenes/Enemies/enemyBat.tscn" id="10_pqbsm"]
 [ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="12_lcqtw"]
 [ext_resource type="Script" path="res://scripts/LevelPass.gd" id="13_l7sxb"]
-[ext_resource type="PackedScene" uid="uid://bk3ddvpbk8j8g" path="res://scenes/PlayerStuff/HealthBar.tscn" id="15_1f670"]
-[ext_resource type="PackedScene" path="res://scenes/Enemies/enemySkull.tscn" id="15_gk7gf"]
-[ext_resource type="PackedScene" path="res://scenes/Enemies/enemySlime.tscn" id="16_a52y8"]
-[ext_resource type="PackedScene" path="res://scenes/Enemies/golem.tscn" id="16_sv228"]
+[ext_resource type="PackedScene" uid="uid://bk3ddvpbk8j8g" path="res://Scenes/PlayerStuff/HealthBar.tscn" id="15_1f670"]
+[ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://Scenes/Enemies/enemySkull.tscn" id="15_gk7gf"]
+[ext_resource type="PackedScene" uid="uid://bkr7fwaqp42x1" path="res://Scenes/Enemies/enemySlime.tscn" id="16_a52y8"]
+[ext_resource type="PackedScene" uid="uid://b73mxahhrggmc" path="res://Scenes/Enemies/golem.tscn" id="16_sv228"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7vat8"]
 

@@ -38,10 +38,12 @@ func die():
 		get_tree().change_scene_to_file(deathscreen)
 		GlobalScript.set_player_health(10)
 		Randomizer.completedLevels = []
+		Randomizer.levellist = [1,2,3,5,6,7,9,10]
 		SceneTransition.end()
 	elif get_parent().is_in_group("boss"):
 		emit_signal("bossDie")
 		await(get_tree().create_timer(1.6).timeout)
+		get_tree().change_scene_to_file("res://Scenes/WinScreen.tscn")
 		get_parent().queue_free()
 	else:
 		await(get_tree().create_timer(0.6).timeout)

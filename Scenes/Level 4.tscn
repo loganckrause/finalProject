@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="8_wqt06"]
 [ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="9_fx61l"]
 [ext_resource type="Script" path="res://scripts/LevelPass.gd" id="10_cw0n0"]
-[ext_resource type="PackedScene" uid="uid://bk3ddvpbk8j8g" path="res://scenes/PlayerStuff/HealthBar.tscn" id="11_8leyr"]
+[ext_resource type="PackedScene" uid="uid://bk3ddvpbk8j8g" path="res://Scenes/PlayerStuff/HealthBar.tscn" id="11_8leyr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ohoau"]
 atlas = ExtResource("4_xkh6d")

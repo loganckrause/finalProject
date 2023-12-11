@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://scripts/enemies/golem.gd" id="1_lq4w2"]
 [ext_resource type="Texture2D" uid="uid://c1g6qmbwm3jku" path="res://Assets/enemies/Golem_Full.png" id="2_7q5m3"]
-[ext_resource type="PackedScene" path="res://scenes/components/health_component.tscn" id="2_b7yli"]
-[ext_resource type="PackedScene" path="res://scenes/components/hitbox_component.tscn" id="3_2516m"]
-[ext_resource type="PackedScene" path="res://scenes/components/pathfinding_component.tscn" id="4_8prbc"]
-[ext_resource type="PackedScene" path="res://scenes/components/vision_component.tscn" id="5_7wkb6"]
+[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://Scenes/components/health_component.tscn" id="2_b7yli"]
+[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://Scenes/components/hitbox_component.tscn" id="3_2516m"]
+[ext_resource type="PackedScene" uid="uid://cwb3b6a3tfjmm" path="res://Scenes/components/pathfinding_component.tscn" id="4_8prbc"]
+[ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://Scenes/components/vision_component.tscn" id="5_7wkb6"]
 [ext_resource type="Script" path="res://scripts/enemies/burstWeapon.gd" id="6_naxa3"]
 [ext_resource type="Texture2D" uid="uid://d2tdlo7x31vbe" path="res://Assets/enemies/deathanimation.png" id="8_68jre"]
 
