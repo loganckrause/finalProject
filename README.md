@@ -1,4 +1,4 @@
-# CosmoRunner ReadMe
+# CosmoRunner README
 
 **Demo Video Link:**
 
