@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://45es1xcm0u3y"
-path="res://.godot/imported/static_items_outline.png-96fffd131e1322009140bd86b057f3f3.ctex"
+path="res://.godot/imported/static_items_outline.png-ae1f507109621a7ffe6cf6d6daa0747c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/platformer items - free assets/static_items_outline.png"
-dest_files=["res://.godot/imported/static_items_outline.png-96fffd131e1322009140bd86b057f3f3.ctex"]
+source_file="res://Assets/platformer items - free assets/static_items_outline.png"
+dest_files=["res://.godot/imported/static_items_outline.png-ae1f507109621a7ffe6cf6d6daa0747c.ctex"]
 
 [params]
 

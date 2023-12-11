@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhd4ucr3b4o5k"
-path="res://.godot/imported/player_noweaponrunningfrontfacingback.png-c8b53ba4eb1a77dc5143cbc24eb0cc45.ctex"
+path="res://.godot/imported/player_noweaponrunningfrontfacingback.png-7227bdcaceacf724a7a6ead91b84faf8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/Player/player_noweaponrunningfrontfacingback.png"
-dest_files=["res://.godot/imported/player_noweaponrunningfrontfacingback.png-c8b53ba4eb1a77dc5143cbc24eb0cc45.ctex"]
+source_file="res://Assets/character/Player/player_noweaponrunningfrontfacingback.png"
+dest_files=["res://.godot/imported/player_noweaponrunningfrontfacingback.png-7227bdcaceacf724a7a6ead91b84faf8.ctex"]
 
 [params]
 

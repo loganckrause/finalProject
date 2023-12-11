@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://wm843lfbub4t"
-path="res://.godot/imported/402816__jacksonacademyashmore__jetpack-loop.mp3-7c8d6bfac69fd530ec8803d142fc8135.mp3str"
+path="res://.godot/imported/402816__jacksonacademyashmore__jetpack-loop.mp3-9883f18371daf5d33cbd399a29e87c42.mp3str"
 
 [deps]
 
-source_file="res://assets/Sounds/402816__jacksonacademyashmore__jetpack-loop.mp3"
-dest_files=["res://.godot/imported/402816__jacksonacademyashmore__jetpack-loop.mp3-7c8d6bfac69fd530ec8803d142fc8135.mp3str"]
+source_file="res://Assets/Sounds/402816__jacksonacademyashmore__jetpack-loop.mp3"
+dest_files=["res://.godot/imported/402816__jacksonacademyashmore__jetpack-loop.mp3-9883f18371daf5d33cbd399a29e87c42.mp3str"]
 
 [params]
 

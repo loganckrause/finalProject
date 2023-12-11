@@ -1,10 +1,10 @@
+AnimatedSprite2D
 AudioStreamPlayer
 CollisionShape2D
 Area2D
 PointLight2D
 Node
 AudioStreamPlayer2D
-AnimatedSprite2D
 AnimationPlayer
 AnimationTree
 TextureRect

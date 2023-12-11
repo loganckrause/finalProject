@@ -1,11 +1,12 @@
-[gd_scene load_steps=24 format=3 uid="uid://c61myq8gk6uoy"]
+[gd_scene load_steps=32 format=3 uid="uid://c61myq8gk6uoy"]
 
 [ext_resource type="Script" path="res://scripts/enemies/bat.gd" id="1_svi5i"]
-[ext_resource type="PackedScene" path="res://scenes/components/health_component.tscn" id="2_6vuly"]
+[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="2_6vuly"]
 [ext_resource type="Texture2D" uid="uid://b5ci1nafojiq4" path="res://Assets/enemies/bat.png" id="2_kvyvo"]
-[ext_resource type="PackedScene" path="res://scenes/components/hitbox_component.tscn" id="3_hfq0g"]
-[ext_resource type="PackedScene" path="res://scenes/components/pathfinding_component.tscn" id="4_xuew3"]
-[ext_resource type="PackedScene" path="res://scenes/components/vision_component.tscn" id="5_0w325"]
+[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="3_hfq0g"]
+[ext_resource type="PackedScene" uid="uid://cwb3b6a3tfjmm" path="res://scenes/components/pathfinding_component.tscn" id="4_xuew3"]
+[ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://scenes/components/vision_component.tscn" id="5_0w325"]
+[ext_resource type="Texture2D" uid="uid://d2tdlo7x31vbe" path="res://Assets/enemies/deathanimation.png" id="7_map8w"]
 
 [sub_resource type="Animation" id="Animation_88dky"]
 length = 0.001
@@ -149,6 +150,56 @@ radius = 8.06226
 [sub_resource type="CircleShape2D" id="CircleShape2D_ck0kc"]
 radius = 467.027
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1gou"]
+atlas = ExtResource("7_map8w")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6x4s"]
+atlas = ExtResource("7_map8w")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knfcv"]
+atlas = ExtResource("7_map8w")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehees"]
+atlas = ExtResource("7_map8w")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jtmp"]
+atlas = ExtResource("7_map8w")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fx4tr"]
+atlas = ExtResource("7_map8w")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nhr41"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1gou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6x4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knfcv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehees")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jtmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fx4tr")
+}],
+"loop": true,
+"name": &"die",
+"speed": 10.0
+}]
+
 [node name="bat" type="CharacterBody2D" node_paths=PackedStringArray("pathfinding_component")]
 collision_layer = 2
 collision_mask = 4
@@ -176,7 +227,9 @@ libraries = {
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ykbx0")
 
-[node name="HealthComponent" parent="." instance=ExtResource("2_6vuly")]
+[node name="HealthComponent" parent="." node_paths=PackedStringArray("enemyDeathAnimation", "enemySprite") instance=ExtResource("2_6vuly")]
+enemyDeathAnimation = NodePath("../DeathAnimation")
+enemySprite = NodePath("../Sprite")
 
 [node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_hfq0g")]
 health_component = NodePath("../HealthComponent")
@@ -191,5 +244,11 @@ vision_component = NodePath("../VisionComponent")
 
 [node name="VisionBox" type="CollisionShape2D" parent="VisionComponent"]
 shape = SubResource("CircleShape2D_ck0kc")
+
+[node name="DeathAnimation" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_nhr41")
+animation = &"die"
+frame_progress = 0.359393
 
 [connection signal="area_entered" from="HitboxComponent" to="." method="_on_hitbox_component_area_entered"]

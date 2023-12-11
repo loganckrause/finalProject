@@ -1,17 +1,18 @@
 [gd_scene load_steps=33 format=3 uid="uid://bb1iu7x1mv42b"]
 
-[ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_84yja"]
+[ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://scenes/slime.tscn" id="1_84yja"]
 [ext_resource type="Texture2D" uid="uid://cdh4rjhd1jwa0" path="res://Assets/CaveBackgrounds & Stuff/6axfm8uck3oy.png" id="1_hvvkn"]
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="1_mv124"]
-[ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="3_dknyd"]
+[ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://scenes/next_level.tscn" id="3_dknyd"]
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="5_x3tsb"]
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="6_7lk80"]
-[ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="7_wu3wc"]
+[ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://scenes/maingameaudio.tscn" id="7_wu3wc"]
 [ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="8_toyuj"]
-[ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://Scenes/Enemies/enemySkull.tscn" id="9_j63vo"]
-[ext_resource type="PackedScene" uid="uid://b73mxahhrggmc" path="res://Scenes/Enemies/golem.tscn" id="10_2kna8"]
+[ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://scenes/Enemies/enemySkull.tscn" id="9_j63vo"]
+[ext_resource type="PackedScene" uid="uid://b73mxahhrggmc" path="res://scenes/Enemies/golem.tscn" id="10_2kna8"]
 [ext_resource type="Script" path="res://scripts/LevelPass.gd" id="11_u254d"]
-[ext_resource type="PackedScene" uid="uid://c61myq8gk6uoy" path="res://Scenes/Enemies/enemyBat.tscn" id="12_256qn"]
+[ext_resource type="PackedScene" uid="uid://c61myq8gk6uoy" path="res://scenes/Enemies/enemyBat.tscn" id="12_256qn"]
+
 
 [sub_resource type="Gradient" id="Gradient_dex5k"]
 offsets = PackedFloat32Array(0.233533, 0.682635)

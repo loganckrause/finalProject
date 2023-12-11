@@ -1,18 +1,19 @@
 [gd_scene load_steps=29 format=3 uid="uid://y5imlfgtfvtb"]
 
 [ext_resource type="Texture2D" uid="uid://nnng1s0k7poi" path="res://Assets/CaveBackgrounds & Stuff/caveRemasteredV7.png" id="1_0k3eh"]
-[ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_v3h2o"]
+[ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://scenes/slime.tscn" id="1_v3h2o"]
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="2_rwvrh"]
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="4_5ryj1"]
-[ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="5_gqdlf"]
+[ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://scenes/next_level.tscn" id="5_gqdlf"]
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="6_15ol6"]
-[ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="7_44uh4"]
+[ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://scenes/maingameaudio.tscn" id="7_44uh4"]
 [ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="8_3k1qf"]
-[ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://Scenes/Enemies/enemySkull.tscn" id="9_ux7h1"]
-[ext_resource type="PackedScene" uid="uid://b73mxahhrggmc" path="res://Scenes/Enemies/golem.tscn" id="10_bb102"]
-[ext_resource type="PackedScene" uid="uid://c61myq8gk6uoy" path="res://Scenes/Enemies/enemyBat.tscn" id="11_riexf"]
-[ext_resource type="PackedScene" uid="uid://bkr7fwaqp42x1" path="res://Scenes/Enemies/enemySlime.tscn" id="12_yvbf4"]
+[ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://scenes/Enemies/enemySkull.tscn" id="9_ux7h1"]
+[ext_resource type="PackedScene" uid="uid://b73mxahhrggmc" path="res://scenes/Enemies/golem.tscn" id="10_bb102"]
+[ext_resource type="PackedScene" uid="uid://c61myq8gk6uoy" path="res://scenes/Enemies/enemyBat.tscn" id="11_riexf"]
+[ext_resource type="PackedScene" uid="uid://bkr7fwaqp42x1" path="res://scenes/Enemies/enemySlime.tscn" id="12_yvbf4"]
 [ext_resource type="Script" path="res://scripts/LevelPass.gd" id="13_u5r2j"]
+
 
 [sub_resource type="Gradient" id="Gradient_3htgo"]
 offsets = PackedFloat32Array(0.287425, 0.706587)

@@ -1,11 +1,12 @@
 [gd_scene load_steps=38 format=3 uid="uid://c24ogmb4g4gie"]
 
 [ext_resource type="Script" path="res://scripts/Player/player.gd" id="1_oqed1"]
-[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://Scenes/components/health_component.tscn" id="5_4td3e"]
-[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://Scenes/components/hitbox_component.tscn" id="6_5e8ti"]
+[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="5_4td3e"]
+[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="6_5e8ti"]
 [ext_resource type="Script" path="res://scripts/PlayerEnemyScripts/weapon.gd" id="7_rj4yq"]
 [ext_resource type="Texture2D" uid="uid://wmiet4vfsixo" path="res://Assets/weapon/Guns/guntest.png" id="8_pp8tc"]
 [ext_resource type="Texture2D" uid="uid://0um56fc2gqs3" path="res://Assets/character/Player/PlayerSpriteSheet.png" id="12_t5ghq"]
+
 
 [sub_resource type="Animation" id="Animation_xncjo"]
 length = 0.001

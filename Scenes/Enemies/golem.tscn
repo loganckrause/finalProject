@@ -1,12 +1,13 @@
-[gd_scene load_steps=27 format=3 uid="uid://b73mxahhrggmc"]
+[gd_scene load_steps=35 format=3 uid="uid://b73mxahhrggmc"]
 
 [ext_resource type="Script" path="res://scripts/enemies/golem.gd" id="1_lq4w2"]
 [ext_resource type="Texture2D" uid="uid://c1g6qmbwm3jku" path="res://Assets/enemies/Golem_Full.png" id="2_7q5m3"]
-[ext_resource type="PackedScene" path="res://scenes/components/health_component.tscn" id="2_b7yli"]
-[ext_resource type="PackedScene" path="res://scenes/components/hitbox_component.tscn" id="3_2516m"]
-[ext_resource type="PackedScene" path="res://scenes/components/pathfinding_component.tscn" id="4_8prbc"]
-[ext_resource type="PackedScene" path="res://scenes/components/vision_component.tscn" id="5_7wkb6"]
+[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="2_b7yli"]
+[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="3_2516m"]
+[ext_resource type="PackedScene" uid="uid://cwb3b6a3tfjmm" path="res://scenes/components/pathfinding_component.tscn" id="4_8prbc"]
+[ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://scenes/components/vision_component.tscn" id="5_7wkb6"]
 [ext_resource type="Script" path="res://scripts/enemies/burstWeapon.gd" id="6_naxa3"]
+[ext_resource type="Texture2D" uid="uid://d2tdlo7x31vbe" path="res://Assets/enemies/deathanimation.png" id="8_qv0mk"]
 
 [sub_resource type="Animation" id="Animation_ynbp5"]
 length = 0.001
@@ -160,6 +161,56 @@ radius = 14.1421
 [sub_resource type="CircleShape2D" id="CircleShape2D_ynppu"]
 radius = 352.013
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1gou"]
+atlas = ExtResource("8_qv0mk")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6x4s"]
+atlas = ExtResource("8_qv0mk")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knfcv"]
+atlas = ExtResource("8_qv0mk")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehees"]
+atlas = ExtResource("8_qv0mk")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jtmp"]
+atlas = ExtResource("8_qv0mk")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fx4tr"]
+atlas = ExtResource("8_qv0mk")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rv87c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1gou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6x4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knfcv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehees")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jtmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fx4tr")
+}],
+"loop": true,
+"name": &"die",
+"speed": 10.0
+}]
+
 [node name="golem" type="CharacterBody2D" node_paths=PackedStringArray("pathfinding_component")]
 collision_layer = 2
 collision_mask = 4
@@ -191,8 +242,10 @@ visible = false
 position = Vector2(-0.5, 2.5)
 shape = SubResource("RectangleShape2D_tn6ii")
 
-[node name="HealthComponent" parent="." instance=ExtResource("2_b7yli")]
+[node name="HealthComponent" parent="." node_paths=PackedStringArray("enemyDeathAnimation", "enemySprite") instance=ExtResource("2_b7yli")]
 visible = false
+enemyDeathAnimation = NodePath("../DeathAnimation")
+enemySprite = NodePath("../Sprite")
 
 [node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_2516m")]
 visible = false
@@ -219,6 +272,11 @@ vision_component = NodePath("../VisionComponent")
 
 [node name="muzzle" type="Marker2D" parent="burstWeapon"]
 visible = false
+
+[node name="DeathAnimation" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_rv87c")
+animation = &"die"
 
 [connection signal="area_entered" from="HitboxComponent" to="." method="_on_hitbox_component_area_entered"]
 [connection signal="weaponShot" from="burstWeapon" to="." method="_on_burst_weapon_weapon_shot"]

@@ -1,3 +1,5 @@
+res://Assets/enemies
+res://scripts/components
 res://Scenes
 res://scripts
 res://scripts/Enemies
@@ -8,7 +10,6 @@ D:/GameProjects/finalProject/scripts
 res://Assets/Spawns
 res://Assets/character/Player
 res://Shaders
-res://scripts/components
 res://Assets
 res://Tilesets
 res://Assets/platformer items - free assets

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwyog00odayj1"
-path="res://.godot/imported/pixelart_starfield_diagonal_diffraction_spikes.png-393f585e0187f6a8598f77e7ffd149c9.ctex"
+path="res://.godot/imported/pixelart_starfield_diagonal_diffraction_spikes.png-dc1b4cf357e026510695a49fe5c2a299.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CaveBackgrounds & Stuff/pixelart_starfield_diagonal_diffraction_spikes.png"
-dest_files=["res://.godot/imported/pixelart_starfield_diagonal_diffraction_spikes.png-393f585e0187f6a8598f77e7ffd149c9.ctex"]
+source_file="res://Assets/CaveBackgrounds & Stuff/pixelart_starfield_diagonal_diffraction_spikes.png"
+dest_files=["res://.godot/imported/pixelart_starfield_diagonal_diffraction_spikes.png-dc1b4cf357e026510695a49fe5c2a299.ctex"]
 
 [params]
 

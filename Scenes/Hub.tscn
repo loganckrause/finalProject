@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/InteractionArea.gd" id="4_8tub5"]
 [ext_resource type="Script" path="res://scripts/HubSwitch.gd" id="6_qd1jt"]
 [ext_resource type="Texture2D" uid="uid://casjblcmbgmss" path="res://Assets/Fire+Sparks-SpriteSheet.png" id="7_7b2ey"]
-[ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="7_8t15r"]
+[ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://scenes/slime.tscn" id="7_8t15r"]
 [ext_resource type="Texture2D" uid="uid://ca0slsaso7mxg" path="res://Assets/Gravity-SpriteSheet.png" id="7_iipd7"]
 [ext_resource type="AudioStream" uid="uid://brkw7lim68euh" path="res://Assets/Sounds/PortalSpawn.ogg" id="8_uq5le"]
 [ext_resource type="AudioStream" uid="uid://ccjsaptt6atoc" path="res://Assets/Sounds/Space Ambient Music • [  INTERSTELLAR SPACE JOURNEY  ] •.mp3" id="9_jsjiy"]
