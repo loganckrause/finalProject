@@ -9,6 +9,9 @@ var health : float
 
 signal takeDamage
 
+@export var enemyDeathAnimation: AnimatedSprite2D
+@export var enemySprite: Sprite2D
+
 func _ready():
 	if get_parent().is_in_group("player"):
 		var global_script = get_node("/root/GlobalScript")
@@ -38,5 +41,9 @@ func die():
 		Randomizer.completedLevels = []
 		SceneTransition.end()
 	else:
+		enemyDeathAnimation.visible = true
+		enemySprite.visible = false
+		enemyDeathAnimation.play('die')
+		await(get_tree().create_timer(0.6).timeout)
 		get_parent().queue_free()
 	

@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://b1tos800rgbvu" path="res://Assets/enemies/boss.png" id="1_5mkcu"]
 [ext_resource type="Script" path="res://scripts/enemies/boss.gd" id="1_fto7s"]
-[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://Scenes/components/health_component.tscn" id="2_ghjym"]
-[ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://Scenes/components/vision_component.tscn" id="3_baklm"]
-[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://Scenes/components/hitbox_component.tscn" id="4_i217k"]
-[ext_resource type="PackedScene" uid="uid://cwb3b6a3tfjmm" path="res://Scenes/components/pathfinding_component.tscn" id="5_4igjt"]
+[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="2_ghjym"]
+[ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://scenes/components/vision_component.tscn" id="3_baklm"]
+[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="4_i217k"]
+[ext_resource type="PackedScene" uid="uid://cwb3b6a3tfjmm" path="res://scenes/components/pathfinding_component.tscn" id="5_4igjt"]
 [ext_resource type="Script" path="res://scripts/enemies/bossWeapon.gd" id="7_dscd2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h1801"]
@@ -278,7 +278,7 @@ MAX_HEALTH = 200.0
 shape = SubResource("CircleShape2D_hlu35")
 
 [node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_i217k")]
-health_component = NodePath("../HealthComponent")
+health_component = NodePath("")
 
 [node name="HitBox" type="CollisionShape2D" parent="HitboxComponent"]
 position = Vector2(0, 23)
@@ -297,3 +297,5 @@ pathfinding_component = NodePath("../PathfindingComponent")
 [node name="muzzle" type="Marker2D" parent="bossWeapon"]
 
 [connection signal="area_entered" from="HitboxComponent" to="." method="_on_hitbox_component_area_entered"]
+[connection signal="burst" from="bossWeapon" to="." method="_on_boss_weapon_burst"]
+[connection signal="wall" from="bossWeapon" to="." method="_on_boss_weapon_wall"]

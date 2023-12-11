@@ -23,6 +23,9 @@ var wallBurstInterval: float = 7
 var isBursting = false
 var isWallBursting = false
 
+signal wall
+signal burst
+
 func make_timers():
 	burstTimer.set_one_shot(true)
 	wallBurstTimer.set_one_shot(true)
@@ -54,6 +57,7 @@ func _process(_delta):
 		attackRotation = PI
 
 func burstShoot():
+	emit_signal("burst")
 	burstTimer.start()
 	burstTimer.wait_time = burstInterval
 	for i in range(8):
@@ -65,6 +69,7 @@ func burstShoot():
 		get_parent().add_child(bullet_instance)
 
 func bulletWallShoot():
+	emit_signal("wall")
 	wallBurstTimer.start()
 	wallBurstTimer.wait_time = wallBurstInterval
 	for wave in range(2):

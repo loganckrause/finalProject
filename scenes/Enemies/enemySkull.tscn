@@ -1,13 +1,14 @@
-[gd_scene load_steps=20 format=3 uid="uid://bbwxtpj14djoa"]
+[gd_scene load_steps=28 format=3 uid="uid://bbwxtpj14djoa"]
 
 [ext_resource type="Script" path="res://scripts/enemies/skull.gd" id="1_bsux7"]
 [ext_resource type="Texture2D" uid="uid://ce2h4v20exevp" path="res://Assets/enemies/skull.png" id="2_2gji0"]
-[ext_resource type="PackedScene" path="res://scenes/components/health_component.tscn" id="2_tvs4d"]
-[ext_resource type="PackedScene" path="res://scenes/components/hitbox_component.tscn" id="3_3k7jl"]
-[ext_resource type="PackedScene" path="res://scenes/components/pathfinding_component.tscn" id="4_jra07"]
-[ext_resource type="PackedScene" path="res://scenes/components/vision_component.tscn" id="5_1wdfh"]
+[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="2_tvs4d"]
+[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="3_3k7jl"]
+[ext_resource type="PackedScene" uid="uid://cwb3b6a3tfjmm" path="res://scenes/components/pathfinding_component.tscn" id="4_jra07"]
+[ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://scenes/components/vision_component.tscn" id="5_1wdfh"]
 [ext_resource type="Script" path="res://scripts/enemies/weaponEnemy.gd" id="6_estkc"]
 [ext_resource type="Texture2D" uid="uid://d17qf084ds4st" path="res://icon.svg" id="6_ljcnd"]
+[ext_resource type="Texture2D" uid="uid://d2tdlo7x31vbe" path="res://Assets/enemies/deathanimation.png" id="9_5uum8"]
 
 [sub_resource type="Animation" id="Animation_mmi4v"]
 length = 0.001
@@ -88,6 +89,56 @@ radius = 274.002
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hci7x"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1gou"]
+atlas = ExtResource("9_5uum8")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6x4s"]
+atlas = ExtResource("9_5uum8")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knfcv"]
+atlas = ExtResource("9_5uum8")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehees"]
+atlas = ExtResource("9_5uum8")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jtmp"]
+atlas = ExtResource("9_5uum8")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fx4tr"]
+atlas = ExtResource("9_5uum8")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v8yy6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1gou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6x4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knfcv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehees")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jtmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fx4tr")
+}],
+"loop": true,
+"name": &"die",
+"speed": 10.0
+}]
+
 [node name="enemySkull" type="CharacterBody2D" node_paths=PackedStringArray("pathfinding_component")]
 collision_layer = 2
 collision_mask = 4
@@ -112,7 +163,9 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_0kdf7")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="HealthComponent" parent="." instance=ExtResource("2_tvs4d")]
+[node name="HealthComponent" parent="." node_paths=PackedStringArray("enemyDeathAnimation", "enemySprite") instance=ExtResource("2_tvs4d")]
+enemyDeathAnimation = NodePath("../DeathAnimation")
+enemySprite = NodePath("../Sprite2D")
 
 [node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_3k7jl")]
 health_component = NodePath("../HealthComponent")
@@ -143,6 +196,11 @@ position = Vector2(140, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_hci7x")
+
+[node name="DeathAnimation" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_v8yy6")
+animation = &"die"
 
 [connection signal="area_entered" from="HitboxComponent" to="." method="_on_hitbox_component_area_entered"]
 [connection signal="weaponShot" from="enemyWeapon" to="." method="_on_enemy_weapon_weapon_shot"]

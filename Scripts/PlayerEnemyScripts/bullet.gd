@@ -19,7 +19,6 @@ func _physics_process(_delta):
 	
 
 func _on_area_entered(body):
-	print("Entered body class:", body.get_class())
 	if body is HitboxComponent:
 		var hitbox : HitboxComponent = body
 		

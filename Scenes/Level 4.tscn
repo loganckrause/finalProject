@@ -1,16 +1,17 @@
 [gd_scene load_steps=45 format=3 uid="uid://djwt024ncard6"]
 
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="1_4ebfl"]
-[ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_pahcs"]
+[ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://scenes/slime.tscn" id="1_pahcs"]
 [ext_resource type="Texture2D" uid="uid://v73hu350ajt4" path="res://Assets/CaveBackgrounds & Stuff/pixelart_starfield_corona.png" id="1_txh7x"]
 [ext_resource type="Script" path="res://scripts/Chest.gd" id="4_0tno4"]
 [ext_resource type="Texture2D" uid="uid://r1b8qicjklk1" path="res://Assets/Animated Chests/Chests.png" id="4_xkh6d"]
-[ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="5_2ogbf"]
+[ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://scenes/next_level.tscn" id="5_2ogbf"]
 [ext_resource type="Texture2D" uid="uid://j2t0exb3ha83" path="res://Assets/platformer items - free assets/animated_items.png" id="6_ori8h"]
-[ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="8_wqt06"]
+[ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://scenes/maingameaudio.tscn" id="8_wqt06"]
 [ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="9_fx61l"]
 [ext_resource type="Script" path="res://scripts/LevelPass.gd" id="10_cw0n0"]
 [ext_resource type="PackedScene" uid="uid://b7vtrv0xj7nw5" path="res://Scenes/PlayerStuff/HealthBar.tscn" id="11_8leyr"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ohoau"]
 atlas = ExtResource("4_xkh6d")

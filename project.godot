@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="FinalMain"
-run/main_scene="res://Scenes/Menu.tscn"
+run/main_scene="res://scenes/Menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 run/max_fps=144
 boot_splash/bg_color=Color(0, 0, 0, 1)
@@ -19,17 +19,17 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SceneTransition="*res://Scenes/scene_transition.tscn"
-Maingameaudio="*res://Scenes/maingameaudio.tscn"
+SceneTransition="*res://scenes/scene_transition.tscn"
+Maingameaudio="*res://scenes/maingameaudio.tscn"
 Randomizer="*res://scripts/Randomizer.gd"
 NextLevel="*res://scripts/next_level.gd"
 GlobalScript="*res://scripts/Player/GlobalScript.gd"
-GunSound="*res://Scenes/GunSound.tscn"
-BossMusic="*res://Scenes/BossMusic.tscn"
-JetpackSound="*res://Scenes/JetpackSound.tscn"
-JetpackDash="*res://Scenes/JetpackDash.tscn"
-JumpSound="*res://Scenes/JumpSound.tscn"
-HurtSound="*res://Scenes/HurtSound.tscn"
+GunSound="*res://scenes/GunSound.tscn"
+BossMusic="*res://scenes/BossMusic.tscn"
+JetpackSound="*res://scenes/JetpackSound.tscn"
+JetpackDash="*res://scenes/JetpackDash.tscn"
+JumpSound="*res://scenes/JumpSound.tscn"
+HurtSound="*res://scenes/HurtSound.tscn"
 
 [display]
 

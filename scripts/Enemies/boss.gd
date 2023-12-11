@@ -14,7 +14,7 @@ var gravity = 980
 @export var maxSpeed = 200
 
 var tempMaxSpeed = maxSpeed
-var dashSpeed: float = 250
+var dashSpeed: float = 300
 var punchDistance: float = 20
 
 var dashDuration: float = 1.3
@@ -34,11 +34,14 @@ var jumpInterval: float = 2.5
 var state_machine
 
 var burstTimer = Timer.new()
-var burstInterval: float = 2.7
+var burstInterval: float = 2.0
 var wallBurstTimer = Timer.new()
-var wallBurstInterval: float = 3.5
+var wallBurstInterval: float = 2.5
 
 var runIntoDamage: float = 3
+
+var isAttacking = false
+var isCasting = false
 
 func make_timers():
 	attackTimer.set_one_shot(true)
@@ -99,6 +102,12 @@ func _physics_process(delta):
 		state_machine.travel("idle")
 		if isDashing:
 			state_machine.travel("dash")
+		elif isCasting:
+			velocity.x = 0
+			state_machine.travel("cast")
+		elif isAttacking:
+			velocity.x = 0
+			state_machine.travel("attack1")
 		elif abs(velocity.x) > 0:
 			state_machine.travel("walk")
 		pass
@@ -107,6 +116,12 @@ func _physics_process(delta):
 		state_machine.travel("idle")
 		if isDashing:
 			state_machine.travel("dash")
+		elif isCasting:
+			velocity.x = 0
+			state_machine.travel("cast")
+		elif isAttacking:
+			velocity.x = 0
+			state_machine.travel("attack1")
 		elif abs(velocity.x) > 0:
 			state_machine.travel("walk")
 		pass
@@ -139,5 +154,12 @@ func _on_hitbox_component_area_entered(area):
 
 		hitbox.damage(attack)
 
+func _on_boss_weapon_burst():
+	isAttacking = true
+	await(get_tree().create_timer(1.6).timeout)
+	isAttacking = false
 
-
+func _on_boss_weapon_wall():
+	isCasting = true
+	await(get_tree().create_timer(1.6).timeout)
+	isCasting = false
