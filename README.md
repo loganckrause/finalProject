@@ -1,4 +1,4 @@
-# finalProject
+# CosmoRunner ReadMe
 
 **Demo Video Link:**
 
