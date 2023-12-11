@@ -76,6 +76,7 @@ func xaccelerate(direction, delta):
 
 
 func _on_burst_weapon_weapon_shot():
+	GolemAttackSound.play()
 	isAttacking = true
 	await(get_tree().create_timer(1).timeout)
 	isAttacking = false

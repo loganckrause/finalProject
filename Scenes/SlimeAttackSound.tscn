@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyiac1yrp2ktn"]
+
+[ext_resource type="AudioStream" uid="uid://nrgkxvdtta8j" path="res://Assets/Sounds/slimejump-6913.mp3" id="1_aysxq"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_aysxq")
+volume_db = -5.474
+pitch_scale = 1.34

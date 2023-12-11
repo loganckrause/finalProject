@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://chovm4ojj5wag"]
+
+[ext_resource type="AudioStream" uid="uid://dof2d1345bj77" path="res://Assets/Sounds/whoosh-transitions-sfx-02-118229.mp3" id="1_uk666"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_uk666")
+volume_db = -27.071
+pitch_scale = 0.84

@@ -103,6 +103,7 @@ func _physics_process(delta):
 		$Sprite.set_flip_h(false)
 		state_machine.travel("idle")
 		if isDying:
+			velocity = Vector2.ZERO
 			state_machine.travel("die")
 		elif isDashing:
 			state_machine.travel("dash")
@@ -119,6 +120,7 @@ func _physics_process(delta):
 		$Sprite.set_flip_h(true)
 		state_machine.travel("idle")
 		if isDying:
+			velocity = Vector2.ZERO
 			state_machine.travel("die")
 		elif isDashing:
 			state_machine.travel("dash")

@@ -273,7 +273,7 @@ tree_root = SubResource("AnimationNodeStateMachine_0jea6")
 anim_player = NodePath("../AnimationPlayer")
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_ghjym")]
-MAX_HEALTH = 200.0
+MAX_HEALTH = 300.0
 
 [node name="VisionComponent" parent="." instance=ExtResource("3_baklm")]
 visible = false
@@ -306,7 +306,7 @@ offset_top = -35.0
 offset_right = 217.0
 offset_bottom = 4.0
 scale = Vector2(0.4, 0.4)
-max_value = 200.0
+max_value = 300.0
 value = 50.0
 texture_under = ExtResource("8_xsuld")
 texture_progress = ExtResource("9_4jiqu")

@@ -1,4 +1,17 @@
+res://Scenes/Hub.tscn
 res://Tilesets/shiptres.tres
 res://Shaders/hitflash.tres
+res://Scenes/Menu.tscn
+res://Scenes/Enemies/enemyBullet.tscn
+res://Scenes/Death.tscn
+res://Scenes/Level 1.tscn
 res://Tilesets/Tileset.tres
 res://Tilesets/Crystals.tres
+res://scripts/Enemies/enemy1.gd
+res://Scenes/SkullAttackSound.tscn
+res://Scenes/GolemAttackSound.tscn
+res://Scenes/BatAttackSound.tscn
+res://scripts/enemies/bat.gd
+res://Scenes/Enemies/boss.tscn
+res://scripts/enemies/boss.gd
+res://Scenes/Level 10.tscn

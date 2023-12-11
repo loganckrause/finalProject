@@ -30,13 +30,19 @@ JetpackSound="*res://Scenes/JetpackSound.tscn"
 JetpackDash="*res://Scenes/JetpackDash.tscn"
 JumpSound="*res://Scenes/JumpSound.tscn"
 HurtSound="*res://Scenes/HurtSound.tscn"
+BatAttackSound="*res://Scenes/BatAttackSound.tscn"
+GolemAttackSound="*res://Scenes/GolemAttackSound.tscn"
+SkullAttackSound="*res://Scenes/SkullAttackSound.tscn"
+SlimeAttackSound="*res://Scenes/SlimeAttackSound.tscn"
 
 [display]
 
 window/size/viewport_width=272
 window/size/viewport_height=160
-window/size/window_width_override=1280
-window/size/window_height_override=720
+window/size/mode=3
+window/size/borderless=true
+window/size/window_width_override=1920
+window/size/window_height_override=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 mouse_cursor/custom_image="res://Assets/crosshair.png"

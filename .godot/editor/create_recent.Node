@@ -1,10 +1,10 @@
+AudioStreamPlayer
 Label
 TextureRect
 TextureProgressBar
 AnimatedSprite2D
 Sprite2D
 CanvasLayer
-AudioStreamPlayer
 CollisionShape2D
 Area2D
 PointLight2D

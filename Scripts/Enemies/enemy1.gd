@@ -65,6 +65,7 @@ func _physics_process(delta):
 		state_machine.travel("idle")
 		if isDashing:
 			state_machine.travel("attack")
+			SlimeAttackSound.play()
 		elif abs(velocity.x) > 0:
 			state_machine.travel("move")
 		pass

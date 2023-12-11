@@ -92,6 +92,7 @@ func getDirection(angleRadians: float):
 
 func dashAttack(direction):
 	if pathfinding_component.isInVision() and canDash and not isDashing:
+		BatAttackSound.play()
 		tempMaxSpeed = dashSpeed
 		isDashing = true
 

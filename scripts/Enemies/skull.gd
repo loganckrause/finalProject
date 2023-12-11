@@ -78,6 +78,7 @@ func accelerate(direction, delta):
 
 func _on_enemy_weapon_weapon_shot():
 	var dir = pathfinding_component.sendMovement(self)
+	SkullAttackSound.play()
 	if dir > 0:
 		$Sprite2D.set_flip_h(false)
 		state_machine.travel("attack")
