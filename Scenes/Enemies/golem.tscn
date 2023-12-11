@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://scripts/enemies/golem.gd" id="1_lq4w2"]
 [ext_resource type="Texture2D" uid="uid://c1g6qmbwm3jku" path="res://Assets/enemies/Golem_Full.png" id="2_7q5m3"]
-[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="2_b7yli"]
-[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="3_2516m"]
-[ext_resource type="PackedScene" uid="uid://cwb3b6a3tfjmm" path="res://scenes/components/pathfinding_component.tscn" id="4_8prbc"]
-[ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://scenes/components/vision_component.tscn" id="5_7wkb6"]
+[ext_resource type="PackedScene" path="res://scenes/components/health_component.tscn" id="2_b7yli"]
+[ext_resource type="PackedScene" path="res://scenes/components/hitbox_component.tscn" id="3_2516m"]
+[ext_resource type="PackedScene" path="res://scenes/components/pathfinding_component.tscn" id="4_8prbc"]
+[ext_resource type="PackedScene" path="res://scenes/components/vision_component.tscn" id="5_7wkb6"]
 [ext_resource type="Script" path="res://scripts/enemies/burstWeapon.gd" id="6_naxa3"]
-[ext_resource type="Texture2D" uid="uid://d2tdlo7x31vbe" path="res://Assets/enemies/deathanimation.png" id="8_qv0mk"]
+[ext_resource type="Texture2D" uid="uid://d2tdlo7x31vbe" path="res://Assets/enemies/deathanimation.png" id="8_68jre"]
 
 [sub_resource type="Animation" id="Animation_ynbp5"]
 length = 0.001
@@ -161,53 +161,53 @@ radius = 14.1421
 [sub_resource type="CircleShape2D" id="CircleShape2D_ynppu"]
 radius = 352.013
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j1gou"]
-atlas = ExtResource("8_qv0mk")
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cscm"]
+atlas = ExtResource("8_68jre")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m6x4s"]
-atlas = ExtResource("8_qv0mk")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jxug"]
+atlas = ExtResource("8_68jre")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_knfcv"]
-atlas = ExtResource("8_qv0mk")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2n4qw"]
+atlas = ExtResource("8_68jre")
 region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ehees"]
-atlas = ExtResource("8_qv0mk")
+[sub_resource type="AtlasTexture" id="AtlasTexture_si5kf"]
+atlas = ExtResource("8_68jre")
 region = Rect2(192, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8jtmp"]
-atlas = ExtResource("8_qv0mk")
+[sub_resource type="AtlasTexture" id="AtlasTexture_l30fa"]
+atlas = ExtResource("8_68jre")
 region = Rect2(256, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fx4tr"]
-atlas = ExtResource("8_qv0mk")
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0cmn"]
+atlas = ExtResource("8_68jre")
 region = Rect2(320, 0, 64, 64)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_rv87c"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_0toik"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j1gou")
+"texture": SubResource("AtlasTexture_0cscm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m6x4s")
+"texture": SubResource("AtlasTexture_2jxug")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_knfcv")
+"texture": SubResource("AtlasTexture_2n4qw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ehees")
+"texture": SubResource("AtlasTexture_si5kf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8jtmp")
+"texture": SubResource("AtlasTexture_l30fa")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fx4tr")
+"texture": SubResource("AtlasTexture_l0cmn")
 }],
-"loop": true,
-"name": &"die",
+"loop": false,
+"name": &"death",
 "speed": 10.0
 }]
 
@@ -242,10 +242,8 @@ visible = false
 position = Vector2(-0.5, 2.5)
 shape = SubResource("RectangleShape2D_tn6ii")
 
-[node name="HealthComponent" parent="." node_paths=PackedStringArray("enemyDeathAnimation", "enemySprite") instance=ExtResource("2_b7yli")]
+[node name="HealthComponent" parent="." instance=ExtResource("2_b7yli")]
 visible = false
-enemyDeathAnimation = NodePath("../DeathAnimation")
-enemySprite = NodePath("../Sprite")
 
 [node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_2516m")]
 visible = false
@@ -273,10 +271,10 @@ vision_component = NodePath("../VisionComponent")
 [node name="muzzle" type="Marker2D" parent="burstWeapon"]
 visible = false
 
-[node name="DeathAnimation" type="AnimatedSprite2D" parent="."]
-visible = false
-sprite_frames = SubResource("SpriteFrames_rv87c")
-animation = &"die"
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0toik")
+animation = &"death"
 
+[connection signal="dieAnimation" from="HealthComponent" to="." method="_on_health_component_die_animation"]
 [connection signal="area_entered" from="HitboxComponent" to="." method="_on_hitbox_component_area_entered"]
 [connection signal="weaponShot" from="burstWeapon" to="." method="_on_burst_weapon_weapon_shot"]

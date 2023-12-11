@@ -1,21 +1,40 @@
-res://Scenes/Enemies/boss.tscn
+res://Scenes/Menu.tscn
 res://Tilesets/shiptres.tres
 res://Shaders/hitflash.tres
+res://Scenes/components/health_component.tscn
+res://Scenes/Enemies/boss.tscn
 res://Tilesets/Tileset.tres
 res://Tilesets/Crystals.tres
-res://Scenes/Hub.tscn
-res://Scenes/HurtSound.tscn
 res://Scenes/Level 10.tscn
-res://Scenes/PlayerStuff/hp_bar.tscn
-res://scripts/Player/hp_bar.gd
-res://scripts/Player/GlobalScript.gd
-res://Scenes/PlayerStuff/HealthBar.tscn
+res://Scenes/Enemies/enemyBat.tscn
+res://scripts/enemies/bat.gd
+res://scripts/components/HealthComponent.gd
 res://Scenes/Level 1.tscn
+res://Scenes/Enemies/enemySkull.tscn
+res://scripts/enemies/skull.gd
+res://Scenes/Enemies/enemySlime.tscn
+res://scripts/Enemies/enemy1.gd
+res://Scenes/Enemies/golem.tscn
+res://scripts/enemies/golem.gd
+res://scripts/Chest.gd
+res://scripts/Heal.gd
+res://Scenes/Level 4.tscn
+res://Scenes/Level 8.tscn
+res://scripts/SpeedPotion.gd
+res://scripts/AttackPotion.gd
+res://scripts/PlayerEnemyScripts/weapon.gd
+res://scripts/Player/GlobalScript.gd
+res://scripts/PlayerEnemyScripts/bullet.gd
+res://scenes/Enemies/boss.tscn
+res://scripts/enemies/boss.gd
+res://scenes/Level 10.tscn
+res://scripts/enemies/bossWeapon.gd
+res://scripts/BossHealth.gd
+res://scenes/PlayerStuff/HealthBar.tscn
+res://scripts/LevelPass.gd
+res://Scenes/Level 9.tscn
 res://Scenes/Level 2.tscn
 res://Scenes/Level 3.tscn
-res://Scenes/Level 4.tscn
 res://Scenes/Level 5.tscn
 res://Scenes/Level 6.tscn
 res://Scenes/Level 7.tscn
-res://Scenes/Level 8.tscn
-res://Scenes/Level 9.tscn

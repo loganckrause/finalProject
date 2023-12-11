@@ -1,4 +1,7 @@
 TextureProgressBar
+Label
+AnimatedSprite2D
+Sprite2D
 CanvasLayer
 AudioStreamPlayer
 CollisionShape2D
@@ -6,9 +9,6 @@ Area2D
 PointLight2D
 Node
 AudioStreamPlayer2D
-AnimatedSprite2D
 AnimationPlayer
 AnimationTree
 TextureRect
-DirectionalLight2D
-TileMap

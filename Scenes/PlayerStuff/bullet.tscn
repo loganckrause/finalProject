@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://d2kj7hqe7uwhu"]
 
-[ext_resource type="Script" path="res://scripts/PlayerEnemyScripts/bullet.gd" id="1_v6sgb"]
-[ext_resource type="Texture2D" uid="uid://cx0rvfog5ddqa" path="res://Assets/weapon/bullets/laserbulletcollision.png" id="2_o2bay"]
-[ext_resource type="Texture2D" uid="uid://7v3h20rerqg2" path="res://Assets/weapon/bullets/laserbullet.png" id="3_5m2tl"]
+[ext_resource type="Script" path="res://scripts/PlayerEnemyScripts/bullet.gd" id="1_k2ijg"]
+[ext_resource type="Texture2D" uid="uid://7v3h20rerqg2" path="res://Assets/weapon/bullets/laserbullet.png" id="2_eysmd"]
+[ext_resource type="Texture2D" uid="uid://cx0rvfog5ddqa" path="res://Assets/weapon/bullets/laserbulletcollision.png" id="2_i5jup"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d33q3"]
 radius = 3.0
@@ -18,35 +18,35 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2cxcm"]
-atlas = ExtResource("2_o2bay")
+atlas = ExtResource("2_i5jup")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0dp5s"]
-atlas = ExtResource("2_o2bay")
+atlas = ExtResource("2_i5jup")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iv7yq"]
-atlas = ExtResource("2_o2bay")
+atlas = ExtResource("2_i5jup")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhonk"]
-atlas = ExtResource("2_o2bay")
+atlas = ExtResource("2_i5jup")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qbe1h"]
-atlas = ExtResource("3_5m2tl")
+atlas = ExtResource("2_eysmd")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lxqdo"]
-atlas = ExtResource("3_5m2tl")
+atlas = ExtResource("2_eysmd")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_prkc8"]
-atlas = ExtResource("3_5m2tl")
+atlas = ExtResource("2_eysmd")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mlu0w"]
-atlas = ExtResource("3_5m2tl")
+atlas = ExtResource("2_eysmd")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_611yy"]
@@ -87,7 +87,7 @@ animations = [{
 }]
 
 [node name="bullet" type="Area2D" groups=["bullet"]]
-script = ExtResource("1_v6sgb")
+script = ExtResource("1_k2ijg")
 speed = 300
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

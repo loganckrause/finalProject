@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var pathfinding_component: PathfindingComponent
+@export var health_component : HealthComponent
 
 @onready var player = get_tree().get_first_node_in_group("player")
 
@@ -24,6 +25,8 @@ var state_machine
 
 var runIntoDamage: float = 3
 
+var isDead = false
+
 func _ready():
 	dashTimer.set_one_shot(true)
 	cooldownTimer.set_one_shot(true)
@@ -31,6 +34,7 @@ func _ready():
 	add_child(cooldownTimer)
 	dashTimer.timeout.connect(_on_dashTimer_timeout)
 	cooldownTimer.timeout.connect(_on_cooldownTimer_timeout)
+	$AnimatedSprite2D.visible = false
 	
 	$AnimationTree.active = true
 
@@ -60,8 +64,11 @@ func _physics_process(delta):
 	accelerate(direction, delta)
 	player_movement(velocity)
 	dashAttack(direction)
-	
 	var dir = pathfinding_component.sendMovement(self)
+	
+	if isDead:
+		velocity = Vector2.ZERO
+		$HitboxComponent.monitorable = false
 	
 	if dir > 0:
 		$Sprite.set_flip_h(false)
@@ -131,5 +138,8 @@ func vectorToAngle(vector: Vector2) -> float:
 	return angleToPlayer
 
 
-
-
+func _on_health_component_die_animation():
+	isDead = true
+	$AnimatedSprite2D.visible = true
+	$Sprite.visible = false
+	$AnimatedSprite2D.play("death")

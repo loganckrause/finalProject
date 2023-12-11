@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7vtrv0xj7nw5"]
+[gd_scene load_steps=4 format=3 uid="uid://bk3ddvpbk8j8g"]
 
 [ext_resource type="Script" path="res://scripts/Player/hp_bar.gd" id="1_mowba"]
 [ext_resource type="Texture2D" uid="uid://dki0k2tcu7j02" path="res://Assets/BarV8_Bar.png" id="1_okvm6"]

@@ -16,9 +16,11 @@ var state_machine
 
 var runIntoDamage: float = 3
 
+var isDead = false
+
 func _ready():
 	$AnimationTree.active = true
-
+	$AnimatedSprite2D.visible = false
 
 func _physics_process(delta):
 	$burstWeapon.position = self.global_position
@@ -29,6 +31,10 @@ func _physics_process(delta):
 	player_movement(velocity, delta)
 	
 	var dir = pathfinding_component.sendMovement(self)
+	
+	if isDead:
+		velocity = Vector2.ZERO
+		$HitboxComponent.monitorable = false
 	
 	if dir > 0:
 		$Sprite.set_flip_h(false)
@@ -83,3 +89,9 @@ func _on_hitbox_component_area_entered(area):
 		attack.attack_damage = runIntoDamage
 
 		hitbox.damage(attack)
+		
+func _on_health_component_die_animation():
+	isDead = true
+	$AnimatedSprite2D.visible = true
+	$Sprite.visible = false
+	$AnimatedSprite2D.play("death")

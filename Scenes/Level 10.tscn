@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bmvat3dh5trx4"]
+[gd_scene load_steps=22 format=3 uid="uid://bhnfmhxvl2bax"]
 
 [ext_resource type="Texture2D" uid="uid://bych5ukuaatj7" path="res://Assets/CaveBackgrounds & Stuff/awesomeCavePixelArt.png" id="1_1eda7"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="2_pl8pi"]
@@ -6,18 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="4_cu55n"]
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="5_o6sg2"]
 [ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="6_tevrj"]
-[ext_resource type="PackedScene" uid="uid://cfmwn1icgxwja" path="res://Scenes/Enemies/boss.tscn" id="7_qh358"]
-[ext_resource type="PackedScene" uid="uid://b7vtrv0xj7nw5" path="res://Scenes/PlayerStuff/HealthBar.tscn" id="8_acay4"]
-
-[sub_resource type="Gradient" id="Gradient_478wi"]
-offsets = PackedFloat32Array(0.299401, 0.784431)
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_wcm0q"]
-gradient = SubResource("Gradient_478wi")
-fill = 1
-fill_from = Vector2(0.529915, 0.482906)
-fill_to = Vector2(1, 0.0128205)
+[ext_resource type="PackedScene" uid="uid://cfmwn1icgxwja" path="res://scenes/Enemies/boss.tscn" id="7_qh358"]
+[ext_resource type="PackedScene" uid="uid://bk3ddvpbk8j8g" path="res://scenes/PlayerStuff/HealthBar.tscn" id="8_acay4"]
 
 [sub_resource type="Gradient" id="Gradient_wq5tv"]
 offsets = PackedFloat32Array(0.185629, 0.667665)
@@ -61,6 +51,16 @@ size = Vector2(13, 231.25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tsau"]
 size = Vector2(690.625, 12)
 
+[sub_resource type="Gradient" id="Gradient_478wi"]
+offsets = PackedFloat32Array(0.299401, 0.784431)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wcm0q"]
+gradient = SubResource("Gradient_478wi")
+fill = 1
+fill_from = Vector2(0.529915, 0.482906)
+fill_to = Vector2(1, 0.0128205)
+
 [node name="Level10" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -88,32 +88,6 @@ limit_right = 360
 limit_bottom = 290
 limit_smoothed = true
 position_smoothing_enabled = true
-
-[node name="Lantern" type="Sprite2D" parent="."]
-position = Vector2(-225, 184)
-texture = ExtResource("4_cu55n")
-
-[node name="PointLight2D" type="PointLight2D" parent="Lantern"]
-position = Vector2(3, 31)
-scale = Vector2(1.8551, 1.20561)
-color = Color(1, 0.717647, 0.45098, 1)
-energy = 1.58
-blend_mode = 2
-texture = SubResource("GradientTexture2D_wcm0q")
-texture_scale = 1.86
-
-[node name="Lantern2" type="Sprite2D" parent="."]
-position = Vector2(227, 185.25)
-texture = ExtResource("4_cu55n")
-
-[node name="PointLight2D" type="PointLight2D" parent="Lantern2"]
-position = Vector2(0, 19.75)
-scale = Vector2(1.8551, 1.20561)
-color = Color(1, 0.717647, 0.45098, 1)
-energy = 1.58
-blend_mode = 2
-texture = SubResource("GradientTexture2D_wcm0q")
-texture_scale = 1.86
 
 [node name="TileMap2" type="TileMap" parent="."]
 tile_set = ExtResource("5_o6sg2")
@@ -182,3 +156,29 @@ position = Vector2(62, 188)
 offset = Vector2(10, 10)
 scale = Vector2(0.3, 0.3)
 transform = Transform2D(0.3, 0, 0, 0.3, 10, 10)
+
+[node name="Lantern" type="Sprite2D" parent="."]
+position = Vector2(-215, 40)
+texture = ExtResource("4_cu55n")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lantern"]
+position = Vector2(0, 1.99999)
+scale = Vector2(1.8551, 1.20561)
+color = Color(1, 0.717647, 0.45098, 1)
+energy = 1.58
+blend_mode = 2
+texture = SubResource("GradientTexture2D_wcm0q")
+texture_scale = 1.86
+
+[node name="Lantern2" type="Sprite2D" parent="."]
+position = Vector2(221, 38)
+texture = ExtResource("4_cu55n")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lantern2"]
+position = Vector2(2, 11)
+scale = Vector2(1.8551, 1.20561)
+color = Color(1, 0.717647, 0.45098, 1)
+energy = 1.58
+blend_mode = 2
+texture = SubResource("GradientTexture2D_wcm0q")
+texture_scale = 1.86

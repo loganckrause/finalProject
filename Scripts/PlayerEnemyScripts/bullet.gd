@@ -2,7 +2,7 @@ extends Area2D
 
 
 @export var speed = 400
-@export var attackDamage = 3
+@export var attackDamage = GlobalScript.attack_damage
 @export var knockbackForce = 0
 @export var stun_time = 1.5
 
@@ -19,6 +19,7 @@ func _physics_process(_delta):
 	
 
 func _on_area_entered(body):
+	print("Entered body class:", body.get_class())
 	if body is HitboxComponent:
 		var hitbox : HitboxComponent = body
 		

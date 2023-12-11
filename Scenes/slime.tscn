@@ -1,15 +1,15 @@
 [gd_scene load_steps=43 format=3 uid="uid://bsmkk0gf40q0m"]
 
-[ext_resource type="Script" path="res://scripts/Player/player.gd" id="1_qwulg"]
-[ext_resource type="Shader" uid="uid://dksj8i0pj1yry" path="res://Shaders/hitflash.tres" id="2_fgxfa"]
-[ext_resource type="Texture2D" uid="uid://0um56fc2gqs3" path="res://Assets/character/Player/PlayerSpriteSheet.png" id="3_m5kcu"]
-[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="4_2jrir"]
-[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="5_en3n7"]
-[ext_resource type="Texture2D" uid="uid://wmiet4vfsixo" path="res://Assets/weapon/Guns/guntest.png" id="6_oa7vl"]
-[ext_resource type="Script" path="res://scripts/PlayerEnemyScripts/weapon.gd" id="7_cghwy"]
+[ext_resource type="Script" path="res://scripts/Player/player.gd" id="1_oqed1"]
+[ext_resource type="Shader" uid="uid://dksj8i0pj1yry" path="res://Shaders/hitflash.tres" id="2_raqi4"]
+[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://Scenes/components/health_component.tscn" id="5_4td3e"]
+[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://Scenes/components/hitbox_component.tscn" id="6_5e8ti"]
+[ext_resource type="Script" path="res://scripts/PlayerEnemyScripts/weapon.gd" id="7_rj4yq"]
+[ext_resource type="Texture2D" uid="uid://wmiet4vfsixo" path="res://Assets/weapon/Guns/guntest.png" id="8_pp8tc"]
+[ext_resource type="Texture2D" uid="uid://0um56fc2gqs3" path="res://Assets/character/Player/PlayerSpriteSheet.png" id="12_t5ghq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_puy07"]
-shader = ExtResource("2_fgxfa")
+shader = ExtResource("2_raqi4")
 shader_parameter/enabled = false
 shader_parameter/tint = Color(1, 1, 1, 1)
 
@@ -323,12 +323,12 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("health_component") groups=["player"]]
 collision_mask = 4
-script = ExtResource("1_qwulg")
+script = ExtResource("1_oqed1")
 health_component = NodePath("HealthComponent")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_puy07")
-texture = ExtResource("3_m5kcu")
+texture = ExtResource("12_t5ghq")
 offset = Vector2(1, 0)
 hframes = 8
 vframes = 10
@@ -349,20 +349,20 @@ anim_player = NodePath("../AnimationPlayer")
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_qsg3w")
 
-[node name="PlayerHitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_2jrir")]
+[node name="PlayerHitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("6_5e8ti")]
 visible = false
-health_component = NodePath("")
+health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHitboxComponent"]
 position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_5d75f")
 
-[node name="HealthComponent" parent="." instance=ExtResource("5_en3n7")]
+[node name="HealthComponent" parent="." instance=ExtResource("5_4td3e")]
 
 [node name="weapon" type="Sprite2D" parent="."]
-texture = ExtResource("6_oa7vl")
+texture = ExtResource("8_pp8tc")
 offset = Vector2(10, 0)
-script = ExtResource("7_cghwy")
+script = ExtResource("7_rj4yq")
 
 [node name="muzzle" type="Marker2D" parent="weapon"]
 position = Vector2(18, 0)

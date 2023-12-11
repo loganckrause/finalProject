@@ -1,12 +1,15 @@
-[gd_scene load_steps=36 format=3 uid="uid://cfmwn1icgxwja"]
+[gd_scene load_steps=39 format=3 uid="uid://cfmwn1icgxwja"]
 
 [ext_resource type="Texture2D" uid="uid://b1tos800rgbvu" path="res://Assets/enemies/boss.png" id="1_5mkcu"]
 [ext_resource type="Script" path="res://scripts/enemies/boss.gd" id="1_fto7s"]
-[ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://scenes/components/health_component.tscn" id="2_ghjym"]
-[ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://scenes/components/vision_component.tscn" id="3_baklm"]
-[ext_resource type="PackedScene" uid="uid://1oisc6ufulmn" path="res://scenes/components/hitbox_component.tscn" id="4_i217k"]
-[ext_resource type="PackedScene" uid="uid://cwb3b6a3tfjmm" path="res://scenes/components/pathfinding_component.tscn" id="5_4igjt"]
+[ext_resource type="PackedScene" path="res://scenes/components/health_component.tscn" id="2_ghjym"]
+[ext_resource type="PackedScene" path="res://scenes/components/vision_component.tscn" id="3_baklm"]
+[ext_resource type="PackedScene" path="res://scenes/components/hitbox_component.tscn" id="4_i217k"]
+[ext_resource type="PackedScene" path="res://scenes/components/pathfinding_component.tscn" id="5_4igjt"]
 [ext_resource type="Script" path="res://scripts/enemies/bossWeapon.gd" id="7_dscd2"]
+[ext_resource type="Texture2D" uid="uid://ceimde15xpywb" path="res://Assets/BarV6_Bar.png" id="8_xsuld"]
+[ext_resource type="Texture2D" uid="uid://bpra3p1qntf6e" path="res://Assets/BarV6_ProgressBar.png" id="9_4jiqu"]
+[ext_resource type="Script" path="res://scripts/BossHealth.gd" id="10_rgcqf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h1801"]
 radius = 28.0
@@ -238,7 +241,7 @@ height = 78.0
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mqhle"]
 
-[node name="boss" type="CharacterBody2D" node_paths=PackedStringArray("pathfinding_component", "health_component") groups=["Enemy"]]
+[node name="boss" type="CharacterBody2D" node_paths=PackedStringArray("pathfinding_component", "health_component") groups=["Enemy", "boss"]]
 collision_layer = 2
 collision_mask = 4
 script = ExtResource("1_fto7s")
@@ -273,12 +276,13 @@ anim_player = NodePath("../AnimationPlayer")
 MAX_HEALTH = 200.0
 
 [node name="VisionComponent" parent="." instance=ExtResource("3_baklm")]
+visible = false
 
 [node name="VisionBox" type="CollisionShape2D" parent="VisionComponent"]
 shape = SubResource("CircleShape2D_hlu35")
 
 [node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_i217k")]
-health_component = NodePath("")
+health_component = NodePath("../HealthComponent")
 
 [node name="HitBox" type="CollisionShape2D" parent="HitboxComponent"]
 position = Vector2(0, 23)
@@ -296,6 +300,21 @@ pathfinding_component = NodePath("../PathfindingComponent")
 
 [node name="muzzle" type="Marker2D" parent="bossWeapon"]
 
+[node name="BossHealth" type="TextureProgressBar" parent="."]
+offset_left = -55.0
+offset_top = -35.0
+offset_right = 217.0
+offset_bottom = 4.0
+scale = Vector2(0.4, 0.4)
+max_value = 200.0
+value = 50.0
+texture_under = ExtResource("8_xsuld")
+texture_progress = ExtResource("9_4jiqu")
+texture_progress_offset = Vector2(3, 2)
+script = ExtResource("10_rgcqf")
+
+[connection signal="bossDie" from="HealthComponent" to="." method="_on_health_component_boss_die"]
+[connection signal="dieAnimation" from="HealthComponent" to="." method="_on_health_component_die_animation"]
 [connection signal="area_entered" from="HitboxComponent" to="." method="_on_hitbox_component_area_entered"]
 [connection signal="burst" from="bossWeapon" to="." method="_on_boss_weapon_burst"]
 [connection signal="wall" from="bossWeapon" to="." method="_on_boss_weapon_wall"]

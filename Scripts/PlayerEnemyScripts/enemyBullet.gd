@@ -23,6 +23,7 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free() # Replace with function body.
 
 func _on_area_entered(body):
+	print("Entered body class:", body.get_class())
 	if body is HitboxComponent and body.name == "PlayerHitboxComponent":
 		var hitbox : HitboxComponent = body
 		

@@ -14,7 +14,7 @@ var gravity = 980
 @export var maxSpeed = 200
 
 var tempMaxSpeed = maxSpeed
-var dashSpeed: float = 300
+var dashSpeed: float = 250
 var punchDistance: float = 20
 
 var dashDuration: float = 1.3
@@ -34,14 +34,15 @@ var jumpInterval: float = 2.5
 var state_machine
 
 var burstTimer = Timer.new()
-var burstInterval: float = 2.0
+var burstInterval: float = 2.7
 var wallBurstTimer = Timer.new()
-var wallBurstInterval: float = 2.5
+var wallBurstInterval: float = 3.5
 
 var runIntoDamage: float = 3
 
 var isAttacking = false
 var isCasting = false
+var isDying = false
 
 func make_timers():
 	attackTimer.set_one_shot(true)
@@ -87,6 +88,7 @@ func dashAttack():
 
 func _process(delta):
 	$bossWeapon.position = self.global_position-Vector2(0,-20)
+	GlobalScript.boss_health = health_component.health
 	
 func _physics_process(delta):
 	state_machine = $AnimationTree.get("parameters/playback")
@@ -100,7 +102,9 @@ func _physics_process(delta):
 	if dir > 0:
 		$Sprite.set_flip_h(false)
 		state_machine.travel("idle")
-		if isDashing:
+		if isDying:
+			state_machine.travel("die")
+		elif isDashing:
 			state_machine.travel("dash")
 		elif isCasting:
 			velocity.x = 0
@@ -114,7 +118,9 @@ func _physics_process(delta):
 	elif dir < 0:
 		$Sprite.set_flip_h(true)
 		state_machine.travel("idle")
-		if isDashing:
+		if isDying:
+			state_machine.travel("die")
+		elif isDashing:
 			state_machine.travel("dash")
 		elif isCasting:
 			velocity.x = 0
@@ -163,3 +169,7 @@ func _on_boss_weapon_wall():
 	isCasting = true
 	await(get_tree().create_timer(1.6).timeout)
 	isCasting = false
+
+
+func _on_health_component_boss_die():
+	isDying = true

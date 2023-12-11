@@ -8,10 +8,8 @@ class_name HealthComponent
 var health : float
 
 signal takeDamage
-
-@export var enemyDeathAnimation: AnimatedSprite2D
-@export var enemySprite: Sprite2D
-
+signal dieAnimation
+signal bossDie
 func _ready():
 	if get_parent().is_in_group("player"):
 		var global_script = get_node("/root/GlobalScript")
@@ -33,6 +31,7 @@ func damage(attack: Attack):
 
 
 func die():
+	emit_signal("dieAnimation")
 	if get_parent().is_in_group("player"):
 		await(get_tree().create_timer(0.5).timeout)
 		SceneTransition.switch()
@@ -40,10 +39,11 @@ func die():
 		GlobalScript.set_player_health(10)
 		Randomizer.completedLevels = []
 		SceneTransition.end()
+	elif get_parent().is_in_group("boss"):
+		emit_signal("bossDie")
+		await(get_tree().create_timer(1.6).timeout)
+		get_parent().queue_free()
 	else:
-		enemyDeathAnimation.visible = true
-		enemySprite.visible = false
-		enemyDeathAnimation.play('die')
 		await(get_tree().create_timer(0.6).timeout)
 		get_parent().queue_free()
 	
