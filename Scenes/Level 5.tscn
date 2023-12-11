@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bwlmmyy5wfay2"]
+[gd_scene load_steps=29 format=3 uid="uid://bwlmmyy5wfay2"]
 
 [ext_resource type="Texture2D" uid="uid://c5fxehnntttly" path="res://Assets/CaveBackgrounds & Stuff/AllCaveWallsTogether.png" id="1_0y8d3"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_nq5vq"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bkr7fwaqp42x1" path="res://Scenes/Enemies/enemySlime.tscn" id="10_e57rw"]
 [ext_resource type="PackedScene" uid="uid://b73mxahhrggmc" path="res://Scenes/Enemies/golem.tscn" id="11_qn7lk"]
 [ext_resource type="Script" path="res://scripts/LevelPass.gd" id="12_4uhox"]
+[ext_resource type="PackedScene" uid="uid://b7vtrv0xj7nw5" path="res://Scenes/PlayerStuff/HealthBar.tscn" id="13_jvdpb"]
 
 [sub_resource type="Gradient" id="Gradient_2k517"]
 offsets = PackedFloat32Array(0.323353, 0.706587)
@@ -234,6 +235,11 @@ energy = 0.83
 texture = SubResource("GradientTexture2D_2vf76")
 texture_scale = 2.09
 script = ExtResource("12_4uhox")
+
+[node name="HealthBar" parent="." instance=ExtResource("13_jvdpb")]
+offset = Vector2(10, 10)
+scale = Vector2(0.3, 0.3)
+transform = Transform2D(0.3, 0, 0, 0.3, 10, 10)
 
 [connection signal="enemies_gone" from="EnemyChecker" to="NextLevel" method="_on_enemy_checker_enemies_gone"]
 [connection signal="enemies_gone" from="EnemyChecker" to="LevelPass" method="_on_enemy_checker_enemies_gone"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://c27u33itvh4ex"]
+[gd_scene load_steps=54 format=3 uid="uid://c27u33itvh4ex"]
 
 [ext_resource type="Texture2D" uid="uid://bdheexwuhxuhx" path="res://Assets/CaveBackgrounds & Stuff/pixelart_starfield.png" id="1_aqirv"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="2_sf0n0"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="8_q63dr"]
 [ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="9_mm2ld"]
 [ext_resource type="Script" path="res://scripts/LevelPass.gd" id="10_i0gbr"]
+[ext_resource type="PackedScene" uid="uid://b7vtrv0xj7nw5" path="res://Scenes/PlayerStuff/HealthBar.tscn" id="11_vcowk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pw2mf"]
 atlas = ExtResource("4_rkmqj")
@@ -418,6 +419,11 @@ shape = SubResource("RectangleShape2D_r235k")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="wall"]
 position = Vector2(70.75, 182)
 shape = SubResource("RectangleShape2D_hj8q2")
+
+[node name="HealthBar" parent="." instance=ExtResource("11_vcowk")]
+offset = Vector2(10, 10)
+scale = Vector2(0.3, 0.3)
+transform = Transform2D(0.3, 0, 0, 0.3, 10, 10)
 
 [connection signal="animation_finished" from="Chest" to="Chest/Area2D" method="_on_chest_animation_finished"]
 [connection signal="body_entered" from="Chest/Area2D" to="Chest/Area2D" method="_on_body_entered"]

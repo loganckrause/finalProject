@@ -1,7 +1,7 @@
 extends Node
 
 #Global Variables
-var player_health: float = 10
+var player_health: int = 10
 
 func get_player_health():
 	return player_health

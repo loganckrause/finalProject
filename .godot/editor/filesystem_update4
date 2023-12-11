@@ -1,11 +1,16 @@
-res://Tilesets/Tileset.tres
-res://Shaders/hitflash.tres
-res://Tilesets/Crystals.tres
+res://Scenes/Enemies/boss.tscn
 res://Tilesets/shiptres.tres
-res://scripts/Player/player.gd
-res://Scenes/slime.tscn
+res://Shaders/hitflash.tres
+res://Tilesets/Tileset.tres
+res://Tilesets/Crystals.tres
+res://Scenes/Hub.tscn
+res://Scenes/HurtSound.tscn
+res://Scenes/Level 10.tscn
+res://Scenes/PlayerStuff/hp_bar.tscn
+res://scripts/Player/hp_bar.gd
+res://scripts/Player/GlobalScript.gd
+res://Scenes/PlayerStuff/HealthBar.tscn
 res://Scenes/Level 1.tscn
-res://Scenes/PlayerStuff/bullet.tscn
 res://Scenes/Level 2.tscn
 res://Scenes/Level 3.tscn
 res://Scenes/Level 4.tscn
@@ -14,20 +19,3 @@ res://Scenes/Level 6.tscn
 res://Scenes/Level 7.tscn
 res://Scenes/Level 8.tscn
 res://Scenes/Level 9.tscn
-res://Scenes/Level 10.tscn
-res://Scenes/Hub.tscn
-res://Scenes/Menu.tscn
-res://Scenes/BossMusic.tscn
-res://Scenes/JetpackSound.tscn
-res://scenes/Enemies/enemyBat.tscn
-res://scenes/Enemies/enemySkull.tscn
-res://scenes/Enemies/enemySlime.tscn
-res://scenes/Enemies/golem.tscn
-res://scenes/Hub.tscn
-res://Scenes/JetpackDash.tscn
-res://Scenes/JumpSound.tscn
-res://Scenes/HurtSound.tscn
-res://scripts/components/HealthComponent.gd
-res://Scenes/Enemies/boss.tscn
-res://scripts/enemies/boss.gd
-res://scripts/enemies/bossWeapon.gd

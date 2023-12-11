@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bmvat3dh5trx4"]
+[gd_scene load_steps=22 format=3 uid="uid://bmvat3dh5trx4"]
 
 [ext_resource type="Texture2D" uid="uid://bych5ukuaatj7" path="res://Assets/CaveBackgrounds & Stuff/awesomeCavePixelArt.png" id="1_1eda7"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="2_pl8pi"]
@@ -7,6 +7,7 @@
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="5_o6sg2"]
 [ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="6_tevrj"]
 [ext_resource type="PackedScene" uid="uid://cfmwn1icgxwja" path="res://Scenes/Enemies/boss.tscn" id="7_qh358"]
+[ext_resource type="PackedScene" uid="uid://b7vtrv0xj7nw5" path="res://Scenes/PlayerStuff/HealthBar.tscn" id="8_acay4"]
 
 [sub_resource type="Gradient" id="Gradient_478wi"]
 offsets = PackedFloat32Array(0.299401, 0.784431)
@@ -176,3 +177,8 @@ shape = SubResource("RectangleShape2D_0tsau")
 
 [node name="boss" parent="." instance=ExtResource("7_qh358")]
 position = Vector2(62, 188)
+
+[node name="HealthBar" parent="." instance=ExtResource("8_acay4")]
+offset = Vector2(10, 10)
+scale = Vector2(0.3, 0.3)
+transform = Transform2D(0.3, 0, 0, 0.3, 10, 10)

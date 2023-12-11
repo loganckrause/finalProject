@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=3 uid="uid://bllklf26i1itb"]
+[gd_scene load_steps=88 format=3 uid="uid://bllklf26i1itb"]
 
 [ext_resource type="Texture2D" uid="uid://bdheexwuhxuhx" path="res://Assets/CaveBackgrounds & Stuff/pixelart_starfield.png" id="1_kj5hi"]
 [ext_resource type="TileSet" uid="uid://b5rj8427ili8w" path="res://Tilesets/shiptres.tres" id="2_nwxbt"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/HubSwitch.gd" id="6_qd1jt"]
 [ext_resource type="Texture2D" uid="uid://casjblcmbgmss" path="res://Assets/Fire+Sparks-SpriteSheet.png" id="7_7b2ey"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="7_8t15r"]
+[ext_resource type="PackedScene" uid="uid://b7vtrv0xj7nw5" path="res://Scenes/PlayerStuff/HealthBar.tscn" id="7_cdd3s"]
 [ext_resource type="Texture2D" uid="uid://ca0slsaso7mxg" path="res://Assets/Gravity-SpriteSheet.png" id="7_iipd7"]
 [ext_resource type="AudioStream" uid="uid://brkw7lim68euh" path="res://Assets/Sounds/PortalSpawn.ogg" id="8_uq5le"]
 [ext_resource type="AudioStream" uid="uid://ccjsaptt6atoc" path="res://Assets/Sounds/Space Ambient Music • [  INTERSTELLAR SPACE JOURNEY  ] •.mp3" id="9_jsjiy"]
@@ -498,7 +499,10 @@ offset_left = -266.0
 offset_top = -137.0
 offset_right = 440.0
 offset_bottom = 259.0
+size_flags_vertical = 4
 texture = ExtResource("1_kj5hi")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_nwxbt")
@@ -642,6 +646,11 @@ shape = SubResource("RectangleShape2D_bqgmo")
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="wall"]
 position = Vector2(154, 70)
 shape = SubResource("RectangleShape2D_frh1v")
+
+[node name="HealthBar" parent="." instance=ExtResource("7_cdd3s")]
+offset = Vector2(10, 10)
+scale = Vector2(0.3, 0.3)
+transform = Transform2D(0.3, 0, 0, 0.3, 10, 10)
 
 [connection signal="body_entered" from="AnimatedSprite2D/Area2D" to="AnimatedSprite2D/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Interact" to="Interact" method="_on_body_entered"]

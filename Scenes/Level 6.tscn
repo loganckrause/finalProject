@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ftwoq0oadr0j"]
+[gd_scene load_steps=28 format=3 uid="uid://ftwoq0oadr0j"]
 
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_6d0vx"]
 [ext_resource type="Texture2D" uid="uid://bych5ukuaatj7" path="res://Assets/CaveBackgrounds & Stuff/awesomeCavePixelArt.png" id="1_apmv4"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c61myq8gk6uoy" path="res://Scenes/Enemies/enemyBat.tscn" id="11_n8n2d"]
 [ext_resource type="PackedScene" uid="uid://b73mxahhrggmc" path="res://Scenes/Enemies/golem.tscn" id="12_764wl"]
 [ext_resource type="Script" path="res://scripts/LevelPass.gd" id="13_6vcjk"]
+[ext_resource type="PackedScene" uid="uid://b7vtrv0xj7nw5" path="res://Scenes/PlayerStuff/HealthBar.tscn" id="14_spba3"]
 
 [sub_resource type="Gradient" id="Gradient_nt3hv"]
 offsets = PackedFloat32Array(0.233533, 0.290419, 0.652695, 0.907186)
@@ -290,6 +291,11 @@ shape = SubResource("RectangleShape2D_k4pu1")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="wall"]
 position = Vector2(96, 243)
 shape = SubResource("RectangleShape2D_oy4c1")
+
+[node name="HealthBar" parent="." instance=ExtResource("14_spba3")]
+offset = Vector2(10, 10)
+scale = Vector2(0.3, 0.3)
+transform = Transform2D(0.3, 0, 0, 0.3, 10, 10)
 
 [connection signal="enemies_gone" from="EnemyChecker" to="NextLevel" method="_on_enemy_checker_enemies_gone"]
 [connection signal="enemies_gone" from="EnemyChecker" to="LevelPass" method="_on_enemy_checker_enemies_gone"]

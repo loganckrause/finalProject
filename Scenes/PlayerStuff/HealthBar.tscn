@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7vtrv0xj7nw5"]
+
+[ext_resource type="Script" path="res://scripts/Player/hp_bar.gd" id="1_mowba"]
+[ext_resource type="Texture2D" uid="uid://dki0k2tcu7j02" path="res://Assets/BarV8_Bar.png" id="1_okvm6"]
+[ext_resource type="Texture2D" uid="uid://chliokh22ewyk" path="res://Assets/BarV8_ProgressBar.png" id="2_jtbki"]
+
+[node name="HealthBar" type="CanvasLayer"]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+max_value = 10.0
+value = 5.0
+texture_under = ExtResource("1_okvm6")
+texture_progress = ExtResource("2_jtbki")
+texture_progress_offset = Vector2(2, 2)
+script = ExtResource("1_mowba")

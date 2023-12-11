@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkr174dhrit7o"
-path="res://.godot/imported/enemyspawn.png-e4fd98f1bd87bc1697ec91ebd0223fba.ctex"
+path="res://.godot/imported/enemyspawn.png-3c7410b22e40eccacd7dfe6f3734a586.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/enemyspawn.png"
-dest_files=["res://.godot/imported/enemyspawn.png-e4fd98f1bd87bc1697ec91ebd0223fba.ctex"]
+source_file="res://Assets/enemies/enemyspawn.png"
+dest_files=["res://.godot/imported/enemyspawn.png-3c7410b22e40eccacd7dfe6f3734a586.ctex"]
 
 [params]
 

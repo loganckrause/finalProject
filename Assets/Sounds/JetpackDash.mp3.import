@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cpmr6tjkvi75x"
-path="res://.godot/imported/JetpackDash.mp3-f8fa376c83c6689d84003b52e4feeb7c.mp3str"
+path="res://.godot/imported/JetpackDash.mp3-d367918b65dfe652ae168474adf5da0c.mp3str"
 
 [deps]
 
-source_file="res://assets/Sounds/JetpackDash.mp3"
-dest_files=["res://.godot/imported/JetpackDash.mp3-f8fa376c83c6689d84003b52e4feeb7c.mp3str"]
+source_file="res://Assets/Sounds/JetpackDash.mp3"
+dest_files=["res://.godot/imported/JetpackDash.mp3-d367918b65dfe652ae168474adf5da0c.mp3str"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cx0rvfog5ddqa"
-path="res://.godot/imported/laserbulletcollision.png-67ee55f1f5bd7a93bc2ddd7832ef70ac.ctex"
+path="res://.godot/imported/laserbulletcollision.png-db8441f8ed6337bb8d7203b3bdf9f1a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/weapon/bullets/laserbulletcollision.png"
-dest_files=["res://.godot/imported/laserbulletcollision.png-67ee55f1f5bd7a93bc2ddd7832ef70ac.ctex"]
+source_file="res://Assets/weapon/bullets/laserbulletcollision.png"
+dest_files=["res://.godot/imported/laserbulletcollision.png-db8441f8ed6337bb8d7203b3bdf9f1a6.ctex"]
 
 [params]
 

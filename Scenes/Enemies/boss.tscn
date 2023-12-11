@@ -1,6 +1,6 @@
 [gd_scene load_steps=36 format=3 uid="uid://cfmwn1icgxwja"]
 
-[ext_resource type="Texture2D" uid="uid://b1tos800rgbvu" path="res://assets/enemies/boss.png" id="1_5mkcu"]
+[ext_resource type="Texture2D" uid="uid://b1tos800rgbvu" path="res://Assets/enemies/boss.png" id="1_5mkcu"]
 [ext_resource type="Script" path="res://scripts/enemies/boss.gd" id="1_fto7s"]
 [ext_resource type="PackedScene" uid="uid://cuwnh0wr64eac" path="res://Scenes/components/health_component.tscn" id="2_ghjym"]
 [ext_resource type="PackedScene" uid="uid://df1b7vy5uw1hh" path="res://Scenes/components/vision_component.tscn" id="3_baklm"]

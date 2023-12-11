@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://mg0pw2y8xtev"
-path="res://.godot/imported/beam-8-43831.mp3-3acb2426666758febec27fe596b795a5.mp3str"
+path="res://.godot/imported/beam-8-43831.mp3-882989efca8852821b2e9af7952b42f6.mp3str"
 
 [deps]
 
-source_file="res://assets/Sounds/beam-8-43831.mp3"
-dest_files=["res://.godot/imported/beam-8-43831.mp3-3acb2426666758febec27fe596b795a5.mp3str"]
+source_file="res://Assets/Sounds/beam-8-43831.mp3"
+dest_files=["res://.godot/imported/beam-8-43831.mp3-882989efca8852821b2e9af7952b42f6.mp3str"]
 
 [params]
 

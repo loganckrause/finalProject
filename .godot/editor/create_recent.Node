@@ -1,3 +1,5 @@
+TextureProgressBar
+CanvasLayer
 AudioStreamPlayer
 CollisionShape2D
 Area2D
@@ -10,5 +12,3 @@ AnimationTree
 TextureRect
 DirectionalLight2D
 TileMap
-CanvasLayer
-ColorRect

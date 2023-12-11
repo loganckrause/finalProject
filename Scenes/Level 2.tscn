@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cg8knpgq03dsd"]
+[gd_scene load_steps=32 format=3 uid="uid://cg8knpgq03dsd"]
 
 [ext_resource type="Texture2D" uid="uid://nnng1s0k7poi" path="res://Assets/CaveBackgrounds & Stuff/caveRemasteredV7.png" id="1_428hj"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="1_gl8kc"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://Scenes/Enemies/enemySkull.tscn" id="11_wlgj7"]
 [ext_resource type="PackedScene" uid="uid://b73mxahhrggmc" path="res://Scenes/Enemies/golem.tscn" id="12_e4j0r"]
 [ext_resource type="PackedScene" uid="uid://bkr7fwaqp42x1" path="res://Scenes/Enemies/enemySlime.tscn" id="13_ywf0d"]
+[ext_resource type="PackedScene" uid="uid://b7vtrv0xj7nw5" path="res://Scenes/PlayerStuff/HealthBar.tscn" id="14_xc4bk"]
 
 [sub_resource type="Gradient" id="Gradient_ckexa"]
 offsets = PackedFloat32Array(0.356287, 0.727545)
@@ -270,6 +271,11 @@ position = Vector2(277, 223)
 
 [node name="enemySlime" parent="." groups=["Enemies"] instance=ExtResource("13_ywf0d")]
 position = Vector2(452, 222)
+
+[node name="HealthBar" parent="." instance=ExtResource("14_xc4bk")]
+offset = Vector2(10, 10)
+scale = Vector2(0.3, 0.3)
+transform = Transform2D(0.3, 0, 0, 0.3, 10, 10)
 
 [connection signal="enemies_gone" from="EnemyChecker" to="NextLevel" method="_on_enemy_checker_enemies_gone"]
 [connection signal="enemies_gone" from="EnemyChecker" to="LevelPass" method="_on_enemy_checker_enemies_gone"]

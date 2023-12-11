@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b83gms2myygqw"
-path="res://.godot/imported/350902__cabled_mess__jump_c_01.wav-b1d44a55a6acb145447dd84126aa62b0.sample"
+path="res://.godot/imported/350902__cabled_mess__jump_c_01.wav-e38710087ca16745274109bd042c580c.sample"
 
 [deps]
 
-source_file="res://assets/Sounds/350902__cabled_mess__jump_c_01.wav"
-dest_files=["res://.godot/imported/350902__cabled_mess__jump_c_01.wav-b1d44a55a6acb145447dd84126aa62b0.sample"]
+source_file="res://Assets/Sounds/350902__cabled_mess__jump_c_01.wav"
+dest_files=["res://.godot/imported/350902__cabled_mess__jump_c_01.wav-e38710087ca16745274109bd042c580c.sample"]
 
 [params]
 
