@@ -4,21 +4,21 @@ res://Scenes/components/pathfinding_component.tscn::05eb235081a1c4edb14d6b752cd7
 res://Scenes/components/vision_component.tscn::b56675442ddaf7c3771ae1718b6b5ac5::1702257970::res://.godot/exported/133200997/export-01f4a39b5d19777c80b3485409f98e77-vision_component.scn
 res://Scenes/PlayerStuff/bullet.tscn::95b9dd290dc9d9f84455c2c330256441::1702257970::res://.godot/exported/133200997/export-a4caa7efd4c69015822f1e474f6c6f57-bullet.scn
 res://Scenes/Hub.tscn::17ed863649f71c16948674d336ae4bd8::1702257970::res://.godot/exported/133200997/export-100c0ecef17443e0fd58026500c93949-Hub.scn
-res://Scenes/Level 1.tscn::954b3b5114fe730b5a2a890385831d76::1702271621::res://.godot/exported/133200997/export-b01cd3b6d30e54442128e297a9461d6f-Level 1.scn
-res://Scenes/Level 2.tscn::5bfe1795b5545dc2a85329e600c4e252::1702271621::res://.godot/exported/133200997/export-9c0af5494f10685232a1141fc7dc7736-Level 2.scn
-res://Scenes/Level 3.tscn::53b6138187d87ad3cf3ebd9603a39bf1::1702271621::res://.godot/exported/133200997/export-5e76eb458104e06f9c5604b649e72c4c-Level 3.scn
-res://Scenes/Level 4.tscn::85439b152cc00f7f8a1c8f9e867ee678::1702271621::res://.godot/exported/133200997/export-cc55c997b2ab41f0d35b3a2c037db0cf-Level 4.scn
+res://Scenes/Level 1.tscn::1443f27a2ff833b2fdd346e5f5678f32::1702273168::res://.godot/exported/133200997/export-b01cd3b6d30e54442128e297a9461d6f-Level 1.scn
+res://Scenes/Level 2.tscn::90b7d8a3e3ae09ae4a96e6ebc340764c::1702273168::res://.godot/exported/133200997/export-9c0af5494f10685232a1141fc7dc7736-Level 2.scn
+res://Scenes/Level 3.tscn::9cb9546abb26347eec1c454d51cd6b47::1702273168::res://.godot/exported/133200997/export-5e76eb458104e06f9c5604b649e72c4c-Level 3.scn
+res://Scenes/Level 4.tscn::85439b152cc00f7f8a1c8f9e867ee678::1702273167::res://.godot/exported/133200997/export-cc55c997b2ab41f0d35b3a2c037db0cf-Level 4.scn
 res://Scenes/Menu.tscn::2bd396a1bf753add1f5f2767b3f7afcf::1702260170::res://.godot/exported/133200997/export-c66ca9adccb575bddabad42984d7fed5-Menu.scn
 res://Scenes/next_level.tscn::8016b7ba13826a85d607da6bd1b5e9b4::1702257970::res://.godot/exported/133200997/export-86ebc723af5e1c1499731c90515aa82e-next_level.scn
 res://Scenes/slime.tscn::4d317b6d4d50eb086a9df93dc822b743::1702257970::res://.godot/exported/133200997/export-247b4367e168830bf70cbd48b8d0aee8-slime.scn
-res://Tilesets/Tileset.tres::63439e2c119eef12934b290caf202462::1702270521::res://.godot/exported/133200997/export-72e8faa113c20585dbe89a112c25b20d-Tileset.res
-res://Scenes/Enemies/boss.tscn::43a84fccfbc1cc964976546284a78b5c::1702271621::res://.godot/exported/133200997/export-f2e7615c8f1d4f2a0f39f6f6ae9a6cb8-boss.scn
-res://Scenes/Enemies/enemyBat.tscn::f63786593d286fb168908b6b4afe00b4::1702271621::res://.godot/exported/133200997/export-0a85980e18773fc44f82a59e42f7bf9d-enemyBat.scn
+res://Tilesets/Tileset.tres::63439e2c119eef12934b290caf202462::1702273930::res://.godot/exported/133200997/export-72e8faa113c20585dbe89a112c25b20d-Tileset.res
+res://Scenes/Enemies/boss.tscn::89d1aff4356889329a016a83f1c24b4f::1702273167::res://.godot/exported/133200997/export-f2e7615c8f1d4f2a0f39f6f6ae9a6cb8-boss.scn
+res://Scenes/Enemies/enemyBat.tscn::998062713f7009bc9fa6a8392833c566::1702273168::res://.godot/exported/133200997/export-0a85980e18773fc44f82a59e42f7bf9d-enemyBat.scn
 res://Scenes/Enemies/enemyBullet.tscn::9c1d148e106c57e7e4e7eac2f0729989::1702257970::res://.godot/exported/133200997/export-95e991eb3e2c18597368e2d3f8aa4739-enemyBullet.scn
-res://Scenes/Enemies/enemySkull.tscn::d78235cc08803d7f997df9b2d1cad67a::1702271621::res://.godot/exported/133200997/export-58a728a72a3fe6a684099243fe5ffe50-enemySkull.scn
-res://Scenes/Enemies/enemySlime.tscn::9948bede02dfe171b004947ad4fdd289::1702271622::res://.godot/exported/133200997/export-7e8a142005f1448d4cdd74ee16a97e10-enemySlime.scn
-res://Scenes/Enemies/golem.tscn::63735ba2cd274d86c104d47eda8b60d4::1702271622::res://.godot/exported/133200997/export-a27cf8620a0835951baa465aa0be3b03-golem.scn
-res://Scenes/PlayerStuff/HealthBar.tscn::9f566d1be65b315fc9b9558b4bee8edc::1702271621::res://.godot/exported/133200997/export-cc0c5f1588f8ed922870da88bc8f6544-HealthBar.scn
+res://Scenes/Enemies/enemySkull.tscn::b604b2ab5e470ca5c30b848a79efb694::1702273168::res://.godot/exported/133200997/export-58a728a72a3fe6a684099243fe5ffe50-enemySkull.scn
+res://Scenes/Enemies/enemySlime.tscn::80d3fc38673eb283369261e5ffd729ed::1702273168::res://.godot/exported/133200997/export-7e8a142005f1448d4cdd74ee16a97e10-enemySlime.scn
+res://Scenes/Enemies/golem.tscn::9887963a8d6ce90184d123195be6d7c4::1702273168::res://.godot/exported/133200997/export-a27cf8620a0835951baa465aa0be3b03-golem.scn
+res://Scenes/PlayerStuff/HealthBar.tscn::9f566d1be65b315fc9b9558b4bee8edc::1702273168::res://.godot/exported/133200997/export-cc0c5f1588f8ed922870da88bc8f6544-HealthBar.scn
 res://Scenes/PlayerStuff/slime.tscn::223f817af1e0d32b7364161fce8dc6d4::1702257970::res://.godot/exported/133200997/export-a035aac2737237f76e1ec5e6f192d537-slime.scn
 res://Scenes/BossMusic.tscn::264b0c894e358a025d7d43f2f908da59::1702257970::res://.godot/exported/133200997/export-aa1a205639719df41d23c528cad26014-BossMusic.scn
 res://Scenes/Death.tscn::1a6aaae05ffd96fdd92cae193ece8718::1702257970::res://.godot/exported/133200997/export-44d49f801bf462e4d21e96d1c3053a19-Death.scn
@@ -27,16 +27,16 @@ res://Scenes/HurtSound.tscn::aac06b82d274dd960faee0f67da8acfd::1702257970::res:/
 res://Scenes/JetpackDash.tscn::65f7c9482e2b4b8bd503df384a39f5a1::1702257970::res://.godot/exported/133200997/export-74c01887e5027fcbaa7c205cb4011013-JetpackDash.scn
 res://Scenes/JetpackSound.tscn::75061d318e6ae441cf51deeff004061b::1702257970::res://.godot/exported/133200997/export-df0e26a19b24cdcf9667991b75ab52b2-JetpackSound.scn
 res://Scenes/JumpSound.tscn::bc4b2890dea70b9563e7c60a54c3d65b::1702257970::res://.godot/exported/133200997/export-c8f96d9b8e9ef043f76db9c27d849f68-JumpSound.scn
-res://Scenes/Level 5.tscn::0a430c465f81d372c1bfe30cfd9bb124::1702271621::res://.godot/exported/133200997/export-926de3d6c2dc33865614f54cbe5ff3e2-Level 5.scn
-res://Scenes/Level 6.tscn::18694bf8fe90045b55f962222407737a::1702271621::res://.godot/exported/133200997/export-ff5e4d1940489a5d68959c0de2230b82-Level 6.scn
-res://Scenes/Level 7.tscn::7f931e5684c52ab4d63c759bed11e4ab::1702271621::res://.godot/exported/133200997/export-28662dc62cd21eb3623de67e38af6426-Level 7.scn
-res://Scenes/Level 8.tscn::27f812cc655de7de3a319c812df93663::1702271621::res://.godot/exported/133200997/export-a94f3140e55f885c6de7d119d014b723-Level 8.scn
-res://Scenes/Level 9.tscn::0c4277d919a6899c04e686ce09b9cf24::1702271621::res://.godot/exported/133200997/export-8d8a11197a2c29b07fc38bb35a6b845e-Level 9.scn
-res://Scenes/Level 10.tscn::aeb679b554e2e3bf03ef9523b776a095::1702271622::res://.godot/exported/133200997/export-f1125670d3d75a2b81e4c04349f50957-Level 10.scn
+res://Scenes/Level 5.tscn::e089003a3a6df92ad3bd16ec3c599ad3::1702273168::res://.godot/exported/133200997/export-926de3d6c2dc33865614f54cbe5ff3e2-Level 5.scn
+res://Scenes/Level 6.tscn::d39ce76e99df366c261c725eb0739ba5::1702273168::res://.godot/exported/133200997/export-ff5e4d1940489a5d68959c0de2230b82-Level 6.scn
+res://Scenes/Level 7.tscn::73cba2e0fe5949c3d7050dbe2319b2c0::1702273168::res://.godot/exported/133200997/export-28662dc62cd21eb3623de67e38af6426-Level 7.scn
+res://Scenes/Level 8.tscn::27f812cc655de7de3a319c812df93663::1702273167::res://.godot/exported/133200997/export-a94f3140e55f885c6de7d119d014b723-Level 8.scn
+res://Scenes/Level 9.tscn::939305e52336a87e799af9f5e158f029::1702273168::res://.godot/exported/133200997/export-8d8a11197a2c29b07fc38bb35a6b845e-Level 9.scn
+res://Scenes/Level 10.tscn::e7f7f8cf6b4b934e1e055cd8796405ae::1702273169::res://.godot/exported/133200997/export-f1125670d3d75a2b81e4c04349f50957-Level 10.scn
 res://Scenes/maingameaudio.tscn::5739b77c5818009e06e7a295171fbbc4::1702257970::res://.godot/exported/133200997/export-536f2cb8ceff64aa2da31c4ed2f1b5c2-maingameaudio.scn
 res://Scenes/randomizer.tscn::f6550395b77d1b2995cefa2b7164ccd1::1702257970::res://.godot/exported/133200997/export-9f0d1fa48697114b5a11564207935f79-randomizer.scn
 res://Scenes/WinScreen.tscn::0511af2a6a7cf40fcb8128880489fcd4::1702271573::res://.godot/exported/133200997/export-d419aa46a8e2d0fe46f6f4403f578052-WinScreen.scn
 res://Scenes/scene_transition.tscn::11e5361e65f5b76f0928baa2cbedae06::1702257970::res://.godot/exported/133200997/export-7e618cffb097bf975934e0745eb06f45-scene_transition.scn
-res://Shaders/hitflash.tres::5762a0338990401369838cfd2b073d44::1702270521::res://.godot/exported/133200997/export-03696229ee123ecd58f5f2db2e0b807b-hitflash.res
-res://Tilesets/Crystals.tres::b0b474040d12017a20a59c2a5498d1c7::1702270521::res://.godot/exported/133200997/export-8ef407e3cdb143da5492ea213a9fd2dd-Crystals.res
-res://Tilesets/shiptres.tres::f1ef6ac2941094f612008f4f6a48c343::1702270521::res://.godot/exported/133200997/export-d1cac4e55a147a7f29bf2a90e7d27dfd-shiptres.res
+res://Shaders/hitflash.tres::5762a0338990401369838cfd2b073d44::1702273930::res://.godot/exported/133200997/export-03696229ee123ecd58f5f2db2e0b807b-hitflash.res
+res://Tilesets/Crystals.tres::b0b474040d12017a20a59c2a5498d1c7::1702273930::res://.godot/exported/133200997/export-8ef407e3cdb143da5492ea213a9fd2dd-Crystals.res
+res://Tilesets/shiptres.tres::f1ef6ac2941094f612008f4f6a48c343::1702273930::res://.godot/exported/133200997/export-d1cac4e55a147a7f29bf2a90e7d27dfd-shiptres.res

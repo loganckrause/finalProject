@@ -1,21 +1,4 @@
-res://Scenes/Level 10.tscn
-res://Tilesets/Tileset.tres
-res://Shaders/hitflash.tres
-res://Tilesets/Crystals.tres
 res://Tilesets/shiptres.tres
-res://Scenes/Level 4.tscn
-res://Scenes/Level 8.tscn
-res://Scenes/Level 1.tscn
-res://Scenes/Level 2.tscn
-res://Scenes/Level 3.tscn
-res://Scenes/Level 5.tscn
-res://Scenes/Level 6.tscn
-res://Scenes/Level 7.tscn
-res://Scenes/Level 9.tscn
-res://Scenes/Enemies/enemyBat.tscn
-res://Scenes/Enemies/enemySkull.tscn
-res://Scenes/Enemies/enemySlime.tscn
-res://Scenes/Enemies/golem.tscn
-res://scenes/Enemies/boss.tscn
-res://scenes/Level 10.tscn
-res://scenes/PlayerStuff/HealthBar.tscn
+res://Shaders/hitflash.tres
+res://Tilesets/Tileset.tres
+res://Tilesets/Crystals.tres
