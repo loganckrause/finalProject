@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://bllklf26i1itb"]
+[gd_scene load_steps=87 format=3 uid="uid://bllklf26i1itb"]
 
 [ext_resource type="Texture2D" uid="uid://bdheexwuhxuhx" path="res://Assets/CaveBackgrounds & Stuff/pixelart_starfield.png" id="1_kj5hi"]
 [ext_resource type="TileSet" uid="uid://b5rj8427ili8w" path="res://Tilesets/shiptres.tres" id="2_nwxbt"]
@@ -470,6 +470,27 @@ gradient = SubResource("Gradient_qnooq")
 fill = 1
 fill_from = Vector2(0.619658, 0.508547)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lcdyk"]
+size = Vector2(213, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kdn3o"]
+size = Vector2(17, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_agp4b"]
+size = Vector2(14, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ccsny"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kmni"]
+size = Vector2(215, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lhwl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqgmo"]
+size = Vector2(19, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frh1v"]
+
 [node name="Hub" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -587,6 +608,40 @@ texture = SubResource("GradientTexture2D_5uvv6")
 stream = ExtResource("9_jsjiy")
 volume_db = -6.569
 autoplay = true
+
+[node name="wall" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+position = Vector2(39.5, 55.5)
+shape = SubResource("RectangleShape2D_lcdyk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall"]
+position = Vector2(-72.5, 72)
+shape = SubResource("RectangleShape2D_kdn3o")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wall"]
+position = Vector2(-87, 104)
+shape = SubResource("RectangleShape2D_agp4b")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wall"]
+position = Vector2(-74, 138)
+shape = SubResource("RectangleShape2D_ccsny")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="wall"]
+position = Vector2(39.5, 153.5)
+shape = SubResource("RectangleShape2D_6kmni")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="wall"]
+position = Vector2(154, 138)
+shape = SubResource("RectangleShape2D_8lhwl")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="wall"]
+position = Vector2(169.5, 104)
+shape = SubResource("RectangleShape2D_bqgmo")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="wall"]
+position = Vector2(154, 70)
+shape = SubResource("RectangleShape2D_frh1v")
 
 [connection signal="body_entered" from="AnimatedSprite2D/Area2D" to="AnimatedSprite2D/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Interact" to="Interact" method="_on_body_entered"]

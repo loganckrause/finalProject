@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpr14u57tnpcm"]
+
+[ext_resource type="AudioStream" uid="uid://cpmr6tjkvi75x" path="res://Assets/Sounds/JetpackDash.mp3" id="1_cwnc0"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_cwnc0")
+volume_db = -13.274

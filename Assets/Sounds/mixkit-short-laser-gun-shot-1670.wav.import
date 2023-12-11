@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dwfavkbl7et0i"
-path="res://.godot/imported/mixkit-short-laser-gun-shot-1670.wav-83d3e081f7dff526c6e0585bfd8f7a64.sample"
+path="res://.godot/imported/mixkit-short-laser-gun-shot-1670.wav-f8e6bd9c0c6a30233f881ecd825c1a60.sample"
 
 [deps]
 
-source_file="res://Assets/Sounds/mixkit-short-laser-gun-shot-1670.wav"
-dest_files=["res://.godot/imported/mixkit-short-laser-gun-shot-1670.wav-83d3e081f7dff526c6e0585bfd8f7a64.sample"]
+source_file="res://assets/Sounds/mixkit-short-laser-gun-shot-1670.wav"
+dest_files=["res://.godot/imported/mixkit-short-laser-gun-shot-1670.wav-f8e6bd9c0c6a30233f881ecd825c1a60.sample"]
 
 [params]
 

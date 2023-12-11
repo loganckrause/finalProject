@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx0oduja1fo8q"]
+
+[ext_resource type="AudioStream" uid="uid://dxhgod8si7n52" path="res://Assets/Sounds/MJGrunt.mp3" id="1_fwge3"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_fwge3")

@@ -199,6 +199,7 @@ func _physics_process(delta):
 
 func dashAttack():
 	if Input.is_action_just_pressed("dash") and canDash and not isDashing:
+		JetpackDash.play()
 		tempMaxSpeed = dashSpeed
 		isDashing = true
 		emit_signal("dashingSignal")
@@ -239,11 +240,13 @@ func jump(delta):
 	
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
+			JumpSound.play()
 			isJumping = true
 			canDoubleJump = true
 			velocity.y = JUMP_VELOCITY
 		if not is_on_floor():
 			if canDoubleJump and Input.is_action_just_pressed("jump"):
+				JetpackSound.play()
 				canDoubleJump = false
 				isDoubleJump = true
 				velocity.y = JUMP_VELOCITY

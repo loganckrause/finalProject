@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgko2hduo4o30"]
+
+[ext_resource type="AudioStream" uid="uid://dvalecd00lcax" path="res://Assets/Sounds/585546__akumaseiyuu__multiple-jet.mp3" id="1_14cnp"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_14cnp")
+volume_db = -23.537
+pitch_scale = 0.75

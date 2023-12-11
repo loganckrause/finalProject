@@ -22,6 +22,7 @@ func damage(attack: Attack):
 	health -= attack.attack_damage
 	emit_signal("takeDamage")
 	if get_parent().is_in_group("player"):
+		HurtSound.play()
 		playerhitflash.play("hitflash")
 	print(health)
 	if health <= 0:

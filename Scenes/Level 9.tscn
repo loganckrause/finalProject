@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="6_eh0ns"]
 [ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="7_r2may"]
 [ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="8_uarj6"]
-[ext_resource type="PackedScene" uid="uid://b73mxahhrggmc" path="res://scenes/Enemies/golem.tscn" id="9_ssrhb"]
-[ext_resource type="PackedScene" uid="uid://c61myq8gk6uoy" path="res://scenes/Enemies/enemyBat.tscn" id="10_01rt5"]
-[ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://scenes/Enemies/enemySkull.tscn" id="11_g2ood"]
+[ext_resource type="PackedScene" uid="uid://b73mxahhrggmc" path="res://Scenes/Enemies/golem.tscn" id="9_ssrhb"]
+[ext_resource type="PackedScene" uid="uid://c61myq8gk6uoy" path="res://Scenes/Enemies/enemyBat.tscn" id="10_01rt5"]
+[ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://Scenes/Enemies/enemySkull.tscn" id="11_g2ood"]
 [ext_resource type="Script" path="res://scripts/LevelPass.gd" id="12_hmmr8"]
 
 [sub_resource type="Gradient" id="Gradient_7w5h0"]

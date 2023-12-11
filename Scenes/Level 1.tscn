@@ -1,16 +1,14 @@
-[gd_scene load_steps=35 format=3 uid="uid://c5jmorjvt41y1"]
+[gd_scene load_steps=33 format=3 uid="uid://c5jmorjvt41y1"]
 
 [ext_resource type="Texture2D" uid="uid://bych5ukuaatj7" path="res://Assets/CaveBackgrounds & Stuff/awesomeCavePixelArt.png" id="1_fi2fc"]
 [ext_resource type="Texture2D" uid="uid://domj8tr1okhwm" path="res://Tilesets/mainlev_build.png" id="2_a77a7"]
 [ext_resource type="TileSet" uid="uid://bnww31fwo8lay" path="res://Tilesets/Tileset.tres" id="5_51v8s"]
 [ext_resource type="PackedScene" uid="uid://bc8odp4js2qqo" path="res://Scenes/next_level.tscn" id="5_076jv"]
 [ext_resource type="PackedScene" uid="uid://bsmkk0gf40q0m" path="res://Scenes/slime.tscn" id="5_gkotl"]
-[ext_resource type="PackedScene" uid="uid://bkr7fwaqp42x1" path="res://scenes/Enemies/enemySlime.tscn" id="6_e8k1e"]
 [ext_resource type="Texture2D" uid="uid://dkj4v80uxfys7" path="res://Assets/CaveBackgrounds & Stuff/lantern.png" id="7_gwyap"]
 [ext_resource type="TileSet" uid="uid://c2idcledugybt" path="res://Tilesets/Crystals.tres" id="8_boy6c"]
 [ext_resource type="PackedScene" uid="uid://c7ia7le6wcv7k" path="res://Scenes/maingameaudio.tscn" id="9_cmunu"]
-[ext_resource type="PackedScene" uid="uid://c61myq8gk6uoy" path="res://scenes/Enemies/enemyBat.tscn" id="10_pqbsm"]
-[ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://scenes/Enemies/enemySkull.tscn" id="11_hus7w"]
+[ext_resource type="PackedScene" uid="uid://c61myq8gk6uoy" path="res://Scenes/Enemies/enemyBat.tscn" id="10_pqbsm"]
 [ext_resource type="Script" path="res://scripts/Enemies/EnemyChecker.gd" id="12_lcqtw"]
 [ext_resource type="Script" path="res://scripts/LevelPass.gd" id="13_l7sxb"]
 [ext_resource type="PackedScene" uid="uid://bbwxtpj14djoa" path="res://Scenes/Enemies/enemySkull.tscn" id="15_gk7gf"]
@@ -2985,10 +2983,10 @@ process_mode = 3
 [node name="bat" parent="." groups=["Enemies"] instance=ExtResource("10_pqbsm")]
 position = Vector2(447, 84)
 
-[node name="skull" parent="." groups=["Enemies"] instance=ExtResource("11_hus7w")]
+[node name="skull" parent="." groups=["Enemies"] instance=ExtResource("15_gk7gf")]
 position = Vector2(274, 130)
 
-[node name="slime" parent="." groups=["Enemies"] instance=ExtResource("6_e8k1e")]
+[node name="slime" parent="." groups=["Enemies"] instance=ExtResource("16_a52y8")]
 position = Vector2(411, 196)
 
 [node name="EnemyChecker" type="Area2D" parent="."]

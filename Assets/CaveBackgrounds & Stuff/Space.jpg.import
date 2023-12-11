@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cd42r7gh2ukmd"
-path="res://.godot/imported/Space.jpg-bd755bfc2fdff4be602d924e8d7b7b98.ctex"
+path="res://.godot/imported/Space.jpg-06d4fef6669f45e35a770deb1cc5d7a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/CaveBackgrounds & Stuff/Space.jpg"
-dest_files=["res://.godot/imported/Space.jpg-bd755bfc2fdff4be602d924e8d7b7b98.ctex"]
+source_file="res://assets/CaveBackgrounds & Stuff/Space.jpg"
+dest_files=["res://.godot/imported/Space.jpg-06d4fef6669f45e35a770deb1cc5d7a4.ctex"]
 
 [params]
 
