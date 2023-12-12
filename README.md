@@ -1,5 +1,8 @@
 # CosmoRunner README
 
+**Project By:** Logan Krause and Gavin Montross
+**Year:** Freshman
+
 **Demo Video Link:** https://www.youtube.com/watch?v=NoOPrV6OOKE
 
 **Challenges/Difficulties we overcame:**
